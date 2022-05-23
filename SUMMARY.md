@@ -28,7 +28,7 @@
   * [Hardware Recommendations](other/hardware-recommendations.md)
   * [Other Notes](other/other-notes.md)
 
-## DDC Smart Contracts <a href="#ddc" id="ddc"></a>
+## DDC <a href="#ddc" id="ddc"></a>
 
 * [Intro](ddc/intro.md)
 * [How to add DDC Node to the Smart Contract](ddc/how-to-add-ddc-node-to-the-smart-contract.md)
