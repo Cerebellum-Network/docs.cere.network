@@ -1,9 +1,10 @@
-# Blockchain Details
+# Network details
 
 ### Network description
 
-| **Name**                   | Cere Mainnet                                                                                                           |
+|                            |                                                                                                                        |
 | -------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **Name**                   | Cere Mainnet                                                                                                           |
 | **Decimals**               | 10                                                                                                                     |
 | **Native Token**           | CERE                                                                                                                   |
 | **Full Node RPC**          | [https://rpc.mainnet.cere.network:9934](https://rpc.mainnet.cere.network:9934)                                         |
