@@ -1,10 +1,9 @@
-# Test Network details
+# Blockchain Details (Testnet)
 
 ### Network description
 
-|                            |                                                                                        |
-| -------------------------- | -------------------------------------------------------------------------------------- |
 | **Name**                   | Cere Testnet                                                                           |
+| -------------------------- | -------------------------------------------------------------------------------------- |
 | **Decimals**               | 10                                                                                     |
 | **Native Token**           | CERE                                                                                   |
 | **Full Node RPC**          | [https://rpc.testnet.cere.network:9934](https://rpc.testnet.cere.network:9934)         |

@@ -4,15 +4,23 @@
 
 ## DDC
 
-* [Storage Node](ddc/intro.md)
+* [📖 Concepts](ddc/concepts.md)
+* [⚙ Developer Quickstart](ddc/developer-quickstart.md)
+* [📦 SDK](ddc/sdk.md)
+* [☁ CDN Nodes](ddc/cdn-nodes.md)
+* [🌐 Storage Nodes](ddc/intro.md)
+* [⚖ Smart Contracts](ddc/smart-contracts.md)
+* [📃 Specifications](ddc/specifications.md)
 
 ## Mainnet
 
-* [Network details](mainnet/network-details.md)
+* [Blockchain Details](mainnet/network-details.md)
+* [DDC Network](mainnet/ddc-network.md)
 
 ## Testnet
 
-* [Test Network details](testnet/network-details.md)
+* [Blockchain Details (Testnet)](testnet/network-details.md)
+* [DDC Network (Testnet)](testnet/ddc-network-testnet.md)
 
 ## Blockchain Node <a href="#node" id="node"></a>
 
