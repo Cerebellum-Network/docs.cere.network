@@ -2,6 +2,10 @@
 
 * [Introduction to Cere DDC](README.md)
 
+## DDC
+
+* [Storage Node](ddc/intro.md)
+
 ## Mainnet
 
 * [Network details](mainnet/network-details.md)
@@ -27,13 +31,6 @@
   * [Linux Best Practises](other/linux-best-practises.md)
   * [Hardware Recommendations](other/hardware-recommendations.md)
   * [Other Notes](other/other-notes.md)
-
-## DDC <a href="#ddc" id="ddc"></a>
-
-* [Intro](ddc/intro.md)
-* [How to add DDC Node to the Smart Contract](ddc/how-to-add-ddc-node-to-the-smart-contract.md)
-* [How to add an Inspector to the Smart Contract](ddc/how-to-add-a-reporter-to-the-smart-contract.md)
-* [How to configure DDC Inspectors](ddc/how-to-configure-reporter-ocw.md)
 
 ## tools
 
