@@ -7,5 +7,5 @@ DDC nodes operations are coordinated and rewarded through smart contracts runnin
 This section covers the configuration of DDC Smart Contracts and DDC Inspector nodes.
 
 {% hint style="info" %}
-**For more details on DDC Storage nodes, see the DDC book:** [**https://cerebellum-network.github.io/ddc-storage-node/**](https://cerebellum-network.github.io/ddc-storage-node/)\*\*\*\*
+**For more details on DDC Storage nodes, see the DDC book: [https://cerebellum-network.github.io/ddc-storage-node/](https://cerebellum-network.github.io/ddc-storage-node/)**
 {% endhint %}
