@@ -10,30 +10,24 @@ Write up from [these requirements](https://www.notion.so/cere/Architecture-of-DD
 
 ## Network Description
 
-### Discovering nodes
-
-{% hint style="warning" %}
-TODO
-
-Explain the discovery of CDN nodes. Clients do that.
-
-&#x20;   Trusted CDN Cluster ID -> CDN Nodes
-{% endhint %}
-
-{% hint style="warning" %}
-TODO
-
-Explain the discovery of Storage nodes. Normally CDN nodes do that:\
-&#x20;   Bucket ID -> Storage Cluster -> Storage Nodes
-{% endhint %}
-
 ### Discovering data
 
 {% hint style="warning" %}
 TODO
 
 Explain the discovery flows:\
-&#x20;   Wallet address -> Buckets -> list Pieces, list Files, or search by tag
+&#x20;   Wallet address -> Buckets\
+&#x20;   Bucket ID -> Files or Pieces
+{% endhint %}
+
+### Discovering nodes
+
+{% hint style="danger" %}
+TODO
+
+Explain the discovery flows:\
+&#x20;   Bucket ID -> Cluster\
+&#x20;   Cluster -> Node URLs
 {% endhint %}
 
 ### Bucket Description
