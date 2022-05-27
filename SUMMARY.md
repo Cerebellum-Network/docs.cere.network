@@ -14,7 +14,7 @@
 * [📦 SDK](ddc/sdk.md)
 * [☁ CDN Nodes](ddc/cdn-nodes/README.md)
   * [API](ddc/cdn-nodes/api.md)
-* [🌐 Storage Nodes](ddc/intro.md)
+* [🌐 Storage Nodes](ddc/storage-nodes/README.md)
 * [⚖ Smart Contracts](ddc/smart-contracts.md)
 * [📃 Specifications](ddc/specifications.md)
 
