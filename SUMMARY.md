@@ -17,6 +17,7 @@
 * [🌐 Storage Nodes](ddc/storage-nodes/README.md)
 * [⚖ Smart Contracts](ddc/smart-contracts.md)
 * [📃 Specifications](ddc/specifications.md)
+  * [🔗 DDC URLs](ddc/specifications/ddc-url.md)
 
 ## Mainnet
 
