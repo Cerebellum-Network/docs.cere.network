@@ -1,4 +1,4 @@
-# 🔗 DDC URLs
+# 🔗 DDC URL
 
 {% hint style="warning" %}
 TODO
@@ -9,7 +9,15 @@ Write up from [these requirements](https://www.notion.so/cere/Architecture-of-DD
 
 ![Structure of DDC URLs](<../../.gitbook/assets/DDC URL.png>)
 
-## Native DDC Protocol
+## URI - Queries in the DDC Protocol
+
+### Files
+
+Represent a file. FILE_PATH resolves to a query of pieces by tag. The piece will be interpreted as a file descriptor, possibly fetching the file content from other pieces.
+
+    ddc:file/BUCKET_NAME/FILE_PATH
+
+### Pieces
 
 Represent a piece by bucket ID and piece ID:
 
@@ -25,34 +33,29 @@ Search a piece by tag and bucket ID:
 
 Or by bucket NAME:
 
-    ddc:piece/@BUCKET_NAME/?tag=KEY:VALUE
+    ddc:piece/BUCKET_NAME/?tag=KEY:VALUE
 
 Select a piece with additional options:
 
-    ddc:piece/@BUCKET_NAME/?tag=KEY:VALUE&version:latest
-
-Represent a file. FILE_PATH resolves to a query of pieces by tag. The piece will be interpreted as a file descriptor, possibly fetching the file content from other pieces.
-
-    ddc:file/BUCKET_NAME/FILE_PATH
+    ddc:piece/BUCKET_NAME/?tag=KEY:VALUE&version:latest
 
 
-## Web Gateway to DDC
+## URL - The gateway from the web to DDC
 
 DDC defines URLs that can be used anywhere where HTTPS is expected, i.e. in web browsers.
 
-Connect to a given CDN Node and request it to fetch an object by its DDC_URL.
+The URI of an object can be parsed from a URL by detecting the first occurence of the string `/ddc:`
 
-    https://ANY_CDN/DDC_URL
+The client can connect to the given CDN node and request it to fetch an object by its DDC URI. The client can also decide to use another CDN node of his choice.
 
-Example:
+    https://ANY-CDN-NODE/DDC-URI
 
-    https://cdn.cere.network/file/@my_bucket/image.png
+Example: fetch a piece that describes a file, and return the file content.
+
+    https://cdn.cere.network/ddc:file/my_bucket/image.png
+
+            The web gateway / The DDC query
 
 Fetch a piece and return the payload.
 
-    https://cdn.cere.network/piece/…
-
-
-Fetch a piece that describes a file, and return the file content.
-
-    https://cdn.cere.network/file/…
+    https://cdn.cere.network/ddc:piece/BUCKET_ID/PIECE_ID
