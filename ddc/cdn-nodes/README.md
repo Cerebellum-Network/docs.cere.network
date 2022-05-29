@@ -1,23 +1,16 @@
 # ☁ CDN Nodes
 
-CDN node is stateless node which responsible for routing content to storage nodes, replication, caching(**not implemented yet**). All access to stored data goes through the CDN node.
+A CDN node is a web gateway to DDC. It can act as a web server and provide content to
+regural HTTP clients, especially web browsers. Web apps can rely on CDN nodes to serve various
+assets, or even be hosted completely on DDC.
 
-A CDN node is also a web gateway to DDC. It can act as a web server and provide content to
-regural HTTP clients, especially web browsers. Web apps can rely on CDN nodes to serve various assets,
-or even be hosted completely on DDC.
+CDN nodes address the complexity and slowness of decentralized storage. This is useful both
+for server-based and for server-less apps. All access to stored data should go through a CDN node.
+
+A CDN node is a stateless service which is capable of routing content to and from storage nodes,
+as well as data replication, and caching.
 
 
-{% hint style="warning" %}
-TODO
-
-Explain that CDN nodes address the complexity and slowness of decentralized storage, both for server-based and server-less apps.
-{% endhint %}
-
-## Metrics
-
-CDN node provides metrics for monitoring:
-
-* general HTTP metrics
-* number piece viewed
+## Implementation
 
 {% embed url="https://github.com/Cerebellum-Network/ddc-gateway-node" %}

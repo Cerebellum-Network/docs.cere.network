@@ -7,6 +7,7 @@
 {% hint style="warning" %} This feature is not yet implemented. {% endhint %}
 
 Resolve a query using the `ddc:file` protocol and return the content of a file.
+
 See the specification of [🔗 DDC URL](/ddc/specifications/ddc-url.md) for the format of the queries.
 
 #### Request
@@ -147,3 +148,14 @@ message SearchResult {
   repeated SignedPiece signedPieces = 1; // signed pieces by DDC node
 }
 ```
+
+
+## Metrics
+
+CDN nodes provide the following metrics for monitoring:
+
+* general HTTP metrics
+* number piece viewed
+
+{% hint style="warning" %} TODO: document the API of metrics
+{% endhint %}
