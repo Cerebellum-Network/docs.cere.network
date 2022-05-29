@@ -11,13 +11,15 @@ Write up from [these requirements](https://www.notion.so/cere/Architecture-of-DD
 
 ## URI - Queries in the DDC Protocol
 
-### Files
+A URI represents an object or a set of objects in the DDC network.
+
+### File protocol
 
 Represent a file. FILE_PATH resolves to a query of pieces by tag. The piece will be interpreted as a file descriptor, possibly fetching the file content from other pieces.
 
     ddc:file/BUCKET_NAME/FILE_PATH
 
-### Pieces
+### Piece protocol
 
 Represent a piece by bucket ID and piece ID:
 
@@ -46,7 +48,7 @@ DDC defines URLs that can be used anywhere where HTTPS is expected, i.e. in web 
 
 The URI of an object can be parsed from a URL by detecting the first occurence of the string `/ddc:`
 
-The client can connect to the given CDN node and request it to fetch an object by its DDC URI. The client can also decide to use another CDN node of his choice.
+The client can connect to a given CDN node and request it to fetch an object by its DDC URI. The client can also decide to use another CDN node of his choice.
 
     https://ANY-CDN-NODE/DDC-URI
 

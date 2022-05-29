@@ -87,6 +87,22 @@ message SearchResult {
 
 ## HTTP API
 
+### Web Gateway
+
+{% hint style="warning" %} This feature is not yet implemented. {% endhint %}
+
+A CDN node acts as a web gateway. It can resolve a query in the DDC File protocol and return the content of a file, for consumption by regural HTTP clients, e.g., web browsers. See the specification of [🔗 DDC URL](/ddc/specifications/ddc-url.md) for the format of the queries.
+
+#### Request
+```http
+GET /ddc:file/{{file_query}}
+```
+
+#### Response
+* Status code: 200
+* Body: the content of the file
+* Headers: Content-Type, Content-Disposition
+
 ### Download Piece
 
 #### Request
