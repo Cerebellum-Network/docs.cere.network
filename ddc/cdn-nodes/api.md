@@ -6,9 +6,8 @@
 
 {% hint style="warning" %} This feature is not yet implemented. {% endhint %}
 
-A CDN node acts as a web gateway to DDC. It can resolve a query of the `ddc:file` protocol and
-return the content of a file, for consumption by regural HTTP clients, e.g., web browsers. See
-the specification of [🔗 DDC URL](/ddc/specifications/ddc-url.md) for the format of the queries.
+Resolve a query using the `ddc:file` protocol and return the content of a file.
+See the specification of [🔗 DDC URL](/ddc/specifications/ddc-url.md) for the format of the queries.
 
 #### Request
 ```http
