@@ -1,6 +1,52 @@
-# API
+# CDN API
 
-## Model
+## HTTP API
+
+### Download Piece
+
+#### Request
+
+```http
+GET /api/rest/pieces/{{cid}}?bucketId={{bucket_id}}
+```
+
+#### Response
+
+* Status code: 200
+* Body: _SignedPiece_ model
+
+### Upload piece
+
+#### Request
+
+```http
+PUT /api/rest/pieces
+
+{{SignedPiece_model}}
+```
+
+#### Response
+
+* Status code: 201
+* Body: _Signature_ model
+
+### Search pieces
+
+#### Request
+
+```http
+GET /api/rest/pieces
+
+{{Query_model}}
+```
+
+#### Response
+
+* Status code: 200
+* Bode: _SearchResult_ model
+
+
+## Data Model
 
 CDN Node uses **protobuf** serialization for communicating and requests.
 
@@ -84,48 +130,3 @@ message SearchResult {
   repeated SignedPiece signedPieces = 1; // signed pieces by DDC node
 }
 ```
-
-## HTTP API
-
-### Download Piece
-
-#### Request
-
-```http
-GET /api/rest/pieces/{{cid}}?bucketId={{bucket_id}}
-```
-
-#### Response
-
-* Status code: 200
-* Body: _SignedPiece_ model
-
-### Upload piece
-
-#### Request
-
-```http
-PUT /api/rest/pieces
-
-{{SignedPiece_model}}
-```
-
-#### Response
-
-* Status code: 201
-* Body: _Signature_ model
-
-### Search pieces
-
-#### Request
-
-```http
-GET /api/rest/pieces
-
-{{Query_model}}
-```
-
-#### Response
-
-* Status code: 200
-* Bode: _SearchResult_ model
