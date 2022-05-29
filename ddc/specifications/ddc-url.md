@@ -15,46 +15,69 @@ Write up from [these requirements](https://www.notion.so/cere/Architecture-of-DD
 A URI represents an object or a set of objects in the DDC network.
 
 
-### File protocol
+### File Protocol
 
-A `ddc:file` URI represents a file. The basic query points to a file path inside of a named bucket:
+A `ddc:file` URI represents a file. The most usual form points to a file path inside of a named
+bucket:
 
     ddc:file/BUCKET_NAME/FILE_PATH
 
-or by bucket ID:
+But in general, a file URI corresponds to a query of a data piece in DDC Object Storage, using the
+`ddc:piece` protocol (described below):
 
-    ddc:file/BUCKET_ID/FILE_PATH
+    ddc:file/BUCKET/PIECE
 
-FILE_PATH resolves to a query of pieces by tag in DDC Object Storage. The piece will be interpreted
-as a file descriptor, possibly fetching the file content from other pieces.
-
-BUCKET_NAME or BUCKET_ID resolves to a query in the DDC bucket system to identify the current set
-of storage nodes where the file pieces should be found.
+The piece is to be interpreted as a file descriptor, possibly fetching additional
+file content from linked pieces.
 
 
-### Piece protocol
+### Piece Protocol
 
-A `ddc:piece` URI represents a piece or a list of pieces in DDC Object Storage.
+A `ddc:piece` URI represents a data piece or a set of pieces in DDC Object Storage. Piece URIs take
+the following form:
 
-Search a piece by tag and bucket name:
+    ddc:piece/BUCKET/PIECE
 
-    ddc:piece/BUCKET_NAME/?tag=KEY:VALUE
+The notable form below represents an immutable piece addressed by its Content ID (CID), without a
+hint for a containing bucket:
 
-Or by bucket ID:
+    ddc:piece/*/=CID
 
-    ddc:piece/BUCKET_ID/?tag=KEY:VALUE
 
-Represent a piece by Content ID and bucket ID:
+### Identifying Buckets
 
-    ddc:piece/BUCKET_ID/CID
+BUCKET_ID or BUCKET_NAME resolves to a query in the DDC bucket system to identify the current set
+of storage nodes where the files or pieces should be found.
 
-Represent a piece by Content ID, without a hint for a containing bucket:
+* BUCKET_ID is a numerical, unique, and immutable identifier to a bucket.
 
-    ddc:piece/*/CID
+* BUCKET_NAME is a mutable alias to a bucket. A bucket name must be claimed and controlled by user
+  accounts on the Cere blockchain.
 
-Select a piece with additional options:
+* A star (`*`) indicates that the bucket is unknown, or irrelevant, or that a query spans all
+  buckets.
 
-    ddc:piece/BUCKET_NAME/?tag=KEY:VALUE&version:latest
+
+### Identifying Files and Pieces
+
+The PIECE part of a URI identifies a piece of content within a bucket.
+
+* Immutable content is addressed by an equal sign (`=`) followed by a Content Identifier (CID):
+
+        =CID
+
+* Mutable content can be addressed by a slash-based path. Such path is a shorthand for a search on
+  the tag `path`.
+
+        NAME or SLASH/SEPARATED/PATH
+
+* Mutable content can be addressed by a search on the tags of pieces:
+
+        ?tag=KEY:VALUE
+        ?tag=KEY:VALUE&tag=KEY:VALUE
+
+A query to mutable content represents the set of pieces that match the query. In contexts where a
+single piece is requested, the most recent piece should be returned. (TODO: specify the ordering)
 
 
 ## URL - The gateway from the web to DDC
