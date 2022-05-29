@@ -9,33 +9,48 @@ Write up from [these requirements](https://www.notion.so/cere/Architecture-of-DD
 
 ![Structure of DDC URLs](<../../.gitbook/assets/DDC URL.png>)
 
+
 ## URI - Queries in the DDC Protocol
 
 A URI represents an object or a set of objects in the DDC network.
 
+
 ### File protocol
 
-Represent a file. FILE_PATH resolves to a query of pieces by tag. The piece will be interpreted as a file descriptor, possibly fetching the file content from other pieces.
+A `ddc:file` URI represents a file. The basic query points to a file path inside of a named bucket:
 
     ddc:file/BUCKET_NAME/FILE_PATH
 
+or by bucket ID:
+
+    ddc:file/BUCKET_ID/FILE_PATH
+
+FILE_PATH resolves to a query of pieces by tag in DDC Object Storage. The piece will be interpreted
+as a file descriptor, possibly fetching the file content from other pieces.
+
+BUCKET_NAME or BUCKET_ID resolves to a query in the DDC bucket system to identify the current set
+of storage nodes where the file pieces should be found.
+
+
 ### Piece protocol
 
-Represent a piece by bucket ID and piece ID:
+A `ddc:piece` URI represents a piece or a list of pieces in DDC Object Storage.
 
-    ddc:piece/BUCKET_ID/CID
+Search a piece by tag and bucket name:
 
-Represent a piece by piece ID, in any bucket:
+    ddc:piece/BUCKET_NAME/?tag=KEY:VALUE
 
-    ddc:piece/*/CID
-
-Search a piece by tag and bucket ID:
+Or by bucket ID:
 
     ddc:piece/BUCKET_ID/?tag=KEY:VALUE
 
-Or by bucket NAME:
+Represent a piece by Content ID and bucket ID:
 
-    ddc:piece/BUCKET_NAME/?tag=KEY:VALUE
+    ddc:piece/BUCKET_ID/CID
+
+Represent a piece by Content ID, without a hint for a containing bucket:
+
+    ddc:piece/*/CID
 
 Select a piece with additional options:
 
