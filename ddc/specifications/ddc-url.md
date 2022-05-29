@@ -44,20 +44,21 @@ Select a piece with additional options:
 
 ## URL - The gateway from the web to DDC
 
-DDC defines URLs that can be used anywhere where HTTPS is expected, i.e. in web browsers.
+DDC defines URLs that can be used anywhere where HTTPS is expected, i.e. in web browsers. A web URL is constructed with the URL to a CDN node, followed by the DDC URI to resolve, like so:
 
-The URI of an object can be parsed from a URL by detecting the first occurence of the string `/ddc:`
+    CDN_NODE_URL/DDC_URI
 
-The client can connect to a given CDN node and request it to fetch an object by its DDC URI. The client can also decide to use another CDN node of his choice.
-
-    https://ANY-CDN-NODE/DDC-URI
-
-Example: fetch a piece that describes a file, and return the file content.
+For example:
 
     https://cdn.cere.network/ddc:file/my_bucket/image.png
+    ^                        ^
+    The web gateway          The DDC URI
 
-            The web gateway / The DDC query
+The URL identifies a file, and suggest a CDN node that can retrieve it from the DDC network. Given
+a request for this URL, the CDN node will find the data piece(s) that describe the file, and return
+the file content.
 
-Fetch a piece and return the payload.
+The client may also use another CDN node of his choice, or it may use the `ddc:file` protocol by itself and
+find the file in storage nodes directly.
 
-    https://cdn.cere.network/ddc:piece/BUCKET_ID/PIECE_ID
+The URI of an object can always be parsed from a URL by detecting the first occurence of the string `/ddc:`
