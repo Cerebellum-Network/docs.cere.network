@@ -1,6 +1,70 @@
-# API
+# CDN API
 
-## Model
+## HTTP API
+
+### Web Gateway
+
+{% hint style="warning" %} This feature is not yet implemented. {% endhint %}
+
+A CDN node acts as a web gateway to DDC. It can resolve a query of the `ddc:file` protocol and
+return the content of a file, for consumption by regural HTTP clients, e.g., web browsers. See
+the specification of [🔗 DDC URL](/ddc/specifications/ddc-url.md) for the format of the queries.
+
+#### Request
+```http
+GET /ddc:file/{{file_query}}
+```
+
+#### Response
+* Status code: 200
+* Body: the content of the file
+* Headers: Content-Type, Content-Disposition
+
+### Download Piece
+
+#### Request
+
+```http
+GET /api/rest/pieces/{{cid}}?bucketId={{bucket_id}}
+```
+
+#### Response
+
+* Status code: 200
+* Body: _SignedPiece_ model
+
+### Upload piece
+
+#### Request
+
+```http
+PUT /api/rest/pieces
+
+{{SignedPiece_model}}
+```
+
+#### Response
+
+* Status code: 201
+* Body: _Signature_ model
+
+### Search pieces
+
+#### Request
+
+```http
+GET /api/rest/pieces
+
+{{Query_model}}
+```
+
+#### Response
+
+* Status code: 200
+* Bode: _SearchResult_ model
+
+
+## Data Model
 
 CDN Node uses **protobuf** serialization for communicating and requests.
 
@@ -84,66 +148,3 @@ message SearchResult {
   repeated SignedPiece signedPieces = 1; // signed pieces by DDC node
 }
 ```
-
-## HTTP API
-
-### Web Gateway
-
-{% hint style="warning" %} This feature is not yet implemented. {% endhint %}
-
-A CDN node acts as a web gateway to DDC. It can resolve a query of the `ddc:file` protocol and
-return the content of a file, for consumption by regural HTTP clients, e.g., web browsers. See
-the specification of [🔗 DDC URL](/ddc/specifications/ddc-url.md) for the format of the queries.
-
-#### Request
-```http
-GET /ddc:file/{{file_query}}
-```
-
-#### Response
-* Status code: 200
-* Body: the content of the file
-* Headers: Content-Type, Content-Disposition
-
-### Download Piece
-
-#### Request
-
-```http
-GET /api/rest/pieces/{{cid}}?bucketId={{bucket_id}}
-```
-
-#### Response
-
-* Status code: 200
-* Body: _SignedPiece_ model
-
-### Upload piece
-
-#### Request
-
-```http
-PUT /api/rest/pieces
-
-{{SignedPiece_model}}
-```
-
-#### Response
-
-* Status code: 201
-* Body: _Signature_ model
-
-### Search pieces
-
-#### Request
-
-```http
-GET /api/rest/pieces
-
-{{Query_model}}
-```
-
-#### Response
-
-* Status code: 200
-* Bode: _SearchResult_ model
