@@ -1,4 +1,4 @@
-# CDN API
+# ☁ CDN API
 
 ## HTTP API
 

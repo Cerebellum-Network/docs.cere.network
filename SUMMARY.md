@@ -15,9 +15,10 @@
 * [☁ CDN Nodes](ddc/cdn-nodes/README.md)
 * [🌐 Storage Nodes](ddc/storage-nodes/README.md)
 * [⚖ Smart Contracts](ddc/smart-contracts.md)
-* [📃 Protocols](ddc/protocols.md)
+* [📃 Protocols](ddc/protocols/README.md)
   * [🔗 DDC URL](ddc/protocols/ddc-url.md)
   * [☁ CDN API](ddc/protocols/cdn-api.md)
+  * [🕸 Network Topology](ddc/protocols/topology.md)
 
 ## Mainnet
 

@@ -7,7 +7,7 @@ DDC nodes operations are coordinated and rewarded through smart contracts runnin
 {% hint style="info" %}
 **For more details, see the documentation of DDC Storage nodes:**
 
-****[**https://cerebellum-network.github.io/ddc-storage-node/**](https://cerebellum-network.github.io/ddc-storage-node/)
+[**https://cerebellum-network.github.io/ddc-storage-node/**](https://cerebellum-network.github.io/ddc-storage-node/)
 {% endhint %}
 
 ## Recovery

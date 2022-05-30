@@ -10,7 +10,7 @@ for server-based and for server-less apps. All access to stored data should go t
 A CDN node is a stateless service which is capable of routing content to and from storage nodes,
 as well as data replication, and caching.
 
-**See the [☁ CDN API](/ddc/protocols/cdn-api.md)** for details.
+**See the [☁ CDN API](/ddc/protocols/cdn-api.md) for details.**
 
 ## Implementation
 
