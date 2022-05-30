@@ -4,11 +4,11 @@
 
 ### Web Gateway
 
-{% hint style="warning" %} This feature is not yet implemented. {% endhint %}
-
 Resolve a query using the `ddc:file` protocol and return the content of a file.
 
-See the specification of [🔗 DDC URL](/ddc/specifications/ddc-url.md) for the format of the queries.
+See the specification of [🔗 DDC URL](ddc-url.md) for the format of the queries.
+
+{% hint style="warning" %} This feature is not yet implemented. {% endhint %}
 
 #### Request
 ```http
