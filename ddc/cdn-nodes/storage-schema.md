@@ -1,3 +1,16 @@
+# Storage Schema
+
+This is the data model and API for DDC Storage.
+
+
+## Changelog
+
+### v0.1.2
+
+- Initial model moved from the [Go SDK v0.1.2](https://github.com/Cerebellum-Network/cere-ddc-sdk-go/releases/tag/v0.1.2)
+- Added inline documentation.
+
+
 # Protocol Documentation
 <a name="top"></a>
 
@@ -38,14 +51,14 @@
 <a name="pb-Link"></a>
 
 ### Link
-
+A link is a pointer from one piece to another.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| cid | [string](#string) |  |  |
-| size | [uint64](#uint64) |  |  |
-| name | [string](#string) | optional |  |
+| cid | [string](#string) |  | The CID of the linked piece. |
+| size | [uint64](#uint64) |  | The size of the payload of the linked piece. |
+| name | [string](#string) | optional | The name of the linked piece, in the context of the linking piece. |
 
 
 
@@ -71,15 +84,16 @@
 <a name="pb-Piece"></a>
 
 ### Piece
-A piece is the unit of data that is stored in DDC.
+A piece is a container of data and metadata.
+It is the smallest indivisible unit stored in DDC object storage.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | data | [bytes](#bytes) |  | The opaque payload carried by the piece. |
 | bucketId | [uint32](#uint32) |  | The ID of a bucket that contains the piece. |
-| tags | [Tag](#pb-Tag) | repeated | A list of tags with which the piece may be searched. |
-| links | [Link](#pb-Link) | repeated | A list of links to other pieces. |
+| tags | [Tag](#pb-Tag) | repeated | A list of tags with which the piece may be searched. There can be multiple tags with the same key. |
+| links | [Link](#pb-Link) | repeated | A list of links to other pieces. If this piece is interpreted as a file, the linked pieces make up the file content. |
 
 
 
@@ -105,13 +119,13 @@ A piece is the unit of data that is stored in DDC.
 <a name="pb-Query"></a>
 
 ### Query
-
+A query represents a search of pieces by tags.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| bucketId | [uint32](#uint32) |  |  |
-| tags | [Tag](#pb-Tag) | repeated |  |
+| bucketId | [uint32](#uint32) |  | The ID of the bucket to search. |
+| tags | [Tag](#pb-Tag) | repeated | A list of tags to match against the tags of stored pieces. There can be multiple tags with the same key. |
 
 
 
@@ -137,12 +151,12 @@ A piece is the unit of data that is stored in DDC.
 <a name="pb-SearchResult"></a>
 
 ### SearchResult
-
+A search result contains the pieces found from a search.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| signedPieces | [SignedPiece](#pb-SignedPiece) | repeated |  |
+| signedPieces | [SignedPiece](#pb-SignedPiece) | repeated | The list of pieces found in storage. |
 
 
 
@@ -168,7 +182,7 @@ A piece is the unit of data that is stored in DDC.
 <a name="pb-Signature"></a>
 
 ### Signature
-A signature and details to help verifying it.
+A signature and details to help verify it.
 
 
 | Field | Type | Label | Description |
@@ -202,13 +216,14 @@ A signature and details to help verifying it.
 <a name="pb-SignedPiece"></a>
 
 ### SignedPiece
-A piece signed by the account that uploaded the piece.
+A piece signed by an account.
+This can be used to verify the intent of the account holder to upload the piece.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | piece | [Piece](#pb-Piece) |  | A piece. |
-| signature | [Signature](#pb-Signature) |  | A signature of the piece by a keypair. |
+| signature | [Signature](#pb-Signature) |  | A signature of the piece by the keypair of the uploader. |
 
 
 
@@ -234,13 +249,16 @@ A piece signed by the account that uploaded the piece.
 <a name="pb-Tag"></a>
 
 ### Tag
+A tag is an attribute attached to pieces.
+Tags can be used to search or filter pieces in storage.
 
+Specific tags are used to implement different higher protocols, such as a file system.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| key | [string](#string) |  |  |
-| value | [string](#string) |  |  |
+| key | [string](#string) |  | The key of the tag. |
+| value | [string](#string) |  | The value of the tag for this key. |
 
 
 
