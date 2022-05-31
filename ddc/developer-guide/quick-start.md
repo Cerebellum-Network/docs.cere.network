@@ -8,9 +8,9 @@ Simple example for uploading data from `test.txt` file with some text and downlo
 More examples and details in [JS SDK README](https://github.com/Cerebellum-Network/cere-ddc-sdk-js)
 {% endhint %}
 
-## Create bucket
+### Create bucket
 
-### Dependencies
+#### Dependencies
 
 package.json
 
@@ -20,7 +20,7 @@ package.json
 }
 ```
 
-### Code
+#### Code
 
 ```javascript
 const {
@@ -84,9 +84,9 @@ Create a bucket…
 New BucketId 5
 ```
 
-## Upload and Download
+### Upload and Download
 
-### Dependencies
+#### Dependencies
 
 package.json
 
@@ -99,7 +99,7 @@ package.json
 }
 ```
 
-### Code
+#### Code
 
 ```javascript
 import {Scheme} from "@cere-ddc-sdk/core";
@@ -134,9 +134,9 @@ const uploadAndDownload = async () => {
 More examples and details in [Kotlin SDK README](https://github.com/Cerebellum-Network/cere-ddc-sdk-kotlin)
 {% endhint %}
 
-## Create bucket
+### Create bucket
 
-### Dependencies
+#### Dependencies
 
 build.gradle.kts
 
@@ -157,7 +157,7 @@ dependencies {
 }
 ```
 
-### Code
+#### Code
 
 ```kotlin
 import network.cere.ddc.contract.BucketContractConfig
@@ -198,9 +198,9 @@ Create a bucket...
 New BucketId 6
 ```
 
-## Upload and Download
+### Upload and Download
 
-### Dependencies
+#### Dependencies
 
 build.gradle.kts
 
@@ -213,7 +213,7 @@ dependencies {
 }
 ```
 
-### Code
+#### Code
 
 ```kotlin
 import network.cere.ddc.core.signature.Scheme
