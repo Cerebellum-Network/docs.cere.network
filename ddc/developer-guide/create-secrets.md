@@ -17,7 +17,7 @@ Download a binary file from [releases](https://github.com/Cerebellum-Network/ddc
 
 ## Generate keys
 
-If you don’t have a wallet yet, you can use DDC CLI to generate a secret phrase (mnemonic code) and keypair (public and private keys):
+If you don’t have a wallet yet, you can use DDC CLI to generate a secret phrase and seed hex:
 
 ```shell
 ./ddc-cli generate-keys  -s sr25519
@@ -31,13 +31,13 @@ Seed hex:  0x3be19e0bba3af20bad16298976ec27e25d9330cd997634abb09cb101a0387e8b
 ```
 
 {% hint style="warning" %}
-Please write down your secret phrase and keep it in a safe place. The secret phrase (mnemonic) can be used to restore your keys (wallet). Keep it carefully to not lose your assets.
+Please write down your secret phrase and keep it in a safe place. The secret phrase can be used to restore your keys (wallet). Keep it carefully to not lose your assets.
 {% endhint %}
 
 Or you can extract seed from existing secret phrase (mnemonic code):
 
 ```shell
-./ddc-cli extract-keys --secret-phrase 'grass smooth rain offer matter senior crucial slim clip news town opera'
+./ddc-cli extract-seed --secret-phrase 'grass smooth rain offer matter senior crucial slim clip news town opera'
 ```
 
 ## Import account to polkadot{.js} extension

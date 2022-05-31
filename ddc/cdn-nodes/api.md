@@ -45,13 +45,10 @@ GET /api/rest/pieces
 * Status code: 200
 * Bode: _SearchResult_ model
 
+
 ## Data Model
 
 CDN Node uses **protobuf** serialization for communicating and requests.
-
-{% hint style="info" %}
-You can find latest protobuf models in [Golang SDK model](https://github.com/Cerebellum-Network/cere-ddc-sdk-go/tree/master/model) module.
-{% endhint %}
 
 ### Signed Piece
 
