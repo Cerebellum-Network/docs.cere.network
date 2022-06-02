@@ -15,10 +15,10 @@ Write up from [these requirements](https://www.notion.so/cere/Architecture-of-DD
 A URI represents an object or a set of objects in the DDC network.
 
 
-### File Protocol
+### The `file` Protocol
 
-A `ddc:file` URI represents a file. The most usual form points to a file path inside of a named
-bucket:
+A `ddc:file` URI represents a file, as known from usual file systems. The simplest form points to a
+file by a path inside of a named bucket:
 
     ddc:file/BUCKET_NAME/FILE_PATH
 
@@ -27,47 +27,38 @@ But in general, a file URI corresponds to a query of a data piece in DDC Object 
 
     ddc:file/BUCKET/PIECE
 
-The piece is to be interpreted as a file descriptor, possibly fetching additional
-file content from linked pieces.
+The piece is to be interpreted as a file descriptor, which contains metadata and links to other
+pieces holding the file content.
 
 
-### Piece Protocol
+### The `piece` Protocol
+
+A piece is a container of data and metadata. It is the smallest indivisible unit stored in DDC
+object storage. A piece can contain links to other pieces.
 
 A `ddc:piece` URI represents a data piece or a set of pieces in DDC Object Storage. Piece URIs take
 the following form:
 
     ddc:piece/BUCKET/PIECE
 
-The notable form below represents an immutable piece addressed by its Content ID (CID), without a
-hint for a containing bucket:
-
-    ddc:piece/*/=CID
-
 
 ### Identifying Buckets
 
-BUCKET_ID or BUCKET_NAME resolves to a query in the DDC bucket system to identify the current set
+BUCKET can be a bucket NAME or a bucket ID. It resolves to a query in the DDC bucket system to identify the current set
 of storage nodes where the files or pieces should be found.
 
-* BUCKET_ID is a numerical, unique, and immutable identifier to a bucket.
+* BUCKET ID is a numerical, unique, and immutable identifier to a bucket.
 
-* BUCKET_NAME is a mutable alias to a bucket. A bucket name must be claimed and controlled by user
+* BUCKET NAME is a mutable alias to a bucket. A bucket name must be claimed and controlled by user
   accounts on the Cere blockchain.
-
-* A star (`*`) indicates that the bucket is unknown, or irrelevant, or that a query spans all
-  buckets.
 
 
 ### Identifying Files and Pieces
 
 The PIECE part of a URI identifies a piece of content within a bucket.
 
-* Immutable content is addressed by an equal sign (`=`) followed by a Content Identifier (CID):
-
-        =CID
-
-* Mutable content can be addressed by a slash-based path. Such path is a shorthand for a search on
-  the tag `path`.
+* Mutable content can be addressed by a name or a slash-based path. Such path is a shorthand for a
+  search on the tag `path`.
 
         NAME or SLASH/SEPARATED/PATH
 
@@ -80,9 +71,18 @@ A query to mutable content represents the set of pieces that match the query. In
 single piece is requested, the most recent piece should be returned. (TODO: specify the ordering)
 
 
+### Immutable Data - The `ifile` and `ipiece` protocols
+
+The `ddc:ifile` and `ddc:ipiece` protocols are similar to `ddc:file` and `ddc:piece`, but they represent **immutable data**. The pieces are permanently identified by a Content Identifier (CID). The pieces can be looked up using the content-addressable protocol implemented by CDN and storage nodes. A client given a piece can always verify cryptographically that it matches its URI.
+
+    ddc:ifile/BUCKET/CID
+    ddc:ipiece/BUCKET/CID
+
+
 ## URL - The gateway from the web to DDC
 
-DDC defines URLs that can be used anywhere where HTTPS is expected, i.e. in web browsers. A web URL is constructed with the URL to a CDN node, followed by the DDC URI to resolve, like so:
+DDC defines URLs that can be used anywhere where HTTPS is expected, i.e. in web browsers. A web URL
+is constructed with the URL to a CDN node, followed by the DDC URI to resolve, like so:
 
     CDN_NODE_URL/DDC_URI
 
@@ -96,7 +96,7 @@ The URL identifies a file, and suggest a CDN node that can retrieve it from the 
 a request for this URL, the CDN node will find the data piece(s) that describe the file, and return
 the file content.
 
-The client may also use another CDN node of his choice, or it may use the `ddc:file` protocol by itself and
-find the file in storage nodes directly.
+The client may also use another CDN node of his choice, or it may use the `ddc:file` protocol by
+itself and find the file in storage nodes directly.
 
 The URI of an object can always be parsed from a URL by detecting the first occurence of the string `/ddc:`
