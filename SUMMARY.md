@@ -13,10 +13,12 @@
   * [⏱ Quick Start](ddc/provider-guide/quick-start.md)
 * [📦 SDK](ddc/sdk.md)
 * [☁ CDN Nodes](ddc/cdn-nodes/README.md)
-  * [CDN API](ddc/cdn-nodes/api.md)
 * [🌐 Storage Nodes](ddc/storage-nodes/README.md)
 * [⚖ Smart Contracts](ddc/smart-contracts.md)
-* [📃 Specifications](ddc/specifications.md)
+* [📃 Protocols](ddc/protocols/README.md)
+  * [🔗 DDC URLs](ddc/protocols/ddc-url.md)
+  * [☁ CDN API](ddc/protocols/cdn-api.md)
+  * [🕸 Network Topology](ddc/protocols/topology.md)
 
 ## Mainnet
 
