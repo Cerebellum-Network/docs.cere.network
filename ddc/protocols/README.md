@@ -1,6 +1,6 @@
 # 📃 Protocols
 
-## [🔗 DDC URL](ddc-url.md)
+## [🔗 DDC URLs](ddc-url.md)
 
 ## [☁ CDN API](cdn-api.md)
 
