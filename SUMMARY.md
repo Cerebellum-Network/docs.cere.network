@@ -18,7 +18,7 @@
 * [📃 Protocols](ddc/protocols/README.md)
   * [🔗 DDC URLs](ddc/protocols/ddc-url.md)
   * [☁ CDN API](ddc/protocols/cdn-api.md)
-  * [Storage Schema](ddc/protocols/storage-schema.md)
+  * [☁ Storage Schema](ddc/protocols/storage-schema.md)
   * [🕸 Network Topology](ddc/protocols/topology.md)
 
 ## Mainnet

@@ -7,8 +7,9 @@ This is the data model and API for DDC Storage.
 
 ### v0.1.2
 
-- Initial model moved from the [Go SDK v0.1.2](https://github.com/Cerebellum-Network/cere-ddc-sdk-go/releases/tag/v0.1.2)
-- Added inline documentation.
+- Piece and query model.
+- As implemented by the [Go SDK v0.1.2](https://github.com/Cerebellum-Network/cere-ddc-sdk-go/releases/tag/v0.1.2)
+- Inline documentation.
 
 
 # Protocol Documentation
@@ -16,39 +17,39 @@ This is the data model and API for DDC Storage.
 
 ## Table of Contents
 
-- [link.proto](#link-proto)
-    - [Link](#pb-Link)
+- [link.proto](#link.proto)
+    - [Link](#pb.Link)
   
-- [piece.proto](#piece-proto)
-    - [Piece](#pb-Piece)
+- [piece.proto](#piece.proto)
+    - [Piece](#pb.Piece)
   
-- [query.proto](#query-proto)
-    - [Query](#pb-Query)
+- [query.proto](#query.proto)
+    - [Query](#pb.Query)
   
-- [search_result.proto](#search_result-proto)
-    - [SearchResult](#pb-SearchResult)
+- [search_result.proto](#search_result.proto)
+    - [SearchResult](#pb.SearchResult)
   
-- [signature.proto](#signature-proto)
-    - [Signature](#pb-Signature)
+- [signature.proto](#signature.proto)
+    - [Signature](#pb.Signature)
   
-- [signed_piece.proto](#signed_piece-proto)
-    - [SignedPiece](#pb-SignedPiece)
+- [signed_piece.proto](#signed_piece.proto)
+    - [SignedPiece](#pb.SignedPiece)
   
-- [tag.proto](#tag-proto)
-    - [Tag](#pb-Tag)
+- [tag.proto](#tag.proto)
+    - [Tag](#pb.Tag)
   
 - [Scalar Value Types](#scalar-value-types)
 
 
 
-<a name="link-proto"></a>
+<a name="link.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
 ## link.proto
 
 
 
-<a name="pb-Link"></a>
+<a name="pb.Link"></a>
 
 ### Link
 A link is a pointer from one piece to another.
@@ -74,14 +75,14 @@ A link is a pointer from one piece to another.
 
 
 
-<a name="piece-proto"></a>
+<a name="piece.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
 ## piece.proto
 
 
 
-<a name="pb-Piece"></a>
+<a name="pb.Piece"></a>
 
 ### Piece
 A piece is a container of data and metadata.
@@ -92,8 +93,8 @@ It is the smallest indivisible unit stored in DDC object storage.
 | ----- | ---- | ----- | ----------- |
 | data | [bytes](#bytes) |  | The opaque payload carried by the piece. |
 | bucketId | [uint32](#uint32) |  | The ID of a bucket that contains the piece. |
-| tags | [Tag](#pb-Tag) | repeated | A list of tags with which the piece may be searched. There can be multiple tags with the same key. |
-| links | [Link](#pb-Link) | repeated | A list of links to other pieces. If this piece is interpreted as a file, the linked pieces make up the file content. |
+| tags | [Tag](#pb.Tag) | repeated | A list of tags with which the piece may be searched. There can be multiple tags with the same key. |
+| links | [Link](#pb.Link) | repeated | A list of links to other pieces. If this piece is interpreted as a file, the linked pieces make up the file content. |
 
 
 
@@ -109,14 +110,14 @@ It is the smallest indivisible unit stored in DDC object storage.
 
 
 
-<a name="query-proto"></a>
+<a name="query.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
 ## query.proto
 
 
 
-<a name="pb-Query"></a>
+<a name="pb.Query"></a>
 
 ### Query
 A query represents a search of pieces by tags.
@@ -125,7 +126,7 @@ A query represents a search of pieces by tags.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | bucketId | [uint32](#uint32) |  | The ID of the bucket to search. |
-| tags | [Tag](#pb-Tag) | repeated | A list of tags to match against the tags of stored pieces. There can be multiple tags with the same key. |
+| tags | [Tag](#pb.Tag) | repeated | A list of tags to match against the tags of stored pieces. There can be multiple tags with the same key. |
 
 
 
@@ -141,14 +142,14 @@ A query represents a search of pieces by tags.
 
 
 
-<a name="search_result-proto"></a>
+<a name="search_result.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
 ## search_result.proto
 
 
 
-<a name="pb-SearchResult"></a>
+<a name="pb.SearchResult"></a>
 
 ### SearchResult
 A search result contains the pieces found from a search.
@@ -156,7 +157,7 @@ A search result contains the pieces found from a search.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| signedPieces | [SignedPiece](#pb-SignedPiece) | repeated | The list of pieces found in storage. |
+| signedPieces | [SignedPiece](#pb.SignedPiece) | repeated | The list of pieces found in storage. |
 
 
 
@@ -172,14 +173,14 @@ A search result contains the pieces found from a search.
 
 
 
-<a name="signature-proto"></a>
+<a name="signature.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
 ## signature.proto
 
 
 
-<a name="pb-Signature"></a>
+<a name="pb.Signature"></a>
 
 ### Signature
 A signature and details to help verify it.
@@ -206,14 +207,14 @@ A signature and details to help verify it.
 
 
 
-<a name="signed_piece-proto"></a>
+<a name="signed_piece.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
 ## signed_piece.proto
 
 
 
-<a name="pb-SignedPiece"></a>
+<a name="pb.SignedPiece"></a>
 
 ### SignedPiece
 A piece signed by an account.
@@ -222,8 +223,8 @@ This can be used to verify the intent of the account holder to upload the piece.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| piece | [Piece](#pb-Piece) |  | A piece. |
-| signature | [Signature](#pb-Signature) |  | A signature of the piece by the keypair of the uploader. |
+| piece | [Piece](#pb.Piece) |  | A piece. |
+| signature | [Signature](#pb.Signature) |  | A signature of the piece by the keypair of the uploader. |
 
 
 
@@ -239,14 +240,14 @@ This can be used to verify the intent of the account holder to upload the piece.
 
 
 
-<a name="tag-proto"></a>
+<a name="tag.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
 ## tag.proto
 
 
 
-<a name="pb-Tag"></a>
+<a name="pb.Tag"></a>
 
 ### Tag
 A tag is an attribute attached to pieces.
