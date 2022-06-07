@@ -3,12 +3,15 @@
 This is the data model and API for DDC Storage.
 
 
+([Source](https://github.com/Cerebellum-Network/ddc-schemas))
+
+
 ## Changelog
 
-### v0.1.2
+### v0.1.3
 
 - Piece and query model.
-- As implemented by the [Go SDK v0.1.2](https://github.com/Cerebellum-Network/cere-ddc-sdk-go/releases/tag/v0.1.2)
+- As implemented by the [Go SDK v0.1.3](https://github.com/Cerebellum-Network/cere-ddc-sdk-go/releases/tag/v0.1.3)
 - Inline documentation.
 
 
@@ -18,26 +21,27 @@ This is the data model and API for DDC Storage.
 ## Table of Contents
 
 - [link.proto](#link.proto)
-    - [Link](#pb.Link)
-  
+  - [Link](#pb.Link)
+
 - [piece.proto](#piece.proto)
-    - [Piece](#pb.Piece)
-  
+  - [Piece](#pb.Piece)
+
 - [query.proto](#query.proto)
-    - [Query](#pb.Query)
-  
+  - [Query](#pb.Query)
+
 - [search_result.proto](#search_result.proto)
-    - [SearchResult](#pb.SearchResult)
-  
+  - [SearchResult](#pb.SearchResult)
+  - [SearchedPiece](#pb.SearchedPiece)
+
 - [signature.proto](#signature.proto)
-    - [Signature](#pb.Signature)
-  
+  - [Signature](#pb.Signature)
+
 - [signed_piece.proto](#signed_piece.proto)
-    - [SignedPiece](#pb.SignedPiece)
-  
+  - [SignedPiece](#pb.SignedPiece)
+
 - [tag.proto](#tag.proto)
-    - [Tag](#pb.Tag)
-  
+  - [Tag](#pb.Tag)
+
 - [Scalar Value Types](#scalar-value-types)
 
 
@@ -65,13 +69,13 @@ A link is a pointer from one piece to another.
 
 
 
- 
 
- 
 
- 
 
- 
+
+
+
+
 
 
 
@@ -100,13 +104,13 @@ It is the smallest indivisible unit stored in DDC object storage.
 
 
 
- 
 
- 
 
- 
 
- 
+
+
+
+
 
 
 
@@ -127,18 +131,19 @@ A query represents a search of pieces by tags.
 | ----- | ---- | ----- | ----------- |
 | bucketId | [uint32](#uint32) |  | The ID of the bucket to search. |
 | tags | [Tag](#pb.Tag) | repeated | A list of tags to match against the tags of stored pieces. There can be multiple tags with the same key. |
+| loadData | [bool](#bool) |  | Return search result with piece data |
 
 
 
 
 
- 
 
- 
 
- 
 
- 
+
+
+
+
 
 
 
@@ -157,19 +162,35 @@ A search result contains the pieces found from a search.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| signedPieces | [SignedPiece](#pb.SignedPiece) | repeated | The list of pieces found in storage. |
+| searchedPieces | [SearchedPiece](#pb.SearchedPiece) | repeated | The list of pieces found in storage. |
 
 
 
 
 
- 
 
- 
+<a name="pb.SearchedPiece"></a>
 
- 
+### SearchedPiece
+A searched piece found in storage
 
- 
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| signedPiece | [SignedPiece](#pb.SignedPiece) |  | Found signed piece. |
+| cid | [string](#string) |  | CID of the found piece |
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -197,13 +218,13 @@ A signature and details to help verify it.
 
 
 
- 
 
- 
 
- 
 
- 
+
+
+
+
 
 
 
@@ -230,13 +251,13 @@ This can be used to verify the intent of the account holder to upload the piece.
 
 
 
- 
 
- 
 
- 
 
- 
+
+
+
+
 
 
 
@@ -265,13 +286,13 @@ Specific tags are used to implement different higher protocols, such as a file s
 
 
 
- 
 
- 
 
- 
 
- 
+
+
+
+
 
 
 
