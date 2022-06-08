@@ -1,12 +1,15 @@
 # Storage Schema
 
-This is the data model and API for DDC Storage.
+This is the data model for the API of DDC Storage.
 
 
 ([Source](https://github.com/Cerebellum-Network/ddc-schemas))
 
 
 ## Changelog
+
+### vNext
+- Tag values are bytes instead of strings.
 
 ### v0.1.3
 
@@ -172,13 +175,13 @@ A search result contains the pieces found from a search.
 <a name="pb.SearchedPiece"></a>
 
 ### SearchedPiece
-A searched piece found in storage
+A searched piece found in storage.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | signedPiece | [SignedPiece](#pb.SignedPiece) |  | Found signed piece. |
-| cid | [string](#string) |  | CID of the found piece |
+| cid | [string](#string) |  | CID of the found piece. |
 
 
 
@@ -280,7 +283,7 @@ Specific tags are used to implement different higher protocols, such as a file s
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | key | [string](#string) |  | The key of the tag. |
-| value | [string](#string) |  | The value of the tag for this key. |
+| value | [bytes](#bytes) |  | The value of the tag for this key. |
 
 
 
