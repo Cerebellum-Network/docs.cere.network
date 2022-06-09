@@ -13,3 +13,10 @@ If we wish to decentralize this process, we must remove all human input from the
 - What is the mechanism by which a new provider is given a piece of data when one provider stops giving access to it?
 
 - Idea: Because the data is encryptped and providers cannot interpret the data that they are hosting, it becomes impossible for providers to coordinate to take down a piece of data. 
+
+
+Insert more theory here. 
+
+Interaction with the smart contract requires the Cere software development kit (SDK). Written in both Javascript and Kotlin, this set of tools allow users to upload content to DDC in just a few lines of code, without needing to worry about the details of interacting with our smart contract.
+
+Note: Unlike centralized solutions, the process of storing data with DDC requires coding by design. App developers will use our SDK to build their front-end, and it is up to them to abstract the code behind their own user interfaces. In other words, we provide the SDK for app developers to seamlessly offer a decentralized storage solution to the data stored on their apps. We do so by designing a publicly accessible system that ensures a economic incentive between users and providers at all times. 
