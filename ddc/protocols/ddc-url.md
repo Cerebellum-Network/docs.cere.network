@@ -5,6 +5,9 @@
 
 ![Structure of DDC URLs](<../../.gitbook/assets/DDC URL.png>)
 
+[original picture]: https://miro.com/app/board/o9J_lsMr5wI=/?moveToWidget=3458764527405861779&cot=14
+[requirements]: https://www.notion.so/cere/Architecture-of-DDC-software-2d6824916b394fa0bc20ff176525d0fc#c8397cdafc4d4f5a9ddd1072a87c189e
+
 ## URIs - Identifying objects in DDC
 
 A URI represents an object or a set of objects in the DDC network.
@@ -16,10 +19,10 @@ Here is an example URI to a file:
 The meaning of the different parts of such URIs is explained below.
 
 
-### The `file/` queries
+### `file/` queries
 
 A `file/` URI represents a file, as known from usual file systems. The simplest form points to a
-file by a path inside of a named bucket:
+file by a path inside of a bucket:
 
     /ddc/buc/BUCKET_ID/file/PATH
 
@@ -31,7 +34,7 @@ The piece is to be interpreted as a file descriptor, which contains metadata and
 pieces holding the file content. See [📂 File Storage](file-storage.md) for more details.
 
 
-### The `piece/` queries
+### `piece/` queries
 
 A piece is a container of data and metadata. It is the smallest indivisible unit stored in DDC
 object storage. A piece can contain links to other pieces.
@@ -59,7 +62,7 @@ A query to mutable content represents the set of pieces that match the query. In
 single piece is requested, the most recent piece should be returned. (TODO: specify the ordering)
 
 
-### The `ifile/` and `ipiece/` queries - Immutable data
+### `ifile/` and `ipiece/` queries - Immutable data
 
 The `ifile/` and `ipiece/` queries are similar to `file/` and `piece/`, but they represent **immutable data**. The pieces are permanently identified by a Content Identifier (CID). The pieces can be looked up using the content-addressable protocol implemented by CDN and storage nodes. A client given a piece can always verify cryptographically that it matches its URI.
 
@@ -100,15 +103,12 @@ For example:
     ^                       ^
     The web gateway         The DDC URI
 
-The Web URL identifies a file, and suggest a CDN node that can retrieve it from the DDC network. Given
-a request for this URL, the CDN node will find the data piece(s) that describe the file, and return
-the file content.
-
-The client may also use any other CDN node of his choice, or it may use the DDC protocol by
-itself and find the file in storage nodes directly.
+A Web URL identifies an object, and suggest a CDN node from which to retrieve it. Given such a request, a CDN node will fetch the corresponding data piece(s) from the DDC network. The client may also use any other CDN node of his choice, or it may use the DDC protocol by itself and fetch the data from the Cere blockchain and from storage nodes directly.
 
 The DDC URI of an object can always be parsed from a Web URL by detecting the first occurence of the string `/ddc/`.
 
+For `file/` and `ifile/` queries, a CDN node will return the file content, including a Content-Type header.
 
-[requirements]: https://www.notion.so/cere/Architecture-of-DDC-software-2d6824916b394fa0bc20ff176525d0fc#c8397cdafc4d4f5a9ddd1072a87c189e
-[original picture]: https://miro.com/app/board/o9J_lsMr5wI=/?moveToWidget=3458764526343104952&cot=14
+For `piece/` and `ipiece/` queries, it will return the piece data structure encoded in binary ProtoBuf, or in JSON, or only the payload (`piece.data`), depending on options (TODO: specify the options). See the piece specification in [☁ Storage Schema](storage-schema.md).
+
+
