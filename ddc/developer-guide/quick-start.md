@@ -1,137 +1,152 @@
 # ⏱ Quick Start
 
-Simple example for uploading data from `test.txt` file with some text and download file by chunks with size 3 bytes.
-
 {% tabs %}
 {% tab title="Javascript" %}
 {% hint style="info" %}
 More examples and details in [JS SDK README](https://github.com/Cerebellum-Network/cere-ddc-sdk-js)
 {% endhint %}
 
-## Create bucket
-
 ### Dependencies
 
 package.json
 
 ```json
 {
-  "@cere-ddc-sdk/content-addressable-storage": "1.1.0",
-  "@cere-ddc-sdk/core": "1.1.0",
-  "@cere-ddc-sdk/ddc-client": "1.1.0",
-  "@cere-ddc-sdk/file-storage": "1.1.0",
-  "@cere-ddc-sdk/key-value-storage": "1.1.0",
-  "@cere-ddc-sdk/proto": "1.1.0",
-  "@cere-ddc-sdk/smart-contract": "1.1.0",
+  "@cere-ddc-sdk/content-addressable-storage": "1.2.0",
+  "@cere-ddc-sdk/core": "1.2.0",
+  "@cere-ddc-sdk/ddc-client": "1.2.0",
+  "@cere-ddc-sdk/file-storage": "1.2.0",
+  "@cere-ddc-sdk/key-value-storage": "1.2.0",
+  "@cere-ddc-sdk/proto": "1.2.0",
+  "@cere-ddc-sdk/smart-contract": "1.2.0",
 }
 ```
 
 ### Code
 
 ```javascript
-const {
-    connect,
-    accountFromUri,
-    sendTx,
-    registerContract,
-    getContract,
-    CERE,
-    ddcBucket,
-} = require("@cere-ddc-sdk/smart-contract");
-const log = console.log;
+const {DdcClient, PieceArray} = require("@cere-ddc-sdk/ddc-client");
+const {TESTNET} = require("@cere-ddc-sdk/smart-contract");
+const {Tag} = require("@cere-ddc-sdk/content-addressable-storage");
+const {u8aToHex} = require("@polkadot/util");
 
-// Network settings
-const RPC = "wss://rpc.testnet.cere.network:9945";
-// User settings
-const SEED = "0x3be19e0bba3af20bad16298976ec27e25d9330cd997634abb09cb101a0387e8b";
-// DDC Settings
-const CLUSTER_ID = 0;
+const MNEMONIC_BOB = "grass smooth rain offer matter senior crucial slim clip news town opera";
+const MNEMONIC_ALICE = "little absent donor alcohol dynamic unit throw laptop boring tissue pen design";
+const clusterId = 0n;
+const cdnUrl = "https://node-0.v2.us.cdn.testnet.cere.network";
 
-const txOptionsPay = {
-    value: 10n * CERE, // value can be 0, but substrate blockchain network v2.0.0 has bug, so with low value transaction can be failed
-    gasLimit: -1, // Unlimited gas
-};
+// Secret Bob's Data
+const secretData = new Uint8Array([0, 1, 2, 3, 4, 5]);
+const topSecretDataTag = new Tag("data-status", "top_secret");
 
-const createBucket = async () => {
-    //Connect to network and contract
-    let contract;
-    let account;
-    {
-        const {api, chainName, getExplorerUrl} = await connect(RPC);
-        log("Connected to blockchain:", chainName);
+// Public Bob's Data
+const publicData = new Uint8Array([10, 11, 12, 13, 14, 15]);
+const publicDataTag = new Tag("data-status", "public");
 
-        account = accountFromUri(SEED);
-        log("From account", account.address);
+// DEK paths
+const mainDekPath = "bob/data/secret";
+const subDekPath = "bob/data/secret/some";
 
-        const contractName = "ddc_bucket";
-        contract = getContract(contractName, chainName, api);
-        log("Using contract", contractName, "at", contract.address.toString());
-    }
+const main = async () => {
+    console.log("========================= Initialize =========================");
+    // Init Bob client
+    const ddcClientBob = await DdcClient.buildAndConnect(MNEMONIC_BOB, {clusterAddress: cdnUrl, smartContract: DEVNET});
+    // Bob creates bucket in cluster
+    const {bucketId} = await ddcClientBob.createBucket(10n, '{"replication": 3}', clusterId);
+    console.log(`New Bucket Id: ${bucketId}`);
 
-    // Create Bucket
-    let bucketId;
-    {
-        log("Create a bucket...");
-        const tx = contract.tx.bucketCreate(txOptionsPay, '{"replication": 3}', CLUSTER_ID);
-        const result = await sendTx(account, tx);
-        bucketId = ddcBucket.findCreatedBucketId(result.contractEvents || []);
-        log("New BucketId", bucketId, "\n");
+    console.log("========================= Store =========================");
+    // Store encrypted data
+    const secretPieceArray = new PieceArray(secretData, [topSecretDataTag]);
+    const secretUri = await ddcClientBob.store(bucketId, secretPieceArray, {encrypt: true, dekPath: subDekPath});
+    console.log(`Secret URI: ${secretUri}`)
+
+    // Store unencrypted data
+    const publicPieceArray = new PieceArray(publicData, [publicDataTag]);
+    const publicUri = await ddcClientBob.store(bucketId, publicPieceArray);
+    console.log(`Public URI: ${publicUri}`)
+
+
+    console.log("========================= Read data for Bob =========================");
+    // Read secret data without decryption
+    console.log("Read encrypted data for Bob:");
+    let pieceArray = await ddcClientBob.read(secretUri);
+    await readData(pieceArray);
+    console.log("=========================");
+
+    // Read secret decrypted data
+    console.log("Read decrypted data for Bob:");
+    pieceArray = await ddcClientBob.read(secretUri, {dekPath: subDekPath, decrypt: true});
+    await readData(pieceArray);
+    console.log("=========================");
+
+    // Read public data
+    console.log("Read public data for Bob:");
+    pieceArray = await ddcClientBob.read(publicUri);
+    await readData(pieceArray);
+    console.log("=========================");
+
+
+    console.log("========================= Share data for Alice =========================");
+    // Init Alice client
+    const ddcClientAlice = await DdcClient.buildAndConnect(MNEMONIC_ALICE, {
+        clusterAddress: cdnUrl,
+        smartContract: DEVNET
+    });
+    // Share DEK
+    await ddcClientBob.shareData(bucketId, mainDekPath, u8aToHex(ddcClientAlice.boxKeypair.publicKey));
+
+
+    console.log("========================= Read data for Alice =========================");
+    // Read public data
+    console.log("Read public data for Alice:");
+    pieceArray = await ddcClientAlice.read(publicUri);
+    await readData(pieceArray);
+    console.log("=========================");
+
+    // Read secret decrypted data
+    console.log("Read decrypted data for Alice:");
+    pieceArray = await ddcClientAlice.read(secretUri, {dekPath: mainDekPath, decrypt: true});
+    await readData(pieceArray);
+    console.log("=========================");
+}
+
+const readData = async (pieceArray) => {
+    for await (const data of pieceArray.dataReader()) {
+        console.log(`Data Uint8Array: ${data}`)
     }
 }
+
+main().then(() => console.log("DONE")).catch(console.error).finally(() => process.exit());
 ```
 
 Output:
 
 ```
-Connected to blockchain: Cere Testnet
-From account 5DA7sweXtrq4hHLanbdzMowsuaTsm8kSKJnNT44t9VLLamJd
-Using contract ddc_bucket at 5DAx9cTNXYKbbMTQUWzh1cZ46Mj14pnyKvshkVWm8fkfh36X
-Create a bucket…
-New BucketId 5
-```
-
-## Upload and Download
-
-### Dependencies
-
-package.json
-
-```json
-{
-  "@cere-ddc-sdk/core": "1.1.0",
-  "@cere-ddc-sdk/proto": "1.1.0",
-  "@cere-ddc-sdk/file-storage": "1.1.0",
-  "@cere-ddc-sdk/content-addressable-storage": "1.1.0"
-}
-```
-
-### Code
-
-```javascript
-import {Scheme} from "@cere-ddc-sdk/core";
-import {createReadStream} from 'node:fs';
-import {FileStorage, FileStorageConfig} from "@cere-ddc-sdk/file-storage";
-
-const BUCKET_ID = 5n;
-const CDN_NODE_URL = "https://node-0.cdn.testnet.cere.network"
-const SEED = "0x3be19e0bba3af20bad16298976ec27e25d9330cd997634abb09cb101a0387e8b"
-
-const uploadAndDownload = async () => {
-    const scheme = await Scheme.createScheme("sr25519", SEED);
-    const testSubject = new FileStorage(scheme, CDN_NODE_URL, new FileStorageConfig(2, 3))
-
-    //Upload file bytes
-    const readable = createReadStream("test.txt");
-    const uri = await testSubject.upload(BUCKET_ID, readable);
-    console.log(uri);
-
-    //Read file bytes
-    const readers = testSubject.read(BUCKET_ID, uri.cid).getReader()
-    let results
-    while (!(results = await readers.read()).done) {
-        console.log(new TextDecoder().decode(results.value))
-    }
-}
+========================= Initialize =========================
+New Bucket Id: 1
+========================= Store =========================
+Secret URI: cns://1/bafk2bzacedvqeirtgwjaa64e2c4rnck3cvycgr43ux5y4lnbn3l7b6byzx6mk
+Public URI: cns://1/bafk2bzaceae7zjzybt34brsbmck2uovjg5ixg5weikxbhglq3gzqjst2kyvki
+========================= Read data for Bob =========================
+Read encrypted data for Bob:
+Data Uint8Array: 198,59,143,241,223,237,145,22,182,37,64,78,166,136,188,213,81,142,109,6,180,35
+=========================
+Read decrypted data for Bob:
+Data Uint8Array: 0,1,2,3,4,5
+=========================
+Read public data for Bob:
+Data Uint8Array: 10,11,12,13,14,15
+=========================
+========================= Share data for Alice =========================
+========================= Read data for Alice =========================
+Read public data for Alice:
+Data Uint8Array: 10,11,12,13,14,15
+=========================
+Read decrypted data for Alice:
+Data Uint8Array: 0,1,2,3,4,5
+=========================
+DONE
 ```
 {% endtab %}
 
@@ -140,9 +155,9 @@ const uploadAndDownload = async () => {
 More examples and details in [Kotlin SDK README](https://github.com/Cerebellum-Network/cere-ddc-sdk-kotlin)
 {% endhint %}
 
-## Create bucket
+### Create bucket
 
-### Dependencies
+#### Dependencies
 
 build.gradle.kts
 
@@ -163,7 +178,7 @@ dependencies {
 }
 ```
 
-### Code
+#### Code
 
 ```kotlin
 import network.cere.ddc.contract.BucketContractConfig
@@ -204,9 +219,9 @@ Create a bucket...
 New BucketId 6
 ```
 
-## Upload and Download
+### Upload and Download
 
-### Dependencies
+#### Dependencies
 
 build.gradle.kts
 
@@ -219,7 +234,7 @@ dependencies {
 }
 ```
 
-### Code
+#### Code
 
 ```kotlin
 import network.cere.ddc.core.signature.Scheme
