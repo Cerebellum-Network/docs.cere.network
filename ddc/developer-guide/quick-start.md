@@ -109,6 +109,10 @@ const main = async () => {
     pieceArray = await ddcClientAlice.read(secretUri, {dekPath: mainDekPath, decrypt: true});
     await readData(pieceArray);
     console.log("=========================");
+    
+    console.log("========================= Disconnect =========================");
+    await ddcClientBob.disconnect();
+    await ddcClientAlice.disconnect();
 }
 
 const readData = async (pieceArray) => {
@@ -146,6 +150,7 @@ Data Uint8Array: 10,11,12,13,14,15
 Read decrypted data for Alice:
 Data Uint8Array: 0,1,2,3,4,5
 =========================
+========================= Disconnect =========================
 DONE
 ```
 {% endtab %}
