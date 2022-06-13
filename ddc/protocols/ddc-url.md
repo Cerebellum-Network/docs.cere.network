@@ -87,7 +87,7 @@ A bucket can also be identified by a name:
 
     org/ORGANIZATION_NAME/buc/BUCKET_NAME/
 
-BUCKET_NAME is a mutable alias to a bucket. Bucket names exist within an *organization*, and can be freely chosen by owners of the organization. An organization itself has a unique name (ORGANIZATION_NAME), which must be claimed and controlled by user accounts in the DDC name system, on the Cere blockchain. A `org/…/buc/…/` query can be resolved to find the ID of a bucket.
+BUCKET_NAME is a mutable alias to a bucket. Bucket names exist within an *organization*, and can be freely chosen by owners of the organization. The organization itself has a name (ORGANIZATION_NAME), which is unique within the DDC network, and which must be claimed and controlled by user accounts on the Cere blockchain. A `org/…/buc/…/` query can be resolved to find the ID of a bucket.
 
 
 ## Web URLs - The gateway from the web to DDC
@@ -103,12 +103,9 @@ For example:
     ^                       ^
     The web gateway         The DDC URI
 
-A Web URL identifies an object, and suggest a CDN node from which to retrieve it. Given such a request, a CDN node will fetch the corresponding data piece(s) from the DDC network. The client may also use any other CDN node of his choice, or it may use the DDC protocol by itself and fetch the data from the Cere blockchain and from storage nodes directly.
+The URI of an object can always be parsed from a Web URL by detecting the first occurence of the string `/ddc/`.
 
-The DDC URI of an object can always be parsed from a Web URL by detecting the first occurence of the string `/ddc/`.
+A Web URL identifies an object, and suggests a CDN node from which to retrieve it. Given such a request, a CDN node will fetch the corresponding data piece(s) from the DDC network. The client may also use any other CDN node of his choice, or it may use the DDC protocol by itself and fetch the data from the Cere blockchain and from storage nodes directly.
 
-For `file/` and `ifile/` queries, a CDN node will return the file content, including a Content-Type header.
-
-For `piece/` and `ipiece/` queries, it will return the piece data structure encoded in binary ProtoBuf, or in JSON, or only the payload (`piece.data`), depending on options (TODO: specify the options). See the piece specification in [☁ Storage Schema](storage-schema.md).
-
+For usage, see the [☁ CDN API](cdn-api.md).
 

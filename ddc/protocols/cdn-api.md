@@ -13,19 +13,20 @@ The CDN API has two parts:
 
 ### Web Gateway
 
-Resolve a query using a `/ddc/` URI and return the content of a file.
-
-{% hint style="warning" %} This feature is not yet implemented. {% endhint %}
+Resolve a query using a `/ddc/` URI and return the content of a file or piece.
 
 #### Request
 ```http
-GET /ddc/{{rest_of_uri}}
+GET /ddc/…/file/…
+GET /ddc/…/ifile/…
+GET /ddc/…/piece/…
+GET /ddc/…/ipiece/…
 ```
 
 #### Response
-* Status code: 200
-* Body: the content of the file
-* Headers: Content-Type, Content-Disposition
+For `file/` and `ifile/` queries, return the file content and a Content-Type header.
+
+For `piece/` and `ipiece/` queries, return the piece data structure encoded in binary ProtoBuf, or in JSON, or only the payload (`piece.data`), depending on options (TODO: specify the options).
 
 
 ### Download Piece
