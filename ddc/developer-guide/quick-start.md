@@ -12,13 +12,7 @@ package.json
 
 ```json
 {
-  "@cere-ddc-sdk/content-addressable-storage": "1.2.0",
-  "@cere-ddc-sdk/core": "1.2.0",
-  "@cere-ddc-sdk/ddc-client": "1.2.0",
-  "@cere-ddc-sdk/file-storage": "1.2.0",
-  "@cere-ddc-sdk/key-value-storage": "1.2.0",
-  "@cere-ddc-sdk/proto": "1.2.0",
-  "@cere-ddc-sdk/smart-contract": "1.2.0",
+  "@cere-ddc-sdk/ddc-client": "1.2.2"
 }
 ```
 
