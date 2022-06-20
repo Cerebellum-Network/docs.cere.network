@@ -12,13 +12,13 @@ Additional chunks, if any, may be stored in data pieces that must be uploaded be
 The details of content chunking is the responsibility of the uploader.
 The inline chunk should be empty or small to allow fast access to the descriptor.
 Considering that a piece is the smallest unit that can be retrieved at once, the size and number of chunks should be chosen to optimize between parallelism, smoothness of streaming, memory usage, and overhead per chunk. Here are some possible use-cases:
-* **Small files:** inline chunk only; this is most efficient in space and speed.
+* **Small files:** inline chunk only; this is the most efficient in space and speed.
 * **Big files:** all content is in linked data pieces. The file descriptor is the smallest possible.
-* **Streamable files**: access to the start of the content as early as possible. The inline chunk may be used to detect the type, or metadata, or preview of the content (video thumbnail), or other application-specific filters. Other chunks may be small enough to allow smooth seeking in media players.
+* **Streamable files**: access to the start of the content as early as possible. The inline chunk may be used to detect the type, or metadata, or preview of the content (video thumbnail), or other application-specific filters. Other chunks should be small enough to allow smooth seeking in media players.
 
 A file descriptor piece has this structure:
 
-```js
+```javascript
 Piece {
     // The first chunk of the file content. Optional.
     data: […bytes…],
@@ -33,6 +33,7 @@ Piece {
         },
         …
     ],
+    
     tags: [
         // Any tag that can help locate this file,
         // or any file metadata.
@@ -43,7 +44,7 @@ Piece {
 
 A content piece has this structure:
 
-```js
+```javascript
 Piece {
     data: […bytes…], // A chunk of the file content.
 }
