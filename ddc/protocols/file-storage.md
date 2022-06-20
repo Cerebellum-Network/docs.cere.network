@@ -1,6 +1,6 @@
 # 📂 File Storage
 
-{% hint style="info" %} This is the specification of `File Storage v0.1`
+{% hint style="info" %} This is the specification of `File Storage v0.1` based on `Storage Schema v0.1.3`
 {% endhint %}
 
 Files are stored in DDC as a set of data pieces. A file is represented by a piece which is a file descriptor. The file can be referenced by referencing this descriptor piece, e.g., by its CID or its tags. The content of the file is stored in chunks in separate data pieces. The chunk pieces are referenced by CID in the descriptor piece in its `links` field. The chunk pieces are to be found in the same context as the descriptor piece, i.e., same bucket and same cluster.
