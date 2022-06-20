@@ -14,7 +14,7 @@ This is the data model for the API of DDC Storage.
 - [Breaking] Return piece CIDs in `SearchResult`.
 - Added the option `Query.skipData` to fetch piece metadata without payload data in search results.
 - Added the option `Tag.searchable` to specify whether or not a tag should be indexed for fast search.
-- `Tag.value` is now bytes instead of string.
+- `Tag.key` and `Tag.value` may contain bytes instead of only string.
 - Added a table of known tags.
 
 ### v0.1.2
@@ -302,8 +302,8 @@ Below is the structure of a tag:
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| key | [string](#string) |  | The key of the tag. The key should start with a letter (a-zA-Z). |
-| value | [bytes](#bytes) |  | The value of the tag for this key. |
+| key | [bytes](#bytes) |  | The key of the tag. It is usually a UTF-8 string, but it may be any data. |
+| value | [bytes](#bytes) |  | The value of the tag for this key. The value should be interpreted based on the key. |
 | searchable | [SearchType](#pb.SearchType) |  | Whether this tag is searchable or not. Yes by default. |
 
 
