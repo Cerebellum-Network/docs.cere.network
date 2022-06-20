@@ -21,6 +21,7 @@
   * [☁ Storage Schema](ddc/protocols/storage-schema.md)
   * [📂 File Storage](ddc/protocols/file-storage.md)
   * [🕸 Network Topology](ddc/protocols/topology.md)
+  * [🕸 Topology Schema](ddc/protocols/contract-params-schema.md)
 
 ## Mainnet
 
