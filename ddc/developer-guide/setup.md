@@ -1,4 +1,4 @@
-# 🔑 Create Secrets
+# 🔑 Setup
 
 ## Install polkadot{.js} extension
 

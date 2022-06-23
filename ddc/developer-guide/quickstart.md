@@ -1,4 +1,8 @@
-# ⏱ Quick Start
+# ⏱ Quickstart
+
+In order to complete this guide using the DDC client library, you must have an account in Cere Blockchain that have enough CERE tokens (amount depends on your needs) and secret phrase (mnemonic) of that account (required to configure a client). 
+
+Use the [🔗 Setup](setup.md) guide to create and top-up an account.
 
 {% tabs %}
 {% tab title="Javascript" %}
