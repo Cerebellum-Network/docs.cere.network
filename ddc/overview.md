@@ -23,8 +23,7 @@ What are we going to learn after reading the Overview?
 3. Network participants
   3.1 Users
   3.2 Providers
-  3.3 Cluster
-  3.4 Cluster Management
+  3.3 Clusters
 4. Data storage
   Concepts: Buckets
   Large File support
@@ -50,6 +49,31 @@ DDC is a Decentralised Data Cloud offering services to store, retrieve, accelera
 DDC enables you to built real-world use cases on a Decentralized Data cloud where the User owns the data. It provides multiple services on the protocol level and a toolset to quickly get started building dApps and serverless applications. DDC offers flexible data management, secure, reliable and GDPR compliant data storing, fast data delivery, Built-in File Sharing and serverless App hosting. 
 
 ## Network participants
+
+Users are developers who want to store and retrieve data.
+
+Providers want to make money. They provide hardware.
+
+Users do not trust providers to provide correctly and to keep their data safe. Providers do not trust users to pay them.
+That is why users and providers meet around a "cluster". A cluster is chosen by users and providers; this is an easier choice than all users and providers connecting directly.
+Users and providers can come and go in and out of a cluster and be replaced by others.
+A cluster is managed by a set of rules and by a number of cluster validators.
+
+## Services
+
+There are multiple services in DDC.
+
+Blockchain for payments and management.
+
+Storage to persist and search data.
+[Details.](storage-nodes.md)
+
+CDN to access data and power apps.
+[Details.](cdn-nodes.md)
+
+Name service to give names to your objects.
+
+NFT registry to find assets of NFTs.
 
 
 
