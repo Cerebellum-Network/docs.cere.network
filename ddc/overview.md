@@ -1,45 +1,5 @@
 # 📖 Overview
 
-## 
-
-What are we going to learn after reading the Overview?
-* What is the DDC Network?
-* How is it structured?
-* What are the benefits of using DDC?
-* What are the actors in the network?
-* What are clusters?
-* Why do we have clusters?
-* How do clusters connect users and providers?
-* How are clusters managed?
-* Is there any concensus?
-* How does it scale?
-* How do I pay for DDC?
-* What are buckets?
-* Which Tools can I use to get started?
-* How is my data protected?
-
-1. What is the DDC Network?
-2. Benefits of DDC
-3. Network participants
-  3.1 Users
-  3.2 Providers
-  3.3 Clusters
-4. Data storage
-  Concepts: Buckets
-  Large File support
-  What type of data?
-  How is it secured?
-5. Data delivery
-  * Replication
-  * Accelelarate data delivery
-6. Scalability
-7. Payment
-  Users
-  Providers
-8. Markets
-9. Tools
-
-
 ## What is the DDC Network?
 
 DDC is a Decentralised Data Cloud offering services to store, retrieve, accelerate and manage data to enable real world use cases.
@@ -63,39 +23,66 @@ A cluster is managed by a set of rules and by a number of cluster validators.
 
 There are multiple services in DDC.
 
-Blockchain for payments and management.
+- Blockchain for payments and management.
 
-Storage to persist and search data.
+- Storage to persist and search data.
 [Details.](storage-nodes.md)
 
-CDN to access data and power apps.
+- CDN to access data and power apps.
 [Details.](cdn-nodes.md)
 
-Name service to give names to your objects.
+- Name service to give names to your objects.
 
-NFT registry to find assets of NFTs.
+- NFT registry to find assets of NFTs.
 
 
+The operations of service nodes are coordinated and rewarded through DDC smart contracts running on the Cere blockchain.
+
+User connect to services by creating buckets in clusters. A bucket represents the ownership and access rights to data or services.
+
+
+## Scalability
+
+DDC services aim for goals similar to blockchains, that is trustlessness, persistence, decentralization. The key difference is that most data and services are partitioned with a small number of nodes assigned to each partition (unlike blockchains which replicate everything on every node). 
+
+Clusters can grow by adding nodes. Financial incentives attract providers and encourage them to provide more hardware capacity.
+
+The ecosystem can grow with new use-cases, new services, new levels of safety, new payment models, by creating new clusters.
+
+
+## Security
+
+The most critical rules that govern the relations between users, providers, and validators, are executed on the Cere blockchain.
+
+All data is replicated over a number of independent providers. Failing or malicious providers are detected and replaced.
+
+The state and history of all nodes is also represented on-chain using cryptography to validate the amount and quality of service provided.
+
+All data is identified by cryptographic identifiers and signatures that let both apps and validators verify the integrity and provenance of the data.
+
+A system of data encryption and data sharing is provided to protect private data.
+
+
+## Payments and resources
+
+Resource management, pricing, and payments work per cluster. 
+Providers and users agree on the terms when they join a cluster.
+
+Users can reserve resources (e.g., storage, bandwidth). Reserved resources are paid in regular intervals in CERE tokens. Payments are received by clusters and distributed to providers according to their relative contributions of resources and quality of service. Some upfront payment is taken in custody to guarantee revenues of providers. However, revenues are also locked away from providers until proper service has been provided and validated.
+
+
+## Markets
+
+Markets are formed by multiple providers and multiple clusters offering similar services. Each cluster can have a different pricing.
+
+Users choose which clusters they want to subscribe to based on, for example, their price, their service quality or their reputation.
+
+
+## Tools
+
+DDC offers a variety of tools to build applications. The DDC SDKs contain many functionalities including subscription management, upload and search of data, encryption and decryption and validation of data. DDC services are designed for the web and can power applications with or without backend servers. Follow the [developer’s guide](developer-guide) to get started with the SDKs.
 
 
 {% hint style="warning" %}
-TODO
-
-Explain that there are users and providers, services and payments, all forming a market.
-{% endhint %}
-
-{% hint style="warning" %}
-TODO
-
-Write up the [contract concepts](https://github.com/Cerebellum-Network/ddc-bucket-contract/blob/dev/DOC.md), very simplified.
-
-User ownership is abstracted by buckets.
-
-The contract between users and providers is organized by clusters.
-{% endhint %}
-
-{% hint style="warning" %}
-TODO
-
-Explain the ownership of data (self-custody apps or managed apps).
+[Source and diagrams](https://github.com/Cerebellum-Network/ddc-bucket-contract/blob/dev/DOC.md)
 {% endhint %}

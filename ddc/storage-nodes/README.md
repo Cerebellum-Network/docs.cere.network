@@ -1,8 +1,7 @@
-# 🌐 Storage Nodes
+# 🌐 Storage Service
 
-DDC Storage Node is a core component of DDC that is responsible for storing and retrieving the data. It’s written in Go and consists of a large set of components and modules, which are shown in the high level architecture diagram below.
-
-DDC nodes operations are coordinated and rewarded through smart contracts running on the Cere test/main blockchains.
+DDC offers clusters with storage services which persists data safely and allows searching and retrieving data.
+A core component of the storage service is the DDC storage node which is responsible for partitions of the data. Safety and scalability is achieved by spreading the data over a number of nodes.
 
 {% hint style="info" %}
 **For more details, see the documentation of DDC Storage nodes:**

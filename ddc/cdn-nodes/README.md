@@ -1,6 +1,6 @@
-# ☁ CDN Nodes
+# ☁ CDN Service
 
-A CDN node is a web gateway to DDC. It can act as a web server and provide content to
+The CDN service is offered by CDN nodes. A CDN node is a gateway from the Web to DDC. It can act as a web server and provide content to
 regural HTTP clients, especially web browsers. Web apps can rely on CDN nodes to serve various
 assets, or even be hosted completely on DDC.
 
@@ -12,6 +12,6 @@ as well as data replication, and caching.
 
 **See the [☁ CDN API](/ddc/protocols/cdn-api.md) for details.**
 
-## Implementation
+## Implementation of CDN node
 
 {% embed url="https://github.com/Cerebellum-Network/ddc-gateway-node" %}
