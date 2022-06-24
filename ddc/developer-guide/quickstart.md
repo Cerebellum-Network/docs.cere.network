@@ -1,170 +1,43 @@
+---
+description: Learn how to get started with DDC using the SDK client library.
+---
+
 # ⏱ Quickstart
 
-In order to complete this guide using the DDC client library, you must have an account in Cere Blockchain that have enough CERE tokens (amount depends on your needs) and secret phrase (mnemonic) of that account (required to configure a client). 
+In order to complete this guide using the DDC client library, you must have an account in Cere Blockchain that have enough CERE tokens (amount depends on your needs) and secret phrase (mnemonic) of that account (required to configure a client).
 
 Use the [🔗 Setup](setup.md) guide to create and top-up an account.
 
+### Installing the client library
+
 {% tabs %}
-{% tab title="Javascript" %}
-{% hint style="info" %}
-More examples and details in [JS SDK README](https://github.com/Cerebellum-Network/cere-ddc-sdk-js)
-{% endhint %}
+{% tab title="JavaScript" %}
+Latest version of SDK can be found on [releases](https://github.com/Cerebellum-Network/cere-ddc-sdk-js/releases) page.
 
-### Dependencies
+```
+npm install --save @cere-ddc-sdk/ddc-client@1.2.6
+```
 
-package.json
+_**package.json**_
 
 ```json
 {
-  "@cere-ddc-sdk/ddc-client": "1.2.2"
+  "@cere-ddc-sdk/ddc-client": "1.2.6"
 }
-```
-
-### Code
-
-```javascript
-const {DdcClient, PieceArray} = require("@cere-ddc-sdk/ddc-client");
-const {TESTNET} = require("@cere-ddc-sdk/smart-contract");
-const {Tag} = require("@cere-ddc-sdk/content-addressable-storage");
-const {u8aToHex} = require("@polkadot/util");
-
-const MNEMONIC_BOB = "grass smooth rain offer matter senior crucial slim clip news town opera";
-const MNEMONIC_ALICE = "little absent donor alcohol dynamic unit throw laptop boring tissue pen design";
-const clusterId = 0n;
-const cdnUrl = "https://node-0.v2.us.cdn.testnet.cere.network";
-
-// Secret Bob's Data
-const secretData = new Uint8Array([0, 1, 2, 3, 4, 5]);
-const topSecretDataTag = new Tag("data-status", "top_secret");
-
-// Public Bob's Data
-const publicData = new Uint8Array([10, 11, 12, 13, 14, 15]);
-const publicDataTag = new Tag("data-status", "public");
-
-// DEK paths
-const mainDekPath = "bob/data/secret";
-const subDekPath = "bob/data/secret/some";
-
-const main = async () => {
-    console.log("========================= Initialize =========================");
-    // Init Bob client
-    const ddcClientBob = await DdcClient.buildAndConnect(MNEMONIC_BOB, {clusterAddress: cdnUrl, smartContract: DEVNET});
-    // Bob creates bucket in cluster
-    const {bucketId} = await ddcClientBob.createBucket(10n, '{"replication": 3}', clusterId);
-    console.log(`New Bucket Id: ${bucketId}`);
-
-    console.log("========================= Store =========================");
-    // Store encrypted data
-    const secretPieceArray = new PieceArray(secretData, [topSecretDataTag]);
-    const secretUri = await ddcClientBob.store(bucketId, secretPieceArray, {encrypt: true, dekPath: subDekPath});
-    console.log(`Secret URI: ${secretUri}`)
-
-    // Store unencrypted data
-    const publicPieceArray = new PieceArray(publicData, [publicDataTag]);
-    const publicUri = await ddcClientBob.store(bucketId, publicPieceArray);
-    console.log(`Public URI: ${publicUri}`)
-
-
-    console.log("========================= Read data for Bob =========================");
-    // Read secret data without decryption
-    console.log("Read encrypted data for Bob:");
-    let pieceArray = await ddcClientBob.read(secretUri);
-    await readData(pieceArray);
-    console.log("=========================");
-
-    // Read secret decrypted data
-    console.log("Read decrypted data for Bob:");
-    pieceArray = await ddcClientBob.read(secretUri, {dekPath: subDekPath, decrypt: true});
-    await readData(pieceArray);
-    console.log("=========================");
-
-    // Read public data
-    console.log("Read public data for Bob:");
-    pieceArray = await ddcClientBob.read(publicUri);
-    await readData(pieceArray);
-    console.log("=========================");
-
-
-    console.log("========================= Share data for Alice =========================");
-    // Init Alice client
-    const ddcClientAlice = await DdcClient.buildAndConnect(MNEMONIC_ALICE, {
-        clusterAddress: cdnUrl,
-        smartContract: DEVNET
-    });
-    // Share DEK
-    await ddcClientBob.shareData(bucketId, mainDekPath, u8aToHex(ddcClientAlice.boxKeypair.publicKey));
-
-
-    console.log("========================= Read data for Alice =========================");
-    // Read public data
-    console.log("Read public data for Alice:");
-    pieceArray = await ddcClientAlice.read(publicUri);
-    await readData(pieceArray);
-    console.log("=========================");
-
-    // Read secret decrypted data
-    console.log("Read decrypted data for Alice:");
-    pieceArray = await ddcClientAlice.read(secretUri, {dekPath: mainDekPath, decrypt: true});
-    await readData(pieceArray);
-    console.log("=========================");
-    
-    console.log("========================= Disconnect =========================");
-    await ddcClientBob.disconnect();
-    await ddcClientAlice.disconnect();
-}
-
-const readData = async (pieceArray) => {
-    for await (const data of pieceArray.dataReader()) {
-        console.log(`Data Uint8Array: ${data}`)
-    }
-}
-
-main().then(() => console.log("DONE")).catch(console.error).finally(() => process.exit());
-```
-
-Output:
-
-```
-========================= Initialize =========================
-New Bucket Id: 1
-========================= Store =========================
-Secret URI: cns://1/bafk2bzacedvqeirtgwjaa64e2c4rnck3cvycgr43ux5y4lnbn3l7b6byzx6mk
-Public URI: cns://1/bafk2bzaceae7zjzybt34brsbmck2uovjg5ixg5weikxbhglq3gzqjst2kyvki
-========================= Read data for Bob =========================
-Read encrypted data for Bob:
-Data Uint8Array: 198,59,143,241,223,237,145,22,182,37,64,78,166,136,188,213,81,142,109,6,180,35
-=========================
-Read decrypted data for Bob:
-Data Uint8Array: 0,1,2,3,4,5
-=========================
-Read public data for Bob:
-Data Uint8Array: 10,11,12,13,14,15
-=========================
-========================= Share data for Alice =========================
-========================= Read data for Alice =========================
-Read public data for Alice:
-Data Uint8Array: 10,11,12,13,14,15
-=========================
-Read decrypted data for Alice:
-Data Uint8Array: 0,1,2,3,4,5
-=========================
-========================= Disconnect =========================
-DONE
 ```
 {% endtab %}
 
 {% tab title="Kotlin" %}
-{% hint style="info" %}
-More examples and details in [Kotlin SDK README](https://github.com/Cerebellum-Network/cere-ddc-sdk-kotlin)
+{% hint style="warning" %}
+At the moment Kotlin SDK is outdated :cry:
 {% endhint %}
 
-### Create bucket
+\
+Latest version of SDK can be found on [releases](https://github.com/Cerebellum-Network/cere-ddc-sdk-kotlin/releases) page.
 
-#### Dependencies
+_**build.gradle.kts**_
 
-build.gradle.kts
-
-```kts
+```
 repositories {
     maven("https://jitpack.io")
     ivy("https://github.com") {
@@ -177,90 +50,265 @@ repositories {
 }
 
 dependencies {
-    api("com.github.Cerebellum-Network.cere-ddc-sdk-kotlin:smart-contract:1.0.4.Final")
-}
-```
-
-#### Code
-
-```kotlin
-import network.cere.ddc.contract.BucketContractConfig
-import network.cere.ddc.contract.BucketSmartContract
-import network.cere.ddc.contract.blockchain.BlockchainConfig
-import network.cere.ddc.contract.model.Balance
-import java.math.BigDecimal
-
-// Network settings
-const val URL = "wss://rpc.testnet.cere.network:9945";
-const val CONTRACT_ADDRESS = "5DAx9cTNXYKbbMTQUWzh1cZ46Mj14pnyKvshkVWm8fkfh36X";
-// User settings
-const val SEED = "0x3be19e0bba3af20bad16298976ec27e25d9330cd997634abb09cb101a0387e8b";
-// DDC Settings
-const val CLUSTER_ID = 0L;
-
-suspend fun main() {
-    val config = BlockchainConfig(URL, CONTRACT_ADDRESS, SEED)
-    val contractConfig = BucketContractConfig()
-
-    val contract = BucketSmartContract.buildAndConnect(config, contractConfig)
-    println("Connected to blockchain");
-
-    // value can be 0, but substrate blockchain network v2.0.0 has bug, so with low value transaction can be failed
-    val balance = Balance(BigDecimal("10"))
-
-    println("Create a bucket...")
-    val bucketCreatedEvent = contract.bucketCreate(balance, "{\"replication\": 3}", CLUSTER_ID)
-    println("New BucketId ${bucketCreatedEvent.bucketId}")
-}
-```
-
-Output:
-
-```
-Connected to blockchain
-Create a bucket...
-New BucketId 6
-```
-
-### Upload and Download
-
-#### Dependencies
-
-build.gradle.kts
-
-```kts
-dependencies {
-    api("com.github.Cerebellum-Network.cere-ddc-sdk-kotlin:core:1.0.4.Final")
-    api("com.github.Cerebellum-Network.cere-ddc-sdk-kotlin:proto:1.0.4.Final")
-    api("com.github.Cerebellum-Network.cere-ddc-sdk-kotlin:content-addressable-storage:1.0.4.Final")
-    api("com.github.Cerebellum-Network.cere-ddc-sdk-kotlin:file-storage:1.0.4.Final")
-}
-```
-
-#### Code
-
-```kotlin
-import network.cere.ddc.core.signature.Scheme
-import network.cere.ddc.storage.config.FileStorageConfig
-import java.nio.file.Paths
-
-const val BUCKET_ID = 6L
-const val CDN_NODE_URL = "https://node-0.cdn.testnet.cere.network"
-const val SEED = "0x3be19e0bba3af20bad16298976ec27e25d9330cd997634abb09cb101a0387e8b"
-
-suspend fun main() {
-    val scheme = Scheme.create(Scheme.SR_25519, SEED)
-    val fileStorage = FileStorage(scheme, CDN_NODE_URL, FileStorageConfig(parallel = 2, chunkSizeInBytes = 3))
-
-    // Upload file
-    val filePath = Paths.get("test.txt")
-    val uri = fileStorage.upload(BUCKET_ID, filePath)
-    println(uri)
-
-    // Download file
-    val newFilePath = Paths.get("test_new.txt")
-    fileStorage.download(BUCKET_ID, uri.cid, newFilePath)
+    api("com.github.Cerebellum-Network.cere-ddc-sdk-kotlin:ddc-client:1.0.5.Final")
 }
 ```
 {% endtab %}
 {% endtabs %}
+
+### Setup client
+
+{% tabs %}
+{% tab title="JavaScript" %}
+```javascript
+import {mnemonicGenerate} from "@polkadot/util-crypto";
+import {DdcClient} from "@cere-ddc-sdk/ddc-client";
+
+// Cluster address is either string (url of the CDN node to use) or number (id of the CDN cluster to use)
+// CDN node addresses and cluster ids can be found here: https://docs.cere.network/testnet/ddc-network-testnet
+const options = {clusterAddress: 2n};
+
+// The secret phrase is going to be used to sign requests and encrypt/decrypt (optional) data
+// Replace mnemonicGenerate by your secret phrase generated during account setup (see https://docs.cere.network/ddc/developer-guide/setup)
+const secretPhrase = mnemonicGenerate();
+
+// Initialise DDC client and connect to blockchain
+const ddcClient = DdcClient.buildAndConnect(options, secretPhrase);
+```
+{% endtab %}
+
+{% tab title="Kotlin" %}
+{% hint style="warning" %}
+At the moment Kotlin SDK is outdated :cry:
+{% endhint %}
+{% endtab %}
+{% endtabs %}
+
+### Create bucket
+
+Bucket concept overview can be found on [Concepts](https://docs.cere.network/ddc/concepts) page.&#x20;
+
+{% tabs %}
+{% tab title="JavaScript" %}
+```javascript
+const createBucket = async () => {
+    // Amount of tokens to deposit to the bucket balance
+    const balance = 10n;
+    // Bucket parameters
+    // 'replication' is a number of copies of each piece. Minimum 1. Maximum 9.
+    const parameters = `{"replication": 3}`
+    // Id of the storage cluster on which the bucket should be created
+    // Storage custer ids can be found here: https://docs.cere.network/testnet/ddc-network-testnet
+    const storageClusterId = 1n
+    
+    // Create bucket and return even produced by Smart Contract that contains generated bucketId that should be used later to store and read data  
+    const bucketCreatedEvent = await ddcClient.createBucket(balance, parameters, storageClusterId);
+    console.log("Successfully created bucket. Id: " + bucketCreatedEvent.bucketId);
+}
+```
+{% endtab %}
+
+{% tab title="Kotlin" %}
+{% hint style="warning" %}
+At the moment Kotlin SDK is outdated :cry:
+{% endhint %}
+{% endtab %}
+{% endtabs %}
+
+### Store piece
+
+Piece is the smallest indivisible unit stored in DDC. A piece consists of the data and [tags](https://docs.cere.network/ddc/protocols/storage-schema#tag) that can be used to search pieces or to store not searchable metadata .&#x20;
+
+Data can be encrypted by client (see [Encryption](https://docs.cere.network/ddc/developer-guide/quickstart#encryption))
+
+{% tabs %}
+{% tab title="JavaScript" %}
+```javascript
+import {Piece} from "@cere-ddc-sdk/ddc-client";
+import {Tag, SearchType} from "@cere-ddc-sdk/core";
+
+const storeData = async () => {    
+    // ID of the bucket in which the piece should be stored
+    const bucketId = 2n
+
+    // Data can be encrypted or not (depends on store options 'encrypt' flag)
+    const data = new TextEncoder().encode("Hello world!");
+    // Tags can be used to store metadata or to search pieces
+    const tags = [
+        // Tags are searchable by default. In this example piece can be found by `usedId`
+        new Tag("userId", "5868302"),
+        // To store metadata, not searchable tags  can be used (they are filtered out during piece indexing)
+        new Tag("type", "photo", SearchType.NOT_SEARCHABLE)
+    ];
+    
+    // Tags and links are optional
+    const piece = new Piece(data, tags, links);
+    
+    const storeOptions = {
+        // True - store encrypted data. False - store unencrypted data.
+        encrypt: true
+        // If empty or not passed - data will be encrypted by master DEK.
+        dekPath: "/documents/personal",
+    };
+    
+    const pieceUri = await ddcClient.store(bucketId, piece, storeOptions);
+    console.log("Successfully uploaded unencrypted piece. CID: " + pieceUri.cid);
+}
+```
+{% endtab %}
+
+{% tab title="Kotlin" %}
+{% hint style="warning" %}
+At the moment Kotlin SDK is outdated :cry:
+{% endhint %}
+{% endtab %}
+{% endtabs %}
+
+### Read piece
+
+Encrypted data can be decrypted by client (see [Encryption](https://docs.cere.network/ddc/developer-guide/quickstart#encryption)).
+
+{% tabs %}
+{% tab title="JavaScript" %}
+```javascript
+import {PieceUri} from "@cere-ddc-sdk/content-addressable-storage";
+
+const readData = async () => {
+    const readOptions = {
+        // True - return decrypted data. False - return data as is.
+        decrypt: true
+        // If empty or not passed - data will be decrypted by master DEK.
+        dekPath: "/documents",
+    };
+    
+    // ID of the bucket from which the piece should be read
+    const bucketId = 2n
+    // CID of the piece to read
+    const cid = "bafk2bzacecdzr32hb7pq7ksx73hxbn2pgata2anniuwvv5nov67gcznvuou5y"
+    const pieceUri = {
+        bucketId: bucketId,
+        cid: cid
+    };
+    
+    const piece = await ddcClient.read(pieceUri);
+    console.log("Successfully read data. CID: " + piece.cid);
+}
+```
+{% endtab %}
+
+{% tab title="Kotlin" %}
+{% hint style="warning" %}
+At the moment Kotlin SDK is outdated :cry:
+{% endhint %}
+{% endtab %}
+{% endtabs %}
+
+### Search pieces
+
+Search is based on [tags](https://docs.cere.network/ddc/protocols/storage-schema#tag) that are combined using logical 'or' operator (e.g. tagA = N or tagB = M). \
+\
+Search operation is distributed and result is collected from the nodes of the storage cluster where bucket is stored (because bucket is distributed across all cluster nodes).
+
+{% tabs %}
+{% tab title="JavaScript" %}
+```javascript
+const searchPieces = async () => {
+    // ID of the bucket where to search pieces
+    const bucketId = 2n
+    
+    // Tags to search pieces
+    const tags = [
+        new Tag("userId", "5868302"),
+        new Tag("userId", "5868303"),
+    ];
+    // True - return only meatadata (CID and tags). False - return both data and metadata
+    const skipData = true;
+    const query = {
+        bucketId: bucketId,
+        tags: tags,
+        skipData: skipData
+    };
+    
+    const pieces = await ddcClient.search(query);
+    console.log("Successfully searched pieces. CIDS: " + pieces.map(e => e.cid));
+}
+```
+{% endtab %}
+
+{% tab title="Kotlin" %}
+{% hint style="warning" %}
+At the moment Kotlin SDK is outdated :cry:
+{% endhint %}
+{% endtab %}
+{% endtabs %}
+
+### Share data
+
+Data sharing is implemented via DEK re-encryption (see [Encryption](https://docs.cere.network/ddc/developer-guide/quickstart#encryption-terms)).
+
+In order to share data to partner, partner have to share his encryption public key to data owner (generated via his secret phrase).&#x20;
+
+Then partner can read encrypted data having his secret phrase and shared DEK path via DDC Client.
+
+{% tabs %}
+{% tab title="JavaScript" %}
+```javascript
+const shareData = async (bucketId: bigint) => {
+    // Partner encryption public key
+    const partnerPublicKeyHex = "0xkldaf3a8as2109...";
+    // DEK path to share access to (hierarchical encryption)
+    const dekPath = "/photos"
+    
+    const edekUri = await ddcClient.shareData(bucketId, "/photos", partnerPublicKeyHex);
+    console.log("Successfully shared data (uploaded EDEK). CID: " + edekUri.cid);
+}
+```
+{% endtab %}
+
+{% tab title="Kotlin" %}
+{% hint style="warning" %}
+At the moment Kotlin SDK is outdated :cry:
+{% endhint %}
+{% endtab %}
+{% endtabs %}
+
+### Encryption
+
+#### Overview
+
+The DDC Client Library provides encryption/decryption out of the box. \
+\
+Secret phrase passed in DDC Client on setup is used to generate (via blake2b) master `DEK`.
+
+`DEK path` per piece can be passed inside `storeOptions` to `store` function. Then DEK path is split by '/' into parts and each part (from left to right) is used to generate DEK based on previous value (master DEK is an initial value).
+
+_Example_
+
+Secret phrase = `super secret phrase`
+
+Master DEK = blake2b(`super secret phrase`)
+
+Piece DEK path = `/documents/personal`
+
+Piece DEK = blake2b(`personal` + blake2b(`documents` + blake2b(`super secret phrase`)))
+
+_Explanation_
+
+The recursively (in reverse order) generated DEK allows to implement hierarchical encryption where data encrypted by `/documents/personal`  can be decrypted knowing one of the values:
+
+* blake2b(`super secret phrase`)
+* blake2b(`documents` + blake2b(`super secret phrase`))
+
+_Use case example_
+
+Directory based access (file sharing platform)&#x20;
+
+#### Terms
+
+**`blake2b`** is a one of the fastest cryptographic hash functions
+
+**`DEK`** is a data encryption key used to encrypt the data (master DEK generated based on secret phrase).
+
+**`EDEK`** is an encrypted data encryption key that is stored in DDC and used to share data (re-encrypt DEK per partner).
+
+**`DEK path`** is a hierarchical encryption path (e.g. /photos/friends) that is used to generate `DEK` recursively (uses master DEK as base) and share data on any level. Similar to directory based access.
