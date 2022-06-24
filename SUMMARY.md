@@ -4,7 +4,7 @@
 
 ## DDC
 
-* [📖 Concepts](ddc/concepts.md)
+* [📖 Overview](ddc/overview.md)
 * [⚙ Developer Guide](ddc/developer-guide/README.md)
   * [🔑 Create Secrets](ddc/developer-guide/create-secrets.md)
   * [⏱ Quick Start](ddc/developer-guide/quick-start.md)
@@ -12,8 +12,8 @@
   * [⚒ Build Node](ddc/provider-guide/build-node.md)
   * [⏱ Quick Start](ddc/provider-guide/quick-start.md)
 * [📦 SDK](ddc/sdk.md)
-* [☁ CDN Nodes](ddc/cdn-nodes/README.md)
-* [🌐 Storage Nodes](ddc/storage-nodes/README.md)
+* [☁ CDN Service](ddc/cdn-nodes/README.md)
+* [🌐 Storage Service](ddc/storage-nodes/README.md)
 * [⚖ Smart Contracts](ddc/smart-contracts.md)
 * [📃 Protocols](ddc/protocols/README.md)
   * [🔗 DDC URLs](ddc/protocols/ddc-url.md)
