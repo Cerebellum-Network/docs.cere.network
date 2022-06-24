@@ -4,7 +4,7 @@
 
 ## DDC
 
-* [📖 Concepts](ddc/concepts.md)
+* [📖 Overview](ddc/overview.md)
 * [⚙ Developer Guide](ddc/developer-guide/README.md)
   * [🔑 Create Secrets](ddc/developer-guide/create-secrets.md)
   * [⏱ Quick Start](ddc/developer-guide/quick-start.md)
