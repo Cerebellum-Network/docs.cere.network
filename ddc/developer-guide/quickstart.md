@@ -1,5 +1,5 @@
 ---
-description: Learn how to get started with DDC using the SDK client library.
+description: Learn how to get started with DDC using the SDK Client Library.
 ---
 
 # ⏱ Quickstart
@@ -86,7 +86,7 @@ At the moment Kotlin SDK is outdated :cry:
 
 ### Create bucket
 
-Bucket concept overview can be found on [Concepts](https://docs.cere.network/ddc/concepts) page.&#x20;
+Bucket concept overview can be found on [Concepts](../concepts.md) page.&#x20;
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -96,10 +96,10 @@ const createBucket = async () => {
     const balance = 10n;
     // Bucket parameters
     // 'replication' is a number of copies of each piece. Minimum 1. Maximum 9.
-    const parameters = `{"replication": 3}`
+    const parameters = `{"replication": 3}`;
     // Id of the storage cluster on which the bucket should be created
     // Storage custer ids can be found here: https://docs.cere.network/testnet/ddc-network-testnet
-    const storageClusterId = 1n
+    const storageClusterId = 1n;
     
     // Create bucket and return even produced by Smart Contract that contains generated bucketId that should be used later to store and read data  
     const bucketCreatedEvent = await ddcClient.createBucket(balance, parameters, storageClusterId);
@@ -117,9 +117,9 @@ At the moment Kotlin SDK is outdated :cry:
 
 ### Store piece
 
-Piece is the smallest indivisible unit stored in DDC. A piece consists of the data and [tags](https://docs.cere.network/ddc/protocols/storage-schema#tag) that can be used to search pieces or to store not searchable metadata .&#x20;
+Piece is the smallest indivisible unit stored in DDC. A piece consists of the data and [tags](../protocols/storage-schema.md) that can be used to search pieces or to store not searchable metadata .&#x20;
 
-Data can be encrypted by client (see [Encryption](https://docs.cere.network/ddc/developer-guide/quickstart#encryption))
+Data can be encrypted by client (see [Encryption](quickstart.md#encryption))
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -129,7 +129,7 @@ import {Tag, SearchType} from "@cere-ddc-sdk/core";
 
 const storeData = async () => {    
     // ID of the bucket in which the piece should be stored
-    const bucketId = 2n
+    const bucketId = 2n;
 
     // Data can be encrypted or not (depends on store options 'encrypt' flag)
     const data = new TextEncoder().encode("Hello world!");
@@ -166,7 +166,7 @@ At the moment Kotlin SDK is outdated :cry:
 
 ### Read piece
 
-Encrypted data can be decrypted by client (see [Encryption](https://docs.cere.network/ddc/developer-guide/quickstart#encryption)).
+Encrypted data can be decrypted by client (see [Encryption](quickstart.md#encryption)).
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -182,9 +182,9 @@ const readData = async () => {
     };
     
     // ID of the bucket from which the piece should be read
-    const bucketId = 2n
+    const bucketId = 2n;
     // CID of the piece to read
-    const cid = "bafk2bzacecdzr32hb7pq7ksx73hxbn2pgata2anniuwvv5nov67gcznvuou5y"
+    const cid = "bafk2bzacecdzr32hb7pq7ksx73hxbn2pgata2anniuwvv5nov67gcznvuou5y";
     const pieceUri = {
         bucketId: bucketId,
         cid: cid
@@ -205,7 +205,7 @@ At the moment Kotlin SDK is outdated :cry:
 
 ### Search pieces
 
-Search is based on [tags](https://docs.cere.network/ddc/protocols/storage-schema#tag) that are combined using logical 'or' operator (e.g. tagA = N or tagB = M). \
+Search is based on [tags](../protocols/storage-schema.md) that are combined using logical 'or' operator (e.g. tagA = N or tagB = M). \
 \
 Search operation is distributed and result is collected from the nodes of the storage cluster where bucket is stored (because bucket is distributed across all cluster nodes).
 
@@ -214,7 +214,7 @@ Search operation is distributed and result is collected from the nodes of the st
 ```javascript
 const searchPieces = async () => {
     // ID of the bucket where to search pieces
-    const bucketId = 2n
+    const bucketId = 2n;
     
     // Tags to search pieces
     const tags = [
@@ -244,7 +244,7 @@ At the moment Kotlin SDK is outdated :cry:
 
 ### Share data
 
-Data sharing is implemented via DEK re-encryption (see [Encryption](https://docs.cere.network/ddc/developer-guide/quickstart#encryption-terms)).
+Data sharing is implemented via DEK re-encryption (see [Encryption](quickstart.md#encryption)).
 
 In order to share data to partner, partner have to share his encryption public key to data owner (generated via his secret phrase).&#x20;
 
@@ -257,7 +257,7 @@ const shareData = async (bucketId: bigint) => {
     // Partner encryption public key
     const partnerPublicKeyHex = "0xkldaf3a8as2109...";
     // DEK path to share access to (hierarchical encryption)
-    const dekPath = "/photos"
+    const dekPath = "/photos";
     
     const edekUri = await ddcClient.shareData(bucketId, "/photos", partnerPublicKeyHex);
     console.log("Successfully shared data (uploaded EDEK). CID: " + edekUri.cid);
@@ -278,7 +278,7 @@ At the moment Kotlin SDK is outdated :cry:
 
 The DDC Client Library provides encryption/decryption out of the box. \
 \
-Secret phrase passed in DDC Client on setup is used to generate (via blake2b) master `DEK`.
+Secret phrase passed in DDC Client on setup is used to generate (via blake2b-256) master `DEK`.
 
 `DEK path` per piece can be passed inside `storeOptions` to `store` function. Then DEK path is split by '/' into parts and each part (from left to right) is used to generate DEK based on previous value (master DEK is an initial value).
 
@@ -286,18 +286,18 @@ _Example_
 
 Secret phrase = `super secret phrase`
 
-Master DEK = blake2b(`super secret phrase`)
+Master DEK = blake2b-256(`super secret phrase`)
 
 Piece DEK path = `/documents/personal`
 
-Piece DEK = blake2b(`personal` + blake2b(`documents` + blake2b(`super secret phrase`)))
+Piece DEK = blake2b-256(`personal` + blake2b-256(`documents` + blake2b-256(`super secret phrase`)))
 
 _Explanation_
 
 The recursively (in reverse order) generated DEK allows to implement hierarchical encryption where data encrypted by `/documents/personal`  can be decrypted knowing one of the values:
 
-* blake2b(`super secret phrase`)
-* blake2b(`documents` + blake2b(`super secret phrase`))
+* blake2b-256(`super secret phrase`)
+* blake2b-256(`documents` + blake2b-256(`super secret phrase`))
 
 _Use case example_
 
@@ -305,7 +305,7 @@ Directory based access (file sharing platform)&#x20;
 
 #### Terms
 
-**`blake2b`** is a one of the fastest cryptographic hash functions
+**`blake2b-256`** is a one of the fastest cryptographic hash functions
 
 **`DEK`** is a data encryption key used to encrypt the data (master DEK generated based on secret phrase).
 

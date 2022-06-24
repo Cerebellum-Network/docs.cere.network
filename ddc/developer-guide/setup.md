@@ -1,3 +1,9 @@
+---
+description: >-
+  Learn how to create account, extract private/public keys required for client
+  libraries and deposit tokens to the account
+---
+
 # 🔑 Setup
 
 ## Install polkadot{.js} extension
