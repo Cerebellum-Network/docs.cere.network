@@ -26,10 +26,10 @@ There are multiple services in DDC.
 - Blockchain for payments and management.
 
 - Storage to persist and search data.
-[Details.](storage-nodes.md)
+[Details.](storage-nodes)
 
 - CDN to access data and power apps.
-[Details.](cdn-nodes.md)
+[Details.](cdn-nodes)
 
 - Name service to give names to your objects.
 
