@@ -1,5 +1,59 @@
 # 📖 Overview
 
+## 
+
+What are we going to learn after reading the Overview?
+* What is the DDC Network?
+* How is it structured?
+* What are the benefits of using DDC?
+* What are the actors in the network?
+* What are clusters?
+* Why do we have clusters?
+* How do clusters connect users and providers?
+* How are clusters managed?
+* Is there any concensus?
+* How does it scale?
+* How do I pay for DDC?
+* What are buckets?
+* Which Tools can I use to get started?
+* How is my data protected?
+
+1. What is the DDC Network?
+2. Benefits of DDC
+3. Network participants
+  3.1 Users
+  3.2 Providers
+  3.3 Cluster
+  3.4 Cluster Management
+4. Data storage
+  Concepts: Buckets
+  Large File support
+  What type of data?
+  How is it secured?
+5. Data delivery
+  * Replication
+  * Accelelarate data delivery
+6. Scalability
+7. Payment
+  Users
+  Providers
+8. Markets
+9. Tools
+
+
+## What is the DDC Network?
+
+DDC is a Decentralised Data Cloud offering services to store, retrieve, accelerate and manage data to enable real world use cases.
+
+## Benefits of DDC
+
+DDC enables you to built real-world use cases on a Decentralized Data cloud where the User owns the data. It provides multiple services on the protocol level and a toolset to quickly get started building dApps and serverless applications. DDC offers flexible data management, secure, reliable and GDPR compliant data storing, fast data delivery, Built-in File Sharing and serverless App hosting. 
+
+## Network participants
+
+
+
+
 {% hint style="warning" %}
 TODO
 
