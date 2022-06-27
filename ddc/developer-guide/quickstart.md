@@ -15,14 +15,30 @@ Use the [🔗 Setup](setup.md) guide to create and top-up an account.
 Latest version of SDK can be found on [releases](https://github.com/Cerebellum-Network/cere-ddc-sdk-js/releases) page.
 
 ```
-npm install --save @cere-ddc-sdk/ddc-client@1.2.6
+npm install --save @cere-ddc-sdk/ddc-client@1.2.7
+npm install --save-dev  typescript
 ```
 
 _**package.json**_
 
 ```json
 {
-  "@cere-ddc-sdk/ddc-client": "1.2.6"
+  "name": "developer-guide",
+  "version": "1.0.0",
+  "description": "An example illustrating usage of the SDK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "NAME",
+  "license": "ISC",
+  "dependencies": {
+    "@cere-ddc-sdk/ddc-client": "^1.2.7"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  },
+  "type": "module"
 }
 ```
 {% endtab %}
@@ -64,16 +80,21 @@ dependencies {
 import {mnemonicGenerate} from "@polkadot/util-crypto";
 import {DdcClient} from "@cere-ddc-sdk/ddc-client";
 
-// Cluster address is either string (url of the CDN node to use) or number (id of the CDN cluster to use)
-// CDN node addresses and cluster ids can be found here: https://docs.cere.network/testnet/ddc-network-testnet
-const options = {clusterAddress: 2n};
+const setupClient = async () => {
+    // Cluster address is either string (url of the CDN node to use) or number (id of the CDN cluster to use)
+    // CDN node addresses and cluster ids can be found here: https://docs.cere.network/testnet/ddc-network-testnet
+    const options = {clusterAddress: 2n};
 
-// The secret phrase is going to be used to sign requests and encrypt/decrypt (optional) data
-// Replace mnemonicGenerate by your secret phrase generated during account setup (see https://docs.cere.network/ddc/developer-guide/setup)
-const secretPhrase = mnemonicGenerate();
+    // The secret phrase is going to be used to sign requests and encrypt/decrypt (optional) data
+    // Replace mnemonicGenerate by your secret phrase generated during account setup (see https://docs.cere.network/ddc/developer-guide/setup)
+    const secretPhrase = mnemonicGenerate();
 
-// Initialise DDC client and connect to blockchain
-const ddcClient = DdcClient.buildAndConnect(options, secretPhrase);
+    // Initialise DDC client and connect to blockchain
+    const ddcClient = await DdcClient.buildAndConnect(options, secretPhrase);
+    console.log("DDC Client successfully connected.");
+
+    return ddcClient
+}
 ```
 {% endtab %}
 
@@ -88,21 +109,33 @@ At the moment Kotlin SDK is outdated :cry:
 
 Bucket concept overview can be found on [Concepts](../concepts.md) page.&#x20;
 
+DDC client setup explained in [Setup client](quickstart.md#setup-client) section.
+
+{% hint style="info" %}
+On bucket creation, you pay tokens for the bucket reservation. Please, be careful and don't create unnecessary buckets that can be unused or forgotten.&#x20;
+{% endhint %}
+
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
 const createBucket = async () => {
+    const ddcClient = await setupClient()
+
     // Amount of tokens to deposit to the bucket balance
     const balance = 10n;
     // Bucket parameters
-    // 'replication' is a number of copies of each piece. Minimum 1. Maximum 9.
-    const parameters = `{"replication": 3}`;
+    const parameters = {
+        // Number of copies of each piece. Minimum 1. Maximum 9. Temporary limited to 3. Default 1.
+        replication: 3,
+        // Bucket size in GB. Temporary limited to 5. Default 1.
+        resource: 5,
+    };
     // Id of the storage cluster on which the bucket should be created
     // Storage custer ids can be found here: https://docs.cere.network/testnet/ddc-network-testnet
     const storageClusterId = 1n;
-    
-    // Create bucket and return even produced by Smart Contract that contains generated bucketId that should be used later to store and read data  
-    const bucketCreatedEvent = await ddcClient.createBucket(balance, parameters, storageClusterId);
+
+    // Create bucket and return even produced by Smart Contract that contains generated bucketId that should be used later to store and read data
+    const bucketCreatedEvent = await ddcClient.createBucket(balance, storageClusterId, parameters);
     console.log("Successfully created bucket. Id: " + bucketCreatedEvent.bucketId);
 }
 ```
@@ -115,19 +148,32 @@ At the moment Kotlin SDK is outdated :cry:
 {% endtab %}
 {% endtabs %}
 
-### Store piece
+### Store data
 
-Piece is the smallest indivisible unit stored in DDC. A piece consists of the data and [tags](../protocols/storage-schema.md) that can be used to search pieces or to store not searchable metadata .&#x20;
+Data can be encrypted by client (see [Encryption](quickstart.md#encryption)).
 
-Data can be encrypted by client (see [Encryption](quickstart.md#encryption))
+DDC client setup explained in [Setup client](quickstart.md#setup-client) section.
+
+{% hint style="info" %}
+Only bucket creator can store data to the bucket. Otherwise, storage returns 403 status code.
+{% endhint %}
+
+#### Piece
+
+Piece is the smallest indivisible unit stored in DDC. A piece consists of the data and [tags](../protocols/storage-schema.md) that can be used to search pieces or to store not searchable metadata.&#x20;
+
+{% hint style="info" %}
+Max size of the piece is 100 MB. To upload bigger unit of data, see [File](quickstart.md#file) section.
+{% endhint %}
 
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
-import {Piece} from "@cere-ddc-sdk/ddc-client";
-import {Tag, SearchType} from "@cere-ddc-sdk/core";
+import {Piece, Tag} from "@cere-ddc-sdk/content-addressable-storage";
 
-const storeData = async () => {    
+const storePiece = async () => {
+    const ddcClient = await setupClient()
+
     // ID of the bucket in which the piece should be stored
     const bucketId = 2n;
 
@@ -136,23 +182,22 @@ const storeData = async () => {
     // Tags can be used to store metadata or to search pieces
     const tags = [
         // Tags are searchable by default. In this example piece can be found by `usedId`
-        new Tag("userId", "5868302"),
-        // To store metadata, not searchable tags  can be used (they are filtered out during piece indexing)
-        new Tag("type", "photo", SearchType.NOT_SEARCHABLE)
+        new Tag("userId", "5868302")
     ];
-    
-    // Tags and links are optional
-    const piece = new Piece(data, tags, links);
-    
+
+    // Tags are optional
+    // Data supported types: Uint8Array
+    const piece = new Piece(data, tags);
+
     const storeOptions = {
         // True - store encrypted data. False - store unencrypted data.
-        encrypt: true
+        encrypt: true,
         // If empty or not passed - data will be encrypted by master DEK.
         dekPath: "/documents/personal",
     };
-    
-    const pieceUri = await ddcClient.store(bucketId, piece, storeOptions);
-    console.log("Successfully uploaded unencrypted piece. CID: " + pieceUri.cid);
+
+    const ddcUri = await ddcClient.store(bucketId, piece, storeOptions);
+    console.log("Successfully uploaded piece. DDC URI: " + ddcUri.toString());
 }
 ```
 {% endtab %}
@@ -164,34 +209,131 @@ At the moment Kotlin SDK is outdated :cry:
 {% endtab %}
 {% endtabs %}
 
-### Read piece
+#### File
 
-Encrypted data can be decrypted by client (see [Encryption](quickstart.md#encryption)).
+File is a bigger unit of data that is presented as a set of pieces. File pieces are distributed across set of nodes (depends on the cluster size and number of pieces).  See [File Storage](../protocols/file-storage.md) section.
+
+{% hint style="info" %}
+There is no hard limit on the max size of the file.
+{% endhint %}
+
+On the code level storing of the File is almost the same as storing of the Piece, the difference is in supported data types (depends on the language you use) and internal logic (splitting of the file into pieces).&#x20;
 
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
-import {PieceUri} from "@cere-ddc-sdk/content-addressable-storage";
+import {DdcClient, File} from "@cere-ddc-sdk/ddc-client";
+import {Tag} from "@cere-ddc-sdk/content-addressable-storage";
 
-const readData = async () => {
+const storeFile = async () => {
+    const ddcClient = await setupClient()
+
+    // ID of the bucket in which the piece should be stored
+    const bucketId = 2n;
+
+    // Data can be encrypted or not (depends on store options 'encrypt' flag)
+    const data = new TextEncoder().encode("Large string 1 GB in size");
+    // Tags can be used to store metadata or to search pieces
+    const tags = [
+        // Tags are searchable by default. In this example piece can be found by `usedId`
+        new Tag("userId", "5868302")
+    ];
+
+    // Tags are optional
+    // Data supported types: ReadableStream<Uint8Array> | string | Uint8Array
+    const file = new File(data, tags);
+
+    const storeOptions = {
+        // True - store encrypted data. False - store unencrypted data.
+        encrypt: true,
+        // If empty or not passed - data will be encrypted by master DEK.
+        dekPath: "/documents/personal",
+    };
+
+    const ddcUri = await ddcClient.store(bucketId, file, storeOptions);
+    console.log("Successfully uploaded file. DDC URI: " + ddcUri.toString());
+}
+```
+{% endtab %}
+
+{% tab title="Kotlin" %}
+{% hint style="warning" %}
+At the moment Kotlin SDK is outdated :cry:
+{% endhint %}
+{% endtab %}
+{% endtabs %}
+
+### Read data
+
+Encrypted data can be decrypted by client (see [Encryption](quickstart.md#encryption)).
+
+DDC client setup explained in [Setup client](quickstart.md#setup-client) section.
+
+#### Piece
+
+{% tabs %}
+{% tab title="JavaScript" %}
+```javascript
+import {DdcClient, File} from "@cere-ddc-sdk/ddc-client";
+import {DdcUri, IPIECE} from "@cere-ddc-sdk/core";
+
+const readPiece = async () => {
+    const ddcClient = await setupClient()
+
     const readOptions = {
         // True - return decrypted data. False - return data as is.
-        decrypt: true
+        decrypt: true,
         // If empty or not passed - data will be decrypted by master DEK.
         dekPath: "/documents",
     };
-    
+
     // ID of the bucket from which the piece should be read
     const bucketId = 2n;
     // CID of the piece to read
     const cid = "bafk2bzacecdzr32hb7pq7ksx73hxbn2pgata2anniuwvv5nov67gcznvuou5y";
-    const pieceUri = {
-        bucketId: bucketId,
-        cid: cid
+    const ddcUri = DdcUri.parse(bucketId, cid, IPIECE)
+
+    // DdcUri that have IPIECE protocol returns Piece
+    const piece = await ddcClient.read(ddcUri, readOptions);
+    console.log("Successfully read piece. CID: " + piece.cid);
+}
+```
+{% endtab %}
+
+{% tab title="Kotlin" %}
+{% hint style="warning" %}
+At the moment Kotlin SDK is outdated :cry:
+{% endhint %}
+{% endtab %}
+{% endtabs %}
+
+#### File
+
+{% tabs %}
+{% tab title="JavaScript" %}
+```javascript
+import {DdcClient, File} from "@cere-ddc-sdk/ddc-client";
+import {DdcUri, IFILE} from "@cere-ddc-sdk/core";
+
+const readFile = async () => {
+    const ddcClient = await setupClient()
+
+    const readOptions = {
+        // True - return decrypted data. False - return data as is.
+        decrypt: true,
+        // If empty or not passed - data will be decrypted by master DEK.
+        dekPath: "/documents",
     };
-    
-    const piece = await ddcClient.read(pieceUri);
-    console.log("Successfully read data. CID: " + piece.cid);
+
+    // ID of the bucket from which the file should be read
+    const bucketId = 2n;
+    // CID of the file to read
+    const cid = "bafk2bzacecdzr32hb7pq7ksx73hxbn2pgata2anniuwvv5nov67gcznvuou5y";
+    const ddcUri = DdcUri.parse(bucketId, cid, IFILE)
+
+    // DdcUri that have IFILE protocol returns File
+    const file = await ddcClient.read(ddcUri, readOptions);
+    console.log("Successfully read file. CID: " + file.cid);
 }
 ```
 {% endtab %}
@@ -208,6 +350,8 @@ At the moment Kotlin SDK is outdated :cry:
 Search is based on [tags](../protocols/storage-schema.md) that are combined using logical 'or' operator (e.g. tagA = N or tagB = M). \
 \
 Search operation is distributed and result is collected from the nodes of the storage cluster where bucket is stored (because bucket is distributed across all cluster nodes).
+
+DDC client setup explained in [Setup client](quickstart.md#setup-client) section.
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -249,6 +393,8 @@ Data sharing is implemented via DEK re-encryption (see [Encryption](quickstart.m
 In order to share data to partner, partner have to share his encryption public key to data owner (generated via his secret phrase).&#x20;
 
 Then partner can read encrypted data having his secret phrase and shared DEK path via DDC Client.
+
+DDC client setup explained in [Setup client](quickstart.md#setup-client) section.
 
 {% tabs %}
 {% tab title="JavaScript" %}
