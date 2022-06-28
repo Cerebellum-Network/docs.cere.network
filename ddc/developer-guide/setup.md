@@ -6,10 +6,6 @@ description: >-
 
 # 🔑 Setup
 
-## Install polkadot{.js} extension
-
-You can download extension [here](https://polkadot.js.org/extension).
-
 ## Install DDC CLI
 
 Download a binary file from [releases](https://github.com/Cerebellum-Network/ddc-cli/releases).
@@ -26,43 +22,51 @@ Download a binary file from [releases](https://github.com/Cerebellum-Network/ddc
 If you don’t have a wallet yet, you can use DDC CLI to generate a secret phrase and seed hex:
 
 ```shell
-./ddc-cli generate-keys  -s sr25519
+./ddc-cli generate-keys -s sr25519
 ```
 
 Output example:
 
 ```shell
-Secret phrase: grass smooth rain offer matter senior crucial slim clip news town opera
-Seed hex:  0x3be19e0bba3af20bad16298976ec27e25d9330cd997634abb09cb101a0387e8b
+Secret phrase: motion gospel order sketch blast rack deer oppose manage burden broccoli foster
+Secret seed: 0x46423dd616093f9ea9b5df65994c18c1c8a27a806c68d885d6effd01721d1492
+Public key: 0xf2ead4d7a4d8be53ca859bd2cd568c22ffd4bf3a54b4825fb823d7dabeff4e1d
+SS58 Address: 5HZDCq4tLYrnjTMpGyMdPsrPxDwAFG8gDR49oW6jL7yTs5Ec
 ```
 
 {% hint style="warning" %}
-Please write down your secret phrase and keep it in a safe place. The secret phrase can be used to restore your keys (wallet). Keep it carefully to not lose your assets.
+Please write down your secret phrase and keep it in a safe place. The secret phrase can be used to restore your keys (wallet). Keep it carefully to not lose your data.
 {% endhint %}
 
-Or you can extract seed from existing secret phrase (mnemonic code):
+Or you can extract keys from existing secret phrase (mnemonic code):
 
 ```shell
-./ddc-cli extract-seed --secret-phrase 'grass smooth rain offer matter senior crucial slim clip news town opera'
+./ddc-cli extract-keys --secret-phrase 'hair solve immune apology aerobic broom milk split paper crime maple harvest' --scheme sr25519
 ```
 
-## Import account to polkadot{.js} extension
+Output example:
 
-You can import generated account to the extension (if you used `generate-keys` command):
-
-1. Open extension in the browser
-2. Click the add icon at the top right
-3. Select `Import account from pre-existing seed`
-4. Put your secret phrase
-5. Click `Next` and follow instructions
+```
+Secret phrase: motion gospel order sketch blast rack deer oppose manage burden broccoli foster
+Secret seed: 0x46423dd616093f9ea9b5df65994c18c1c8a27a806c68d885d6effd01721d1492
+Public key: 0xf2ead4d7a4d8be53ca859bd2cd568c22ffd4bf3a54b4825fb823d7dabeff4e1d
+SS58 Address: 5HZDCq4tLYrnjTMpGyMdPsrPxDwAFG8gDR49oW6jL7yTs5Ec
+```
 
 ## Faucet
 
-To create a bucket, add nodes, create cluster your account should have enough CERE tokens.
+Using Faucet API you can receive tokens in test networks (devnet, qanet and testnet).
 
-Use [faucet](https://stats.cere.network/faucet):
+{% hint style="info" %}
+This command transfer 100 CERE tokens to your account.
+{% endhint %}
 
-1. choose network `testnet`;
-2. enter public key (`5DAx9cTNXYKbbMTQUWzh1cZ46Mj14pnyKvshkVWm8fkfh36X`);
-3. click `Send me test CERE tokens`
-4. wait 1-3 minutes while tokens will be transferred (can check balance [CERE explorer](https://explorer.cere.network) for `Cere Testnet` network)
+```
+./ddc-cli faucet -n testnet -a 5HZDCq4tLYrnjTMpGyMdPsrPxDwAFG8gDR49oW6jL7yTs5Ec
+```
+
+Output example:
+
+```
+Your transaction hash is 0xdde615ac64db4ab3e08cf4168434762f8febaffa088052e09d4994151145940f
+```
