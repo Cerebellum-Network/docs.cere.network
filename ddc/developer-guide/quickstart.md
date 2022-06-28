@@ -15,7 +15,7 @@ Use the [🔗 Setup](setup.md) guide to create and top-up an account.
 Latest version of SDK can be found on [releases](https://github.com/Cerebellum-Network/cere-ddc-sdk-js/releases) page.
 
 ```
-npm install --save @cere-ddc-sdk/ddc-client@1.2.7
+npm install --save @cere-ddc-sdk/ddc-client@1.2.8
 npm install --save-dev  typescript
 ```
 
@@ -33,7 +33,7 @@ _**package.json**_
   "author": "NAME",
   "license": "ISC",
   "dependencies": {
-    "@cere-ddc-sdk/ddc-client": "^1.2.7"
+    "@cere-ddc-sdk/ddc-client": "^1.2.8"
   },
   "devDependencies": {
     "typescript": "^4.7.4"
@@ -123,19 +123,19 @@ const createBucket = async () => {
 
     // Amount of tokens to deposit to the bucket balance
     const balance = 10n;
+    // Bucket size in GB
+    const size = 5n;
     // Bucket parameters
     const parameters = {
         // Number of copies of each piece. Minimum 1. Maximum 9. Temporary limited to 3. Default 1.
         replication: 3,
-        // Bucket size in GB. Temporary limited to 5. Default 1.
-        resource: 5,
     };
     // Id of the storage cluster on which the bucket should be created
     // Storage custer ids can be found here: https://docs.cere.network/testnet/ddc-network-testnet
     const storageClusterId = 1n;
 
     // Create bucket and return even produced by Smart Contract that contains generated bucketId that should be used later to store and read data
-    const bucketCreatedEvent = await ddcClient.createBucket(balance, storageClusterId, parameters);
+    const bucketCreatedEvent = await ddcClient.createBucket(balance, size, storageClusterId, parameters);
     console.log("Successfully created bucket. Id: " + bucketCreatedEvent.bucketId);
 }
 ```
@@ -169,7 +169,7 @@ Max size of the piece is 100 MB. To upload bigger unit of data, see [File](quick
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
-import {Piece, Tag} from "@cere-ddc-sdk/content-addressable-storage";
+import {Piece, Tag} from "@cere-ddc-sdk/ddc-client";
 
 const storePiece = async () => {
     const ddcClient = await setupClient()
@@ -182,7 +182,9 @@ const storePiece = async () => {
     // Tags can be used to store metadata or to search pieces
     const tags = [
         // Tags are searchable by default. In this example piece can be found by `usedId`
-        new Tag("userId", "5868302")
+        new Tag("userId", "5868302"),
+        // To store metadata, not searchable tags  can be used (they are filtered out during piece indexing)
+        new Tag("type", "photo", SearchType.NOT_SEARCHABLE)
     ];
 
     // Tags are optional
@@ -222,8 +224,7 @@ On the code level storing of the File is almost the same as storing of the Piece
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
-import {DdcClient, File} from "@cere-ddc-sdk/ddc-client";
-import {Tag} from "@cere-ddc-sdk/content-addressable-storage";
+import {DdcClient, File, Tag} from "@cere-ddc-sdk/ddc-client";
 
 const storeFile = async () => {
     const ddcClient = await setupClient()
@@ -236,7 +237,9 @@ const storeFile = async () => {
     // Tags can be used to store metadata or to search pieces
     const tags = [
         // Tags are searchable by default. In this example piece can be found by `usedId`
-        new Tag("userId", "5868302")
+        new Tag("userId", "5868302"),
+        // To store metadata, not searchable tags  can be used (they are filtered out during piece indexing)
+        new Tag("type", "photo", SearchType.NOT_SEARCHABLE)
     ];
 
     // Tags are optional
@@ -312,8 +315,7 @@ At the moment Kotlin SDK is outdated :cry:
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
-import {DdcClient, File} from "@cere-ddc-sdk/ddc-client";
-import {DdcUri, IFILE} from "@cere-ddc-sdk/core";
+import {DdcClient, File, DdcUri, IFILE} from "@cere-ddc-sdk/ddc-client";
 
 const readFile = async () => {
     const ddcClient = await setupClient()
@@ -329,11 +331,11 @@ const readFile = async () => {
     const bucketId = 2n;
     // CID of the file to read
     const cid = "bafk2bzacecdzr32hb7pq7ksx73hxbn2pgata2anniuwvv5nov67gcznvuou5y";
-    const ddcUri = DdcUri.parse(bucketId, cid, IFILE)
+    const ddcUri = DdcUri.build(bucketId, cid, IFILE)
 
     // DdcUri that have IFILE protocol returns File
     const file = await ddcClient.read(ddcUri, readOptions);
-    console.log("Successfully read file. CID: " + file.cid);
+    console.log("Successfully read file. CID: " + file.headCid);
 }
 ```
 {% endtab %}
@@ -357,6 +359,8 @@ DDC client setup explained in [Setup client](quickstart.md#setup-client) section
 {% tab title="JavaScript" %}
 ```javascript
 const searchPieces = async () => {
+     const ddcClient = await setupClient()
+     
     // ID of the bucket where to search pieces
     const bucketId = 2n;
     
@@ -399,14 +403,19 @@ DDC client setup explained in [Setup client](quickstart.md#setup-client) section
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
-const shareData = async (bucketId: bigint) => {
+const shareData = async () => {
+    const ddcClient = await setupClient()
+
+    // ID of the bucket where to share data
+    const bucketId = 2n;
+
     // Partner encryption public key
-    const partnerPublicKeyHex = "0xkldaf3a8as2109...";
+    const partnerPublicKeyHex = "0x173319894bc4b7fa6167bd93cbe974f520ec43ef450fb6c6746ecc4c6a86b7de";
     // DEK path to share access to (hierarchical encryption)
-    const dekPath = "/photos";
-    
-    const edekUri = await ddcClient.shareData(bucketId, "/photos", partnerPublicKeyHex);
-    console.log("Successfully shared data (uploaded EDEK). CID: " + edekUri.cid);
+    const dekPath = "/documents";
+
+    const ddcUri = await ddcClient.shareData(bucketId, dekPath, partnerPublicKeyHex);
+    console.log("Successfully shared data (uploaded EDEK). DDC URI: " + ddcUri.toString());
 }
 ```
 {% endtab %}
