@@ -93,7 +93,7 @@ const setupClient = async () => {
     const ddcClient = await DdcClient.buildAndConnect(options, secretPhrase);
     console.log("DDC Client successfully connected.");
 
-    return ddcClient
+    return ddcClient;
 }
 ```
 {% endtab %}
@@ -119,7 +119,7 @@ On bucket creation, you pay tokens for the bucket reservation. Please, be carefu
 {% tab title="JavaScript" %}
 ```javascript
 const createBucket = async () => {
-    const ddcClient = await setupClient()
+    const ddcClient = await setupClient();
 
     // Amount of tokens to deposit to the bucket balance
     const balance = 10n;
@@ -170,7 +170,7 @@ Max size of the piece is 100 MB. To upload bigger unit of data, see [File](quick
 {% tab title="JavaScript" %}
 ```javascript
 const storePiece = async () => {
-    const ddcClient = await setupClient()
+    const ddcClient = await setupClient();
 
     // ID of the bucket in which the piece should be stored
     const bucketId = 2n;
@@ -223,7 +223,7 @@ On the code level storing of the File is almost the same as storing of the Piece
 {% tab title="JavaScript" %}
 ```javascript
 const storeFile = async () => {
-    const ddcClient = await setupClient()
+    const ddcClient = await setupClient();
 
     // ID of the bucket in which the piece should be stored
     const bucketId = 2n;
@@ -274,7 +274,7 @@ DDC client setup explained in [Setup client](quickstart.md#setup-client) section
 {% tab title="JavaScript" %}
 ```javascript
 const readPiece = async () => {
-    const ddcClient = await setupClient()
+    const ddcClient = await setupClient();
 
     const readOptions = {
         // True - return decrypted data. False - return data as is.
@@ -287,7 +287,7 @@ const readPiece = async () => {
     const bucketId = 2n;
     // CID of the piece to read
     const cid = "bafk2bzacecdzr32hb7pq7ksx73hxbn2pgata2anniuwvv5nov67gcznvuou5y";
-    const ddcUri = DdcUri.parse(bucketId, cid, IPIECE)
+    const ddcUri = DdcUri.parse(bucketId, cid, IPIECE);
 
     // DdcUri that have IPIECE protocol returns Piece
     const piece = await ddcClient.read(ddcUri, readOptions);
@@ -309,7 +309,7 @@ At the moment Kotlin SDK is outdated :cry:
 {% tab title="JavaScript" %}
 ```javascript
 const readFile = async () => {
-    const ddcClient = await setupClient()
+    const ddcClient = await setupClient();
 
     const readOptions = {
         // True - return decrypted data. False - return data as is.
@@ -350,7 +350,7 @@ DDC client setup explained in [Setup client](quickstart.md#setup-client) section
 {% tab title="JavaScript" %}
 ```javascript
 const searchPieces = async () => {
-     const ddcClient = await setupClient()
+     const ddcClient = await setupClient();
      
     // ID of the bucket where to search pieces
     const bucketId = 2n;
@@ -385,7 +385,7 @@ At the moment Kotlin SDK is outdated :cry:
 
 Data sharing is implemented via DEK re-encryption (see [Encryption](quickstart.md#encryption)).
 
-In order to share data to partner, partner have to share his encryption public key to data owner (generated via his secret phrase).&#x20;
+In order to share data, partner have to share his encryption public key to data owner (generated via his secret phrase).&#x20;
 
 Then partner can read encrypted data having his secret phrase and shared DEK path via DDC Client.
 
@@ -395,7 +395,7 @@ DDC client setup explained in [Setup client](quickstart.md#setup-client) section
 {% tab title="JavaScript" %}
 ```javascript
 const shareData = async () => {
-    const ddcClient = await setupClient()
+    const ddcClient = await setupClient();
 
     // ID of the bucket where to share data
     const bucketId = 2n;
@@ -422,7 +422,7 @@ At the moment Kotlin SDK is outdated :cry:
 
 #### Overview
 
-The DDC Client Library provides encryption/decryption out of the box. \
+The DDC Client Library provides encryption/decryption out of the box (using [NaCl](https://nacl.cr.yp.to/)). \
 \
 Secret phrase passed in DDC Client on setup is used to generate (via blake2b-256) master `DEK`.
 

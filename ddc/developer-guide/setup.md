@@ -1,7 +1,5 @@
 ---
-description: >-
-  Learn how to create account, extract private/public keys required for client
-  libraries and deposit tokens to the account
+description: Learn how to create an account and deposit tokens
 ---
 
 # 🔑 Setup
