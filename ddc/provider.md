@@ -5,4 +5,4 @@ Provider is a vendor that provides storing data and fast delivery data for users
 * Provider of CDN nodes are essentially getting paid for their work as data deliver;
 * Storage node provider gets paid for storing data.
 
-If you want to become a provider, please fill [form](https://docs.cere.network/ddc/overview).
+If you want to become a provider, please fill in the [form](https://docs.cere.network/ddc/overview).
