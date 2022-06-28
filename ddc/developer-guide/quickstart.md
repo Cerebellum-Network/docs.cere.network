@@ -78,7 +78,7 @@ dependencies {
 {% tab title="JavaScript" %}
 ```javascript
 import {mnemonicGenerate} from "@polkadot/util-crypto";
-import {DdcClient} from "@cere-ddc-sdk/ddc-client";
+import {DdcClient, File, Piece, Tag, SearchType, DdcUri, IFILE, IPIECE} from "@cere-ddc-sdk/ddc-client";
 
 const setupClient = async () => {
     // Cluster address is either string (url of the CDN node to use) or number (id of the CDN cluster to use)
@@ -169,8 +169,6 @@ Max size of the piece is 100 MB. To upload bigger unit of data, see [File](quick
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
-import {Piece, Tag} from "@cere-ddc-sdk/ddc-client";
-
 const storePiece = async () => {
     const ddcClient = await setupClient()
 
@@ -224,8 +222,6 @@ On the code level storing of the File is almost the same as storing of the Piece
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
-import {DdcClient, File, Tag} from "@cere-ddc-sdk/ddc-client";
-
 const storeFile = async () => {
     const ddcClient = await setupClient()
 
@@ -277,9 +273,6 @@ DDC client setup explained in [Setup client](quickstart.md#setup-client) section
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
-import {DdcClient, File} from "@cere-ddc-sdk/ddc-client";
-import {DdcUri, IPIECE} from "@cere-ddc-sdk/core";
-
 const readPiece = async () => {
     const ddcClient = await setupClient()
 
@@ -315,8 +308,6 @@ At the moment Kotlin SDK is outdated :cry:
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
-import {DdcClient, File, DdcUri, IFILE} from "@cere-ddc-sdk/ddc-client";
-
 const readFile = async () => {
     const ddcClient = await setupClient()
 
