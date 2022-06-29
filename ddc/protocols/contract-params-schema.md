@@ -86,13 +86,13 @@ The parameters of a bucket.
 
 
 
- 
+ <!-- end messages -->
 
- 
+ <!-- end enums -->
 
- 
+ <!-- end HasExtensions -->
 
- 
+ <!-- end services -->
 
 
 
@@ -121,7 +121,7 @@ The parameters of a cluster.
 
 
 
- 
+ <!-- end messages -->
 
 
 <a name="pb.TopologyType"></a>
@@ -143,11 +143,11 @@ affinity to users or to queries for better performance (caching, etc).
 | UNIFORM_RING | 0 | The UNIFORM_RING topology defines a ring split into equal segments per vnode. Replication or fallback mechanisms use contiguous vnodes. This is the default topology. |
 
 
- 
+ <!-- end enums -->
 
- 
+ <!-- end HasExtensions -->
 
- 
+ <!-- end services -->
 
 
 
@@ -175,7 +175,7 @@ The parameters of a node.
 
 
 
- 
+ <!-- end messages -->
 
 
 <a name="pb.EngineType"></a>
@@ -190,11 +190,11 @@ The list of engine types.
 | CDN | 2 | The engine of CDN nodes to upload and search pieces. |
 
 
- 
+ <!-- end enums -->
 
- 
+ <!-- end HasExtensions -->
 
- 
+ <!-- end services -->
 
 
 

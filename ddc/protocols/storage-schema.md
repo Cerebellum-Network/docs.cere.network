@@ -82,13 +82,13 @@ A link is a pointer from one piece to another.
 
 
 
- 
+ <!-- end messages -->
 
- 
+ <!-- end enums -->
 
- 
+ <!-- end HasExtensions -->
 
- 
+ <!-- end services -->
 
 
 
@@ -117,13 +117,13 @@ It is the smallest indivisible unit stored in DDC object storage.
 
 
 
- 
+ <!-- end messages -->
 
- 
+ <!-- end enums -->
 
- 
+ <!-- end HasExtensions -->
 
- 
+ <!-- end services -->
 
 
 
@@ -150,13 +150,13 @@ A query represents a search of pieces by tags.
 
 
 
- 
+ <!-- end messages -->
 
- 
+ <!-- end enums -->
 
- 
+ <!-- end HasExtensions -->
 
- 
+ <!-- end services -->
 
 
 
@@ -197,13 +197,13 @@ A searched piece found in storage.
 
 
 
- 
+ <!-- end messages -->
 
- 
+ <!-- end enums -->
 
- 
+ <!-- end HasExtensions -->
 
- 
+ <!-- end services -->
 
 
 
@@ -231,19 +231,19 @@ A signature and details to help verify it.
 - Store the public key of the signer in `publicKey` in binary encoding.
 
 - Store the current time in `timestamp`
-    - In JavaScript: `timestamp = &#43;new Date()`
+    - In JavaScript: `timestamp = +new Date()`
 
 - Format the current time in ISO 8601 `YYYY-MM-DDTHH:mm:ss.sssZ`
 - In JavaScript: `timeText = new Date(timestamp).toISOString()`
 - In Go format: `2006-01-02T15:04:05.000Z`
 
 - The signed message to store a piece is:
-    - `&lt;Bytes&gt;DDC store ${CID} at ${timeText}&lt;/Bytes&gt;`
-    - Note: the `&lt;Bytes&gt;` part is enforced by the Polkadot.js browser extension.
-    - Example: `&lt;Bytes&gt;DDC store bafk2bzacea73ycjnxe2qov7cvnhx52lzfp6nf5jcblnfus6gqreh6ygganbws at 2022-06-27T07:33:44.607Z&lt;/Bytes&gt;`
+    - `<Bytes>DDC store ${CID} at ${timeText}</Bytes>`
+    - Note: the `<Bytes>` part is enforced by the Polkadot.js browser extension.
+    - Example: `<Bytes>DDC store bafk2bzacea73ycjnxe2qov7cvnhx52lzfp6nf5jcblnfus6gqreh6ygganbws at 2022-06-27T07:33:44.607Z</Bytes>`
 
 - The signing scheme should be sr25519, and `scheme` should be empty.
-    - If this not supported by a signer, then `scheme` should be &#34;ed25519&#34;.
+    - If this not supported by a signer, then `scheme` should be "ed25519".
 
 - Sign and store the signature in `sig` in binary encoding.
 
@@ -256,14 +256,14 @@ A signature and details to help verify it.
 
 If `timestamp == 0`, assume an older version:
 - Decode `value` and `signer` from hexadecimal with or without `0x`.
-- Then the signed message is either `${CID}` or `&lt;Bytes&gt;${CID}&lt;/Bytes&gt;`.
+- Then the signed message is either `${CID}` or `<Bytes>${CID}</Bytes>`.
 
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | value | [bytes](#bytes) |  | The cryptographic signature in binary encoding as per the scheme. |
 | signer | [bytes](#bytes) |  | The public key of the signer in binary encoding as per the scheme. |
-| scheme | [string](#string) |  | The name of the signature scheme (sr25519, secp256k1, ed25519). Default and recommended value: &#34;&#34; or &#34;sr25519&#34;. |
+| scheme | [string](#string) |  | The name of the signature scheme (sr25519, secp256k1, ed25519). Default and recommended value: "" or "sr25519". |
 | multiHashType | [uint64](#uint64) |  | The ID of the hashing algorithm as per multiformats/multihash. Default and recommended value: 0 or 0xb220, meaning blake2b-256. |
 | timestamp | [uint64](#uint64) |  | The timestamp in UNIX milliseconds. |
 
@@ -271,13 +271,13 @@ If `timestamp == 0`, assume an older version:
 
 
 
- 
+ <!-- end messages -->
 
- 
+ <!-- end enums -->
 
- 
+ <!-- end HasExtensions -->
 
- 
+ <!-- end services -->
 
 
 
@@ -304,13 +304,13 @@ This can be used to verify the intent of the account holder to upload the piece.
 
 
 
- 
+ <!-- end messages -->
 
- 
+ <!-- end enums -->
 
- 
+ <!-- end HasExtensions -->
 
- 
+ <!-- end services -->
 
 
 
@@ -352,7 +352,7 @@ Below is the structure of a tag:
 
 
 
- 
+ <!-- end messages -->
 
 
 <a name="pb.SearchType"></a>
@@ -366,11 +366,11 @@ How can this tag be searched.
 | NOT_SEARCHABLE | 1 | NOT_SEARCHABLE tags should not be indexed. This option should be set when possible to save node space and speed. |
 
 
- 
+ <!-- end enums -->
 
- 
+ <!-- end HasExtensions -->
 
- 
+ <!-- end services -->
 
 
 
