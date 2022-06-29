@@ -9,6 +9,8 @@ This is the data model for the API of DDC Storage.
 ## Changelog
 
 ### vNext
+- `SignedPiece.piece` is embedded as a serialized message.
+- Improved security and performance of signed upload requests.
 
 ### v0.1.3
 - [Breaking] Return piece CIDs in `SearchResult`.
@@ -217,13 +219,53 @@ A searched piece found in storage.
 ### Signature
 A signature and details to help verify it.
 
+#### Generation
+
+- Compute a CID from the `piece` bytes using details from `signature`:
+    - [CIDv1](https://github.com/multiformats/cid).
+    - The hash function should be blake2b-256 and `multiHashType` should be empty.
+    - Content type codec `0x55`
+    - Base encoded in Base32 with the prefix `b`
+    - Example: bafk2bzacea73ycjnxe2qov7cvnhx52lzfp6nf5jcblnfus6gqreh6ygganbws
+
+- Store the public key of the signer in `publicKey` in binary encoding.
+
+- Store the current time in `timestamp`
+    - In JavaScript: `timestamp = &#43;new Date()`
+
+- Format the current time in ISO 8601 `YYYY-MM-DDTHH:mm:ss.sssZ`
+- In JavaScript: `timeText = new Date(timestamp).toISOString()`
+- In Go format: `2006-01-02T15:04:05.000Z`
+
+- The signed message to store a piece is:
+    - `&lt;Bytes&gt;DDC store ${CID} at ${timeText}&lt;/Bytes&gt;`
+    - Note: the `&lt;Bytes&gt;` part is enforced by the Polkadot.js browser extension.
+    - Example: `&lt;Bytes&gt;DDC store bafk2bzacea73ycjnxe2qov7cvnhx52lzfp6nf5jcblnfus6gqreh6ygganbws at 2022-06-27T07:33:44.607Z&lt;/Bytes&gt;`
+
+- The signing scheme should be sr25519, and `scheme` should be empty.
+    - If this not supported by a signer, then `scheme` should be &#34;ed25519&#34;.
+
+- Sign and store the signature in `sig` in binary encoding.
+
+#### Verification
+
+- Recompute the signed message using the details in `signature`.
+- Verify `sig` given the scheme, the message, and the public key.
+
+#### Legacy signatures before v0.1.4
+
+If `timestamp == 0`, assume an older version:
+- Decode `value` and `signer` from hexadecimal with or without `0x`.
+- Then the signed message is either `${CID}` or `&lt;Bytes&gt;${CID}&lt;/Bytes&gt;`.
+
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| value | [string](#string) |  | A cryptographic signature. |
-| signer | [string](#string) |  | The public key of the signer. |
-| scheme | [string](#string) |  | The name of the signature scheme (sr25519, secp256k1, ed25519). |
-| multiHashType | [uint64](#uint64) |  | The ID of the hashing algorithm as per multiformats/multicodec. Default: 0, meaning blake2b-256. |
+| value | [bytes](#bytes) |  | The cryptographic signature in binary encoding as per the scheme. |
+| signer | [bytes](#bytes) |  | The public key of the signer in binary encoding as per the scheme. |
+| scheme | [string](#string) |  | The name of the signature scheme (sr25519, secp256k1, ed25519). Default and recommended value: &#34;&#34; or &#34;sr25519&#34;. |
+| multiHashType | [uint64](#uint64) |  | The ID of the hashing algorithm as per multiformats/multihash. Default and recommended value: 0 or 0xb220, meaning blake2b-256. |
+| timestamp | [uint64](#uint64) |  | The timestamp in UNIX milliseconds. |
 
 
 
@@ -255,7 +297,7 @@ This can be used to verify the intent of the account holder to upload the piece.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| piece | [Piece](#pb.Piece) |  | A piece. |
+| piece | [bytes](#bytes) |  | A Piece message serialized in protobuf. |
 | signature | [Signature](#pb.Signature) |  | A signature of the piece by the keypair of the uploader. |
 
 
