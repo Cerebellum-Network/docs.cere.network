@@ -9,8 +9,17 @@ This is the data model for the API of DDC Storage.
 ## Changelog
 
 ### vNext
+
+
+### v0.1.4
 - `SignedPiece.piece` is embedded as a serialized message.
+    - No changes in the wire format.
+    - This facilitates forward-compatibility and signature verification.
 - Improved security and performance of signed upload requests.
+    - The signature and the signer address do not need to be encoded in hexadecimal.
+    - The signed message explains what is signed and is human-readable.
+    - The signed message includes a timestamp.
+- Added test vectors from the JS SDK.
 
 ### v0.1.3
 - [Breaking] Return piece CIDs in `SearchResult`.
