@@ -2,16 +2,16 @@
 
 ### Network description
 
-| **Name**                   | Cere Testnet                                                                           |
-| -------------------------- | -------------------------------------------------------------------------------------- |
-| **Decimals**               | 10                                                                                     |
-| **Native Token**           | CERE                                                                                   |
-| **Full Node RPC**          | [https://rpc.testnet.cere.network:9934](https://rpc.testnet.cere.network:9934)         |
-| **Full Node Websocket**    | [wss://rpc.testnet.cere.network:9945](wss://rpc.testnet.cere.network:9945)             |
-| **Archive Node RPC**       | [https://archive.testnet.cere.network:9934](https://archive.testnet.cere.network:9934) |
-| **Archive Node Websocket** | [wss://archive.testnet.cere.network:9945](wss://archive.testnet.cere.network:9945)     |
-| **Cere Explorer**          | [Link](https://explorer.cere.network/)                                                 |
-| **Cere Faucet**            | [Link](https://laboratory.cere.network/#/friend-bot)                                   |
+| **Name**                   | Cere Testnet                                                                   |
+| -------------------------- | ------------------------------------------------------------------------------ |
+| **Decimals**               | 10                                                                             |
+| **Native Token**           | CERE                                                                           |
+| **Full Node RPC**          | [https://rpc.testnet.cere.network](https://rpc.testnet.cere.network)           |
+| **Full Node Websocket**    | [wss://rpc.testnet.cere.network/ws](wss://rpc.testnet.cere.network/ws)         |
+| **Archive Node RPC**       | [https://archive.testnet.cere.network](https://archive.testnet.cere.network)   |
+| **Archive Node Websocket** | [wss://archive.testnet.cere.network/ws](wss://archive.testnet.cere.network/ws) |
+| **Cere Explorer**          | [Link](https://explorer.cere.network/)                                         |
+| **Cere Faucet**            | [Link](https://laboratory.cere.network/#/friend-bot)                           |
 
 ### Bridge description
 
