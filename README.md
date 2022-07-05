@@ -10,4 +10,4 @@ It’s unique combination of storage and cdn clusters improves the capabilities 
 
 Compared with other storage and cdn protocols it gives full control, flexibility and ease of integration to developers. It allows developers to choose geographical cluster locations, data replication levels, private/public data sharing, encryption, etc…
 
-Follow the [developer’s guide](developer-guide) to get started with the SDKs.
+Follow the [developer’s guide](ddc/developer-guide) to get started with the SDKs.
