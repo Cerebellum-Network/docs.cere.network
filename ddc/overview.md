@@ -84,5 +84,5 @@ DDC offers a variety of tools to build applications. The DDC SDKs contain many f
 
 
 {% hint style="warning" %}
-[Source and diagrams](https://github.com/Cerebellum-Network/ddc-bucket-contract/blob/dev/DOC.md)
+[Source and diagrams](https://github.com/Cerebellum-Network/ddc-bucket-contract/blob/main/DOC.md)
 {% endhint %}
