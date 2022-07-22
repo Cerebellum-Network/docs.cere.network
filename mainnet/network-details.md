@@ -6,10 +6,10 @@
 | -------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | **Decimals**               | 10                                                                                                                     |
 | **Native Token**           | CERE                                                                                                                   |
-| **Full Node RPC**          | [https://rpc.mainnet.cere.network:9934](https://rpc.mainnet.cere.network:9934)                                         |
-| **Full Node Websocket**    | [wss://rpc.mainnet.cere.network:9945](wss://rpc.mainnet.cere.network:9945)                                             |
-| **Archive Node RPC**       | [https://archive.mainnet.cere.network:9934](https://archive.mainnet.cere.network:9934)                                 |
-| **Archive Node Websocket** | [wss://archive.mainnet.cere.network:9945](wss://archive.mainnet.cere.network:9945)                                     |
+| **Full Node RPC**          | [https://rpc.mainnet.cere.network](https://rpc.mainnet.cere.network)                                                   |
+| **Full Node Websocket**    | [wss://rpc.mainnet.cere.network/ws](wss://rpc.mainnet.cere.network/ws)                                                 |
+| **Archive Node RPC**       | [https://archive.mainnet.cere.network](https://archive.mainnet.cere.network)                                           |
+| **Archive Node Websocket** | [wss://archive.mainnet.cere.network/ws](wss://archive.mainnet.cere.network/ws)                                         |
 | **Cere Explorer**          | [Link](https://explorer.cere.network/)                                                                                 |
 | **Cere Stats**             | [Link](https://stats.cere.network/)                                                                                    |
 | **Custom Types**           | [File](https://raw.githubusercontent.com/Cerebellum-Network/cerestats/dev-cere/backend/types/cere\_custom\_types.json) |
