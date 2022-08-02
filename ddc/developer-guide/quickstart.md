@@ -15,8 +15,8 @@ Use the [🔗 Setup](setup.md) guide to create and top-up an account.
 Latest version of SDK can be found on [releases](https://github.com/Cerebellum-Network/cere-ddc-sdk-js/releases) page.
 
 ```
-npm install --save @cere-ddc-sdk/ddc-client@1.2.8
-npm install --save-dev  typescript
+@cere-ddc-sdk --save @cere-ddc-sdk/ddc-client@1.3.3
+npm install --save-dev typescript
 ```
 
 _**package.json**_
@@ -33,7 +33,7 @@ _**package.json**_
   "author": "NAME",
   "license": "ISC",
   "dependencies": {
-    "@cere-ddc-sdk/ddc-client": "^1.2.8"
+    "@cere-ddc-sdk/ddc-client": "^1.3.3"
   },
   "devDependencies": {
     "typescript": "^4.7.4"
