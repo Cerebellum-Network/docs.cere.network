@@ -1,41 +1,18 @@
 # 🕸 Network Topology
 
-## Discovering nodes
+## Exploring the network
 
-{% hint style="warning" %}
-TODO
+The entry point into the DDC network is the main smart contract on the Cere blockchain.
+From there, any participant can fully explore the DDC network, and discover the location of all nodes and all data.
+Notably, DDC does not use a gossip protocol; instead, all information can be found by following
+identifiers and URLs found in several data structures described here.
 
-Explain the discovery of CDN nodes. Clients do that.
+Starting from scratch, the first object that a client software needs to find is a `cluster`, which describes a particular service. The full list of clusters can be queried from the contract. The client must know or choose the right cluster, identified by a `cluster_id`. This can be one of the clusters recommended by Cere
+(the default in SDKs, [testnet](https://docs.cere.network/testnet/ddc-network-testnet), [mainnet](https://docs.cere.network/mainnet/ddc-network)),
+or another as recommended by someone else such as the developers of a given app.
 
-&#x20;   Trusted CDN Cluster ID -> CDN Nodes
-{% endhint %}
+From there, the client can lookup the current state of the cluster. This includes some configuration about the service, the costs, and the rules of validation. This also keeps track of the nodes currently offering this service. Services are usually partitioned and replicated, and the client can discover which nodes are replicas of which partitions; see [TopologyType](contract-params-schema#topologytype).
 
-{% hint style="warning" %}
-TODO
+After choosing a node, the client can read its current URL, connect to it, and use the protocol of the service (e.g., the [CDN API](https://docs.cere.network/ddc/protocols/cdn-api)) to upload, search, or download data.
 
-Explain the discovery of Storage nodes. Normally CDN nodes do that:\
-&#x20;   Bucket ID -> Storage Cluster -> Storage Nodes
-{% endhint %}
-
-## Discovering data
-
-{% hint style="warning" %}
-TODO
-
-Explain the discovery flows:\
-&#x20;   Wallet address -> Buckets -> list Pieces, list Files, or search by tag
-{% endhint %}
-
-## Bucket Description
-
-## Cluster Description
-
-## Node Description
-
-## Computing Resources
-
-{% hint style="warning" %}
-TODO
-
-Specify in what units resources are measured and priced.
-{% endhint %}
+**For details, see the [data structures](contract-params-schema) used in the smart contract.**
