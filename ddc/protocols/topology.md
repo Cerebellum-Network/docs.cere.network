@@ -8,11 +8,11 @@ Notably, DDC does not use a gossip protocol; instead, all information can be fou
 identifiers and URLs found in several data structures described here.
 
 Starting from scratch, the first object that a client software needs to find is a `cluster`, which describes a particular service. The full list of clusters can be queried from the contract. The client must know or choose the right cluster, identified by a `cluster_id`. This can be one of the clusters recommended by Cere
-(the default in SDKs, [testnet](https://docs.cere.network/testnet/ddc-network-testnet), [mainnet](https://docs.cere.network/mainnet/ddc-network)),
+(the default in SDKs, [testnet](/testnet/ddc-network-testnet.md), [mainnet](/mainnet/ddc-network.md)),
 or another as recommended by someone else such as the developers of a given app.
 
-From there, the client can lookup the current state of the cluster. This includes some configuration about the service, the costs, and the rules of validation. This also keeps track of the nodes currently offering this service. Services are usually partitioned and replicated, and the client can discover which nodes are replicas of which partitions; see [TopologyType](contract-params-schema#topologytype).
+From there, the client can lookup the current state of the cluster. This includes some configuration about the service, the costs, and the rules of validation. This also keeps track of the nodes currently offering this service. Services are usually partitioned and replicated, and the client can discover which nodes are replicas of which partitions; see [TopologyType](contract-params-schema.md#topologytype).
 
-After choosing a node, the client can read its current URL, connect to it, and use the protocol of the service (e.g., the [CDN API](https://docs.cere.network/ddc/protocols/cdn-api)) to upload, search, or download data.
+After choosing a node, the client can read its current URL, connect to it, and use the protocol of the service (e.g., the [CDN API](cdn-api.md)) to upload, search, or download data.
 
-**For details, see the [data structures](contract-params-schema) used in the smart contract.**
+**For details, see the [data structures](contract-params-schema.md) used in the smart contract.**
