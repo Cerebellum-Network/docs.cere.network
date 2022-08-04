@@ -15,4 +15,4 @@ From there, the client can lookup the current state of the cluster. This include
 
 After choosing a node, the client can read its current URL, connect to it, and use the protocol of the service (e.g., the [CDN API](cdn-api.md)) to upload, search, or download data.
 
-**For details, see the [data structures](contract-params-schema.md) used in the smart contract.**
+**For details, see the [contract API](smart-contract-api.md) and the related [data structures](contract-params-schema.md).**
