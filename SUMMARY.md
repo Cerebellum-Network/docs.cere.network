@@ -22,6 +22,7 @@
   * [🕸 Network Topology](ddc/protocols/topology.md)
   * [🕸 Topology Schema](ddc/protocols/contract-params-schema.md)
   * [⚖ Smart Contracts](ddc/protocols/smart-contracts.md)
+  * [⚖ Smart Contract API](ddc/protocols/smart-contract-api.md)
 
 ## Mainnet
 
