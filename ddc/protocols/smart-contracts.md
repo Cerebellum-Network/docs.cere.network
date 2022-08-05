@@ -1,4 +1,4 @@
-# ⚖ Smart Contract
+# ⚖ Smart Contracts
 
 The DDC v2 Smart Contracts orchestrate the network around clusters and buckets.
 
@@ -8,7 +8,9 @@ The DDC v2 Smart Contracts orchestrate the network around clusters and buckets.
 
 ## API
 
-{% embed url="smart-contract-api" %}
+{% content-ref url="smart-contract-api.md" %}
+[smart-contract-api.md](smart-contract-api.md)
+{% endcontent-ref %}
 
 ## Implementation
 
