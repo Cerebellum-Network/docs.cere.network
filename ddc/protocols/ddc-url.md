@@ -8,6 +8,11 @@
 [original picture]: https://miro.com/app/board/o9J_lsMr5wI=/?moveToWidget=3458764527405861779&cot=14
 [requirements]: https://www.notion.so/cere/Architecture-of-DDC-software-2d6824916b394fa0bc20ff176525d0fc#c8397cdafc4d4f5a9ddd1072a87c189e
 
+**Example URL:**
+
+https://node-0.v2.us.cdn.testnet.cere.network/ddc/buc/11/ifile/bafk2bzacecdzr32hb7pq7ksx73hxbn2pgata2anniuwvv5nov67gcznvuou5y
+
+
 ## URIs - Identifying objects in DDC
 
 A URI represents an object or a set of objects in the DDC network.
