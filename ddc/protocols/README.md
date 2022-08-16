@@ -6,6 +6,8 @@
 ## [📂 File Storage](file-storage.md)
 ## [🕸 Network Topology](topology.md)
 ## [🕸 Topology Schema](contract-params-schema.md)
+## [⚖ Smart Contracts](smart-contracts.md)
+## [⚖ Smart Contract API](smart-contract-api.md)
 
 
 ## Upcoming articles
