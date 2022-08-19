@@ -6,7 +6,9 @@
 Files can be organized in DDC, like in familiar file systems, in a hierarchy of folders and files.
 The file path is included in the piece of the file descriptor (see [📂 File Storage](file-storage.md)).
 
-The file can then be accessed by [🔗 `/file/` URLs](ddc-url.md#file-queries), or by search queries in the [☁ CDN API](cdn-api.md#search-pieces).
+The file can then be accessed by [🔗 `/file/` URLs](ddc-url.md#file-queries). If multiple versions of the file exist, the most recent file will be returned.
+
+Alternatively, all versions of the file can be retrieved with a search query in the [☁ CDN API](cdn-api.md#search-pieces).
 
 
 ```javascript
@@ -16,6 +18,13 @@ Piece {
         Tag {
             key: "file-path",
             value: "… the path separated by slashes …",
+        },
+
+        // An non-indexed tag specifies the timestamp.
+        Tag {
+            key: "timestamp",
+            value: "… the timestamp …",
+            searchable: "NOT_SEARCHABLE",
         },
     ],
 
