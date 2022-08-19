@@ -19,6 +19,7 @@
   * [☁ CDN API](ddc/protocols/cdn-api.md)
   * [☁ Storage Schema](ddc/protocols/storage-schema.md)
   * [📂 File Storage](ddc/protocols/file-storage.md)
+  * [📂 File System](ddc/protocols/file-system.md)
   * [🕸 Network Topology](ddc/protocols/topology.md)
   * [🕸 Topology Schema](ddc/protocols/contract-params-schema.md)
   * [⚖ Smart Contracts](ddc/protocols/smart-contracts.md)
