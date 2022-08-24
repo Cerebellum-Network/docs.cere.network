@@ -74,6 +74,10 @@ The `ifile/` and `ipiece/` queries are similar to `file/` and `piece/`, but they
     /ddc/buc/BUCKET_ID/ifile/CID
     /ddc/buc/BUCKET_ID/ipiece/CID
 
+Additionally, the CID may be followed by a file extension. Such a URL still refers to the same piece, but indicates how the piece content is to be interpreted. Examples:
+
+    …/ifile/abc123.jpeg
+    …/ifile/def456.html
 
 ### `buc/` - Identifying buckets by ID
 
