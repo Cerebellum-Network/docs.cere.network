@@ -20,7 +20,8 @@ Piece {
             value: "… the path separated by slashes …",
         },
 
-        // An non-indexed tag specifies the timestamp.
+        // A non-indexed tag specifies the timestamp.
+        // The timestamp should be in UNIX milliseconds, encoded as a ProtoBuf VarInt.
         Tag {
             key: "timestamp",
             value: "… the timestamp …",
