@@ -3,6 +3,8 @@
 {% hint style="info" %} This is the specification of `File System v0.1` based on `Storage Schema v0.1.4`
 {% endhint %}
 
+## File Paths
+
 Files can be organized in DDC, like in familiar file systems, in a hierarchy of folders and files.
 The file path is included in the piece of the file descriptor (see [📂 File Storage](file-storage.md)).
 
@@ -33,3 +35,32 @@ Piece {
     …
 }
 ```
+
+
+## File Maps
+
+A set of files can be summarized into a file map. This is similar to a tree of directories and files in regular file systems. A map associates relative file paths to the DDC URIs of the target files. The URIs may be absolute (`/ddc/…`), or relative to the context of the snapshot, in which case the URI may be at the minimum the CIDs of the files.
+
+The map format is as follows:
+
+```json
+{
+    "fileMap": {
+        "…FILE PATH…": "…DDC URI…",
+    }
+}
+```
+
+A snapshot can be used to package a web application. This technique is used in particular by the [DDC Web Loader](https://github.com/Cerebellum-Network/cere-ddc-sdk-js/tree/main/packages/web-loader). Example:
+
+```json
+{
+    "fileMap": {
+        "index.html": "some_cid_123",
+        "js/main.js": "some_cide_456",
+        "images/pic.png": "some_cide_789",
+    }
+}
+```
+
+A snapshot may be uploaded itself as a DDC file, and its content holds the map. A snapshot file is immutable, but it is possible to upload multiple versions of a snapshot, distinguished by their timestamp.
