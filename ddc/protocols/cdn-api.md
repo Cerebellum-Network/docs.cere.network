@@ -24,7 +24,7 @@ GET /ddc/…/ipiece/…
 ```
 
 #### Response
-For `file/` and `ifile/` queries, return the file content and a Content-Type header.
+For `file/` and `ifile/` queries, return the file content. The response includes a `Content-Type` header which is based, in order of priority, on the filename extension (like `.mp4`), on the tag `content-type`, or on the file content ([MIME Sniffing](https://mimesniff.spec.whatwg.org/)).
 
 For `piece/` and `ipiece/` queries, return the piece data structure encoded in binary ProtoBuf, or in JSON, or only the payload (`piece.data`), depending on options (TODO: specify the options).
 
