@@ -14,12 +14,7 @@ Use the [🔗 Setup](setup.md) guide to create and top-up an account.
 {% tab title="JavaScript" %}
 Latest version of SDK can be found on [releases](https://github.com/Cerebellum-Network/cere-ddc-sdk-js/releases) page.
 
-```
-@cere-ddc-sdk --save @cere-ddc-sdk/ddc-client@1.3.3
-npm install --save-dev typescript
-```
-
-_**package.json**_
+Create in any directory _**package.json**_:
 
 ```json
 {
@@ -40,6 +35,12 @@ _**package.json**_
   },
   "type": "module"
 }
+```
+
+Then run:
+```
+npm install --save-dev typescript
+npm install
 ```
 {% endtab %}
 
@@ -78,7 +79,8 @@ dependencies {
 {% tab title="JavaScript" %}
 ```javascript
 import {mnemonicGenerate} from "@polkadot/util-crypto";
-import {DdcClient, File, Piece, Tag, SearchType, DdcUri, IFILE, IPIECE} from "@cere-ddc-sdk/ddc-client";
+import {DdcClient, File, Piece, Tag, SearchType} from "@cere-ddc-sdk/ddc-client";
+import {DdcUri, IFILE, IPIECE} from "@cere-ddc-sdk/core";
 
 const setupClient = async () => {
     // Cluster address is either string (url of the CDN node to use) or number (id of the CDN cluster to use)
@@ -124,7 +126,7 @@ const createBucket = async () => {
     // Amount of tokens to deposit to the bucket balance
     const balance = 10n;
     // Bucket size in GB
-    const size = 5n;
+    const size = 1n;
     // Bucket parameters
     const parameters = {
         // Number of copies of each piece. Minimum 1. Maximum 9. Temporary limited to 3. Default 1.
@@ -280,7 +282,7 @@ const readPiece = async () => {
         // True - return decrypted data. False - return data as is.
         decrypt: true,
         // If empty or not passed - data will be decrypted by master DEK.
-        dekPath: "/documents",
+        dekPath: "/documents/personal",
     };
 
     // ID of the bucket from which the piece should be read
@@ -315,7 +317,7 @@ const readFile = async () => {
         // True - return decrypted data. False - return data as is.
         decrypt: true,
         // If empty or not passed - data will be decrypted by master DEK.
-        dekPath: "/documents",
+        dekPath: "/documents/personal",
     };
 
     // ID of the bucket from which the file should be read
