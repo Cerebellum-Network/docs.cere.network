@@ -14,7 +14,7 @@ Use the [🔗 Setup](setup.md) guide to create and top-up an account.
 {% tab title="JavaScript" %}
 Latest version of SDK can be found on [releases](https://github.com/Cerebellum-Network/cere-ddc-sdk-js/releases) page.
 
-Create in any directory _**package.json**_:
+ _**package.json**_:
 
 ```json
 {
