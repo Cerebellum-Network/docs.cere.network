@@ -47,7 +47,7 @@ const subDekPath = "bob/data/secret/some";
 const main = async () => {
     console.log("========================= Initialize =========================");
     // Init Bob client
-    const ddcClientBob = await DdcClient.buildAndConnect(MNEMONIC_BOB, {clusterAddress: cdnUrl, smartContract: DEVNET});
+    const ddcClientBob = await DdcClient.buildAndConnect(MNEMONIC_BOB, {clusterAddress: cdnUrl, smartContract: TESTNET});
     // Bob creates bucket in cluster
     const {bucketId} = await ddcClientBob.createBucket(10n, '{"replication": 3}', clusterId);
     console.log(`New Bucket Id: ${bucketId}`);
