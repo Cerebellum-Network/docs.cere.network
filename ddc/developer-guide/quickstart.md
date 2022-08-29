@@ -337,7 +337,7 @@ const readFile = async () => {
 
     // DdcUri that have IFILE protocol returns File
     const file = await ddcClient.read(ddcUri, readOptions);
-    console.log("Successfully read file. CID: " + file.headCid);
+    console.log("Successfully read file. CID: " + file.cid);
 }
 
 readFile().then(() => console.log("DONE")).catch(console.error).finally(() => process.exit());
