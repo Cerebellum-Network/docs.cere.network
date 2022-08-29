@@ -300,6 +300,7 @@ const readPiece = async () => {
     // DdcUri that have IPIECE protocol returns Piece
     const piece = await ddcClient.read(ddcUri, readOptions);
     console.log("Successfully read piece. CID: " + piece.cid);
+    console.log("Successfully read piece. content: " + new TextDecoder().decode(piece.data));
 }
 
 readPiece().then(() => console.log("DONE")).catch(console.error).finally(() => process.exit());
