@@ -39,7 +39,6 @@ Create in any directory _**package.json**_:
 
 Then run:
 ```
-npm install --save-dev typescript
 npm install
 ```
 {% endtab %}
