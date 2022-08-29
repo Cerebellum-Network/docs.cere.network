@@ -295,7 +295,7 @@ const readPiece = async () => {
     const bucketId = 2n;
     // CID of the piece to read
     const cid = "bafk2bzacecdzr32hb7pq7ksx73hxbn2pgata2anniuwvv5nov67gcznvuou5y";
-    const ddcUri = DdcUri.parse(bucketId, cid, IPIECE);
+    const ddcUri = DdcUri.build(bucketId, cid, IPIECE);
 
     // DdcUri that have IPIECE protocol returns Piece
     const piece = await ddcClient.read(ddcUri, readOptions);
