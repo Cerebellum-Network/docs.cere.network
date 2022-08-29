@@ -14,7 +14,7 @@ Use the [🔗 Setup](setup.md) guide to create and top-up an account.
 {% tab title="JavaScript" %}
 Latest version of SDK can be found on [releases](https://github.com/Cerebellum-Network/cere-ddc-sdk-js/releases) page.
 
- _**package.json**_:
+_**package.json**_:
 
 ```json
 {
@@ -38,6 +38,7 @@ Latest version of SDK can be found on [releases](https://github.com/Cerebellum-N
 ```
 
 Then run:
+
 ```
 npm install
 ```
@@ -108,12 +109,12 @@ At the moment Kotlin SDK is outdated :cry:
 
 ### Create bucket
 
-Bucket concept overview can be found on [Concepts](../concepts.md) page.&#x20;
+Bucket concept overview can be found on [Concepts](../concepts.md) page.
 
 DDC client setup explained in [Setup client](quickstart.md#setup-client) section.
 
 {% hint style="info" %}
-On bucket creation, you pay tokens for the bucket reservation. Please, be careful and don't create unnecessary buckets that can be unused or forgotten.&#x20;
+On bucket creation, you pay tokens for the bucket reservation. Please, be careful and don't create unnecessary buckets that can be unused or forgotten.
 {% endhint %}
 
 {% tabs %}
@@ -139,6 +140,8 @@ const createBucket = async () => {
     const bucketCreatedEvent = await ddcClient.createBucket(balance, size, storageClusterId, parameters);
     console.log("Successfully created bucket. Id: " + bucketCreatedEvent.bucketId);
 }
+
+createBucket().then(() => console.log("DONE")).catch(console.error).finally(() => process.exit());
 ```
 {% endtab %}
 
@@ -161,7 +164,7 @@ Only bucket creator can store data to the bucket. Otherwise, storage returns 403
 
 #### Piece
 
-Piece is the smallest indivisible unit stored in DDC. A piece consists of the data and [tags](../protocols/storage-schema.md) that can be used to search pieces or to store not searchable metadata.&#x20;
+Piece is the smallest indivisible unit stored in DDC. A piece consists of the data and [tags](../protocols/storage-schema.md) that can be used to search pieces or to store not searchable metadata.
 
 {% hint style="info" %}
 Max size of the piece is 100 MB. To upload bigger unit of data, see [File](quickstart.md#file) section.
@@ -200,6 +203,8 @@ const storePiece = async () => {
     const ddcUri = await ddcClient.store(bucketId, piece, storeOptions);
     console.log("Successfully uploaded piece. DDC URI: " + ddcUri.toString());
 }
+
+storePiece().then(() => console.log("DONE")).catch(console.error).finally(() => process.exit());
 ```
 {% endtab %}
 
@@ -212,13 +217,13 @@ At the moment Kotlin SDK is outdated :cry:
 
 #### File
 
-File is a bigger unit of data that is presented as a set of pieces. File pieces are distributed across set of nodes (depends on the cluster size and number of pieces).  See [File Storage](../protocols/file-storage.md) section.
+File is a bigger unit of data that is presented as a set of pieces. File pieces are distributed across set of nodes (depends on the cluster size and number of pieces). See [File Storage](../protocols/file-storage.md) section.
 
 {% hint style="info" %}
 There is no hard limit on the max size of the file.
 {% endhint %}
 
-On the code level storing of the File is almost the same as storing of the Piece, the difference is in supported data types (depends on the language you use) and internal logic (splitting of the file into pieces).&#x20;
+On the code level storing of the File is almost the same as storing of the Piece, the difference is in supported data types (depends on the language you use) and internal logic (splitting of the file into pieces).
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -253,6 +258,8 @@ const storeFile = async () => {
     const ddcUri = await ddcClient.store(bucketId, file, storeOptions);
     console.log("Successfully uploaded file. DDC URI: " + ddcUri.toString());
 }
+
+storeFile().then(() => console.log("DONE")).catch(console.error).finally(() => process.exit());
 ```
 {% endtab %}
 
@@ -294,6 +301,8 @@ const readPiece = async () => {
     const piece = await ddcClient.read(ddcUri, readOptions);
     console.log("Successfully read piece. CID: " + piece.cid);
 }
+
+readPiece().then(() => console.log("DONE")).catch(console.error).finally(() => process.exit());
 ```
 {% endtab %}
 
@@ -329,6 +338,8 @@ const readFile = async () => {
     const file = await ddcClient.read(ddcUri, readOptions);
     console.log("Successfully read file. CID: " + file.headCid);
 }
+
+readFile().then(() => console.log("DONE")).catch(console.error).finally(() => process.exit());
 ```
 {% endtab %}
 
@@ -341,7 +352,7 @@ At the moment Kotlin SDK is outdated :cry:
 
 ### Search pieces
 
-Search is based on [tags](../protocols/storage-schema.md) that are combined using logical 'or' operator (e.g. tagA = N or tagB = M). \
+Search is based on [tags](../protocols/storage-schema.md) that are combined using logical 'or' operator (e.g. tagA = N or tagB = M).\
 \
 Search operation is distributed and result is collected from the nodes of the storage cluster where bucket is stored (because bucket is distributed across all cluster nodes).
 
@@ -372,6 +383,8 @@ const searchPieces = async () => {
     const pieces = await ddcClient.search(query);
     console.log("Successfully searched pieces. CIDS: " + pieces.map(e => e.cid));
 }
+
+searchPieces().then(() => console.log("DONE")).catch(console.error).finally(() => process.exit());
 ```
 {% endtab %}
 
@@ -386,7 +399,7 @@ At the moment Kotlin SDK is outdated :cry:
 
 Data sharing is implemented via DEK re-encryption (see [Encryption](quickstart.md#encryption)).
 
-In order to share data, partner have to share his encryption public key to data owner (generated via his secret phrase).&#x20;
+In order to share data, partner have to share his encryption public key to data owner (generated via his secret phrase).
 
 Then partner can read encrypted data having his secret phrase and shared DEK path via DDC Client.
 
@@ -409,6 +422,8 @@ const shareData = async () => {
     const ddcUri = await ddcClient.shareData(bucketId, dekPath, partnerPublicKeyHex);
     console.log("Successfully shared data (uploaded EDEK). DDC URI: " + ddcUri.toString());
 }
+
+shareData().then(() => console.log("DONE")).catch(console.error).finally(() => process.exit());
 ```
 {% endtab %}
 
@@ -423,7 +438,7 @@ At the moment Kotlin SDK is outdated :cry:
 
 #### Overview
 
-The DDC Client Library provides encryption/decryption out of the box (using [NaCl](https://nacl.cr.yp.to/)). \
+The DDC Client Library provides encryption/decryption out of the box (using [NaCl](https://nacl.cr.yp.to/)).\
 \
 Secret phrase passed in DDC Client on setup is used to generate (via blake2b-256) master `DEK`.
 
@@ -441,14 +456,14 @@ Piece DEK = blake2b-256(`personal` + blake2b-256(`documents` + blake2b-256(`supe
 
 _Explanation_
 
-The recursively (in reverse order) generated DEK allows to implement hierarchical encryption where data encrypted by `/documents/personal`  can be decrypted knowing one of the values:
+The recursively (in reverse order) generated DEK allows to implement hierarchical encryption where data encrypted by `/documents/personal` can be decrypted knowing one of the values:
 
 * blake2b-256(`super secret phrase`)
 * blake2b-256(`documents` + blake2b-256(`super secret phrase`))
 
 _Use case example_
 
-Directory based access (file sharing platform)&#x20;
+Directory based access (file sharing platform)
 
 #### Terms
 
