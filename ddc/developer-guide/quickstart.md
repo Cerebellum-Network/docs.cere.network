@@ -109,8 +109,6 @@ At the moment Kotlin SDK is outdated :cry:
 
 ### Create bucket
 
-Bucket concept overview can be found on [Concepts](../concepts.md) page.
-
 DDC client setup explained in [Setup client](quickstart.md#setup-client) section.
 
 {% hint style="info" %}
