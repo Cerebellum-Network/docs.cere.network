@@ -4,6 +4,8 @@ description: Example application that allows users to upload, download and share
 
 # 🗄 File sharing platform
 
+Use the [🔗 Setup](../setup.md) guide to create and top-up an account.
+
 ### Scenario
 
 There are 2 users Bob and Alice. The scenario flow is next:
@@ -19,13 +21,13 @@ There are 2 users Bob and Alice. The scenario flow is next:
 Add a link to React demo application GitHub repository
 {% endhint %}
 
-### Code example (JavaScript, .cjs file)
+### Code example (JavaScript)
 
 <pre class="language-javascript"><code class="lang-javascript"><strong>
-</strong>const {DdcClient, Piece} = require("@cere-ddc-sdk/ddc-client");
-const {TESTNET} = require("@cere-ddc-sdk/smart-contract");
-const {Tag} = require("@cere-ddc-sdk/content-addressable-storage");
-const {u8aToHex} = require("@polkadot/util");
+</strong>import {DdcClient, Piece} from "@cere-ddc-sdk/ddc-client";
+import {TESTNET} from "@cere-ddc-sdk/smart-contract";
+import {Tag} from "@cere-ddc-sdk/content-addressable-storage";
+import {u8aToHex} from "@polkadot/util";
 
 //Replace MNEMONIC_BOB phrase with one you have containing enough balance
 const MNEMONIC_BOB = "carpet purchase luggage away oak use inflict cheese buddy thrive moon scout";
