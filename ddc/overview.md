@@ -10,9 +10,9 @@ DDC enables you to built real-world use cases on a Decentralized Data cloud wher
 
 ## Network participants
 
-Users are developers who want to store and retrieve data.
+Users are developers looking to store and retrieve data, or make DDC services available to their serverless dApps.
 
-Providers want to make money. They provide hardware.
+Providers run DDC nodes on their hardware, and they are looking for a revenue stream from this service.
 
 Users do not trust providers to provide correctly and to keep their data safe. Providers do not trust users to pay them.
 That is why users and providers meet around a "cluster". A cluster is chosen by users and providers; this is an easier choice than all users and providers connecting directly.
