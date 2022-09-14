@@ -73,12 +73,3 @@ GET /api/rest/pieces
 * Bode: _SearchResult_ model
 
 
-## Metrics
-
-CDN nodes provide the following metrics for monitoring:
-
-* general HTTP metrics
-* number piece viewed
-
-{% hint style="warning" %} TODO: document the API of metrics
-{% endhint %}
