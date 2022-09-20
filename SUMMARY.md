@@ -11,6 +11,7 @@
   * [💼 Examples](ddc/developer-guide/examples/README.md)
     * [🗄 File sharing platform](ddc/developer-guide/examples/file-sharing-platform.md)
 * [💾 Provider](ddc/provider.md)
+* [🏭 Integration](ddc/integration/common-sdk.md)
 * [📦 SDK](ddc/sdk.md)
 * [☁ CDN Service](ddc/cdn-nodes/README.md)
 * [🌐 Storage Service](ddc/storage-nodes/README.md)
