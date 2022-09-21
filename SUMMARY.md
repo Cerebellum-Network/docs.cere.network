@@ -13,7 +13,7 @@
 * [💾 Provider](ddc/provider.md)
 * [🏭 Integration](ddc/integration/README.md)
   * [💻 NFT Commerce SDK](ddc/integration/integration-sdk.md)
-    * [📕 Web](ddc/integration/web-sdk.md)
+    * [📓 Web](ddc/integration/web-sdk.md)
     * [📗 Android](ddc/integration/android-sdk.md)
     * [📙 IOS](ddc/integration/ios-sdk.md)
     * [📘 React Native](ddc/integration/react-native-sdk.md)
