@@ -1,6 +1,4 @@
 # 🤓 EDP Overview
-
-## What is the EDP Extended Developers Program?
 The Extended Developers Program is a Cere backed program offering early joining, tech-savvy individuals, teams and enterprises close and early access to critical changes in the ecosystem. 
 
 
