@@ -63,8 +63,9 @@ EDP offers bounties of various types and sizes. From making transactions on the 
 The best will have additional opportunities to move up the leaderboard, unlocking new potential along the journey. Including project grants and sponsorships, CERE token rewards, event participation packages and more. 
 
 ## Where can you find us? 
-Join us on -> [discord](https://discord.gg/bFv6jkpK8N)
+Join the EDP developer community on 
+- [discord](https://discord.gg/bFv6jkpK8N)
+- [telegram](https://t.me/ceretroubleshooting)
 
 Follow us 
 - on GitHub [@CereIO](https://github.com/cere-io) and [@Cerebellum-Network](https://github.com/Cerebellum-Network)
-- on Twitter [@CereNetwork](https://twitter.com/cerenetwork)
