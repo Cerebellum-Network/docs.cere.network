@@ -48,7 +48,9 @@ More demos, documentation, integrations and code coming soon!
 
 
 ## OGs
-We call the leaders of our community OG, like `old-gansgsta`. You'll see them around, and know it when you do. They come from the top of the ranks within the community. We couldn't work without them. They get paid for their work.
+We call the leaders of our community OG, like `old-gansgsta`. You'll see them around, and know it when you do. They come from the top of the ranks within the community. 
+
+They are responsible for helping at all levels of the community. We couldn't work without them. They get paid for their work.
 
 In the future, OGs will also be a major source of any DAOs Cere EDP community might get involved with.
 
