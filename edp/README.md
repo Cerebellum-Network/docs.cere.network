@@ -21,7 +21,7 @@ Stay tuned! More on building, events, new grants programs and more. Soon.
 EDP community contributes primarily to the following 2 Cere GitHub organizations: [CereIO](https://github.com/cere-io) and [Cerebellum-Network](https://github.com/Cerebellum-Network)
 
 ### DDC v2 ###
-- [DDC](https://docs.cere.network/ddc/overview) is a Decentralised Data Cloud offering services to store, retrieve, accelerate and manage data to enable real world use cases.
+[DDC](https://docs.cere.network/ddc/overview) is a Decentralised Data Cloud offering services to store, retrieve, accelerate and manage data to enable real world use cases.
 - [cere-ddc-sdk-go](https://github.com/Cerebellum-Network/cere-ddc-sdk-go)
 - [cere-ddc-sdk-js](https://github.com/Cerebellum-Network/cere-ddc-sdk-js)
 - [cere-ddc-sdk-kotlin](https://github.com/Cerebellum-Network/cere-ddc-sdk-kotlin)
@@ -47,8 +47,8 @@ Davinci is a realworld example of Freeport project in action.
 ### Documentation ###
 - [DDC v2 Developer Docs](https://github.com/Cerebellum-Network/docs.cere.network)
 
-### More demos
-- [Torus Demo](https://github.com/Cerebellum-Network/torus-demo)
+### More soon! ###
+More demos, documentation, integrations and code coming soon!
 
 
 ## OGs
