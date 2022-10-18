@@ -1,9 +1,5 @@
 # 📖 EDP Overview
 
-## Where can you find us? 
-
-We're on -> [discord](https://discord.gg/bFv6jkpK8N)
-
 ## What is the EDP Extended Developers Program?
 
 Extended Developers Program aims to enable, engage and exponentially expand the open source developer communities integrating, innovating, and securing first and third-party decentralized Cere Network technologies with the legacy web2 and broader web3 blockchain ecosystems.
@@ -44,4 +40,6 @@ EDP offers bounties of various types and sizes. From making transactions on the 
 
 The best will have additional opportunities to move up the leaderboard, unlocking new potential along the journey. Including project grants and sponsorships, CERE token rewards, event participation packages and more. 
 
-We want to buidl!
+## Where can you find us? 
+
+Join us on -> [discord](https://discord.gg/bFv6jkpK8N)
