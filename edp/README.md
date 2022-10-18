@@ -69,5 +69,6 @@ Join the EDP developer community on
 - [discord](https://discord.gg/bFv6jkpK8N)
 - [telegram](https://t.me/ceretroubleshooting)
 
-Follow us 
-- on GitHub [@CereIO](https://github.com/cere-io) and [@Cerebellum-Network](https://github.com/Cerebellum-Network)
+Follow us on GitHub 
+- [@CereIO](https://github.com/cere-io) 
+- [@Cerebellum-Network](https://github.com/Cerebellum-Network)
