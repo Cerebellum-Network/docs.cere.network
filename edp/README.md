@@ -18,7 +18,39 @@ Stay tuned! More on building, events, new grants programs and more. Soon.
 
 ## Github
 
-EDP contributes to the following Cere organizations: [CereIO](https://github.com/cere-io) and [Cerebellum-Network](https://github.com/Cerebellum-Network)
+EDP community contributes primarily to the following 2 Cere GitHub organizations: [CereIO](https://github.com/cere-io) and [Cerebellum-Network](https://github.com/Cerebellum-Network)
+
+### DDC v2 ###
+[DDC](https://docs.cere.network/ddc/overview) is a Decentralised Data Cloud offering services to store, retrieve, accelerate and manage data to enable real world use cases.
+
+[cere-ddc-sdk-go](https://github.com/Cerebellum-Network/cere-ddc-sdk-go)
+[cere-ddc-sdk-js](https://github.com/Cerebellum-Network/cere-ddc-sdk-js)
+[cere-ddc-sdk-kotlin](https://github.com/Cerebellum-Network/cere-ddc-sdk-kotlin)
+[ddc-encryption-impl-kotlin](https://github.com/Cerebellum-Network/ddc-encryption-impl-kotlin)
+
+### Freeport ###
+Freeport is a secure digital asset vault and solution suite for NFT backed assets.
+[Freeport](https://github.com/Cerebellum-Network/Cere-Freeport)
+[Freeport - Minting Tool](https://github.com/Cerebellum-Network/freeport-minting-tool)
+[Freeport - Smart Contracts](https://github.com/Cerebellum-Network/Freeport-Smart-Contracts)
+[Freeport - Smart Contract SDK](https://github.com/Cerebellum-Network/Freeport-Smart-Contracts-SDK)
+
+### Davinci ###
+Davinci is a realworld example of Freeport project in action.
+[Davinci Integration Example](https://github.com/cere-io/integration-external-app-example)
+
+### ???????????????? ###
+[Android SDK](https://github.com/cere-io/sdk-android)
+[Android SDK Example](https://github.com/cere-io/sdk-android-example)
+[iOS SDK](https://github.com/cere-io/sdk-ios)
+[iOS SDK Example](https://github.com/cere-io/sdk-ios-example)
+
+### Documentation ###
+[DDC v2 Developer Docs](https://github.com/Cerebellum-Network/docs.cere.network)
+
+### More demos
+[Torus Demo](https://github.com/Cerebellum-Network/torus-demo)
+
 
 ## OGs
 
@@ -41,3 +73,5 @@ The best will have additional opportunities to move up the leaderboard, unlockin
 ## Where can you find us? 
 
 Join us on -> [discord](https://discord.gg/bFv6jkpK8N)
+
+Follow us on GitHub [@CereIO](https://github.com/cere-io) and [@Cerebellum-Network](https://github.com/Cerebellum-Network)
