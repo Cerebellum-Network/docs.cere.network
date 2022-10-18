@@ -9,7 +9,7 @@ Extended Developers Program aims to enable, engage and exponentially expand the 
 
 We learn and work in Cere Network ecosystem, incentived to earn for good work building and integrating with Cere Network protocol and DDCv2.  We are exploring the edge of what' known in the decentralized storage space, gathering real-world use cases.
 
-Elite contributors become community node operators, community admins and MODs, github project comitters, and sometimes Cere Network colleagues! Check [our latest listing!](https://jobs.lever.co/cere-network)
+Elite contributors become community node operators, community admins and MODs, github project comitters, and sometimes Cere Network colleagues! Check [our latest jobs!](https://jobs.lever.co/cere-network)
 
 The Cere Network team engages with developers at events, and collaborating within the community and ecosystem at large on large scale projects and initiatives. 
 
