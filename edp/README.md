@@ -18,9 +18,7 @@ Stay tuned! More on building, events, new grants programs and more. Soon.
 
 ## Github
 
-EDP contributes to the following Cere organizations:
-- https://github.com/cere-io
-- https://github.com/Cerebellum-Network
+EDP contributes to the following Cere organizations: [CereIO](https://github.com/cere-io) and [Cerebellum-Network](https://github.com/Cerebellum-Network)
 
 ## OGs
 
