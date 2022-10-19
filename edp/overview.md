@@ -1,20 +1,15 @@
 ## Extended Developer Program ##
 
-The Extended Developer Program is a Cere backed program offering early joining, tech-savvy individuals, teams and enterprises close and early access to critical changes in the ecosystem. 
+The Extended Developer Program is a Cere backed program offering early joining, tech-savvy individuals, teams and enterprises close and early access to important changes in the ecosystem. 
 
-## Benefits of EDP ##
-Extended Developers Program aims to enable, engage and exponentially expand the open source developer communities integrating, innovating, and securing first and third-party decentralized Cere Network technologies with the legacy web2 and broader web3 blockchain ecosystems.
+Through this program, the Cere Network team engages with developers on-line and IRL at events, collaborating within the community and ecosystem at large to build the future of decentralized data storage solutions as laid out in the Cere Network Vision 2.0 whitepaper (LINK MISSING). 
 
-We learn and work in Cere Network ecosystem, incentived to earn for good work building and integrating with Cere Network protocol and DDCv2.  We are exploring the edge of what' known in the decentralized storage space, gathering real-world use cases.
-
-Elite contributors become community node operators, community admins and MODs, github project comitters, and sometimes Cere Network colleagues! Check [our latest jobs!](https://jobs.lever.co/cere-network)
-
-The Cere Network team engages with developers at events, and collaborating within the community and ecosystem at large on large scale projects and initiatives. 
-
-Stay tuned! More on building, events, new grants programs and more. Soon. 
+We work with the community to help us test our code, build client SDKs, identify bugs and security vulnerabilities, and build new tools and integrations with other blockchain projects and initiatives. 
 
 ## Github ##
 EDP community contributes primarily to the following 2 Cere GitHub organizations: [CereIO](https://github.com/cere-io) and [Cerebellum-Network](https://github.com/Cerebellum-Network)
+
+For example, some of the repositories the community might engage with during participation in EDP activities are:
 
 ### DDC v2 ###
 [DDC](https://docs.cere.network/ddc/overview) is a Decentralised Data Cloud offering services to store, retrieve, accelerate and manage data to enable real world use cases.
@@ -41,18 +36,20 @@ Davinci is a realworld example of Freeport project in action.
 More demos, documentation, integrations and code coming soon!
 
 ## OGs
-We call the leaders of our community OG, like `old-gansgsta`. You'll see them around, and know it when you do. They come from the top of the ranks within the community. 
+Everyone in the community can participate. Elite contributors earn the ability to get early access to support and resources around validator node pool, community admins and MODs, github project comitters, and sometimes Cere Network colleagues! 
 
-They are responsible for helping at all levels of the community. We couldn't work without them, and they get paid for their work.
+We call these elite leads in our community `OG`, like `old-gansgsta`.  They are responsible for helping at all levels of the community. We couldn't work without them, and they get paid for their work. You'll see them around, and know it when you do. 
 
-In the future, OGs will also be a major source of any DAOs Cere EDP community might initiate around the EDP program.
+In the future, OGs will also be a major source of any DAOs Cere EDP community might initiate around the EDP program. Stay tuned!
 
 ## Bounties
-As Cere Network and Cere IO continue to make new releases, Cere EDP community will continue to explore new territories. 
+As Cere Network and Cere IO continue to make new releases, Cere EDP community will continue to explore these new territories together, as well.
 
-One way EDP we will drive community engagement is through Bounty campaigns. These campaigns will offer many opportunities to learn, share and contribute to the Cere Network ecosystem. Some examples of incentivized bounties might include the posting of 🧵's and youtube video bounties or various technical bounties that help us secure Cere Network, improve or add features, and solve real-world problems.
+EDP drives community engagement primarily through Bounty campaigns. These campaigns will offer many opportunities to learn, share and contribute to the Cere Network ecosystem. 
 
-The best will have additional opportunities to move up the leaderboard, unlocking new potential along the journey. Including project grants and sponsorships, CERE token rewards, event participation packages and more. 
+Some examples of incentivized bounties might include the posting of 🧵's and youtube video bounties or various technical bounties that help us secure Cere Network, improve or add features, and solve real-world problems.
+
+The best will have additional opportunities to move up the leaderboard, unlocking new potential along the journey. Perks include accessing project grants and sponsorships, CERE token rewards, event participation packages, and the ultimate reward -> an invitation to becoming an OG.
 
 More details about bounties in the [Bounty Hunt](bounties.md) section.
 
@@ -64,3 +61,5 @@ Join the EDP developer community on
 Follow us on GitHub 
 - [@CereIO](https://github.com/cere-io) 
 - [@Cerebellum-Network](https://github.com/Cerebellum-Network)
+
+Check [our latest jobs!](https://jobs.lever.co/cere-network)
