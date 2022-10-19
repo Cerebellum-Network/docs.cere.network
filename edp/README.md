@@ -1,5 +1,6 @@
+## Extended Developer Program ##
 
-The Extended Developers Program is a Cere backed program offering early joining, tech-savvy individuals, teams and enterprises close and early access to critical changes in the ecosystem. 
+The Extended Developer Program is a Cere backed program offering early joining, tech-savvy individuals, teams and enterprises close and early access to critical changes in the ecosystem. 
 
 ## Benefits of EDP ##
 Extended Developers Program aims to enable, engage and exponentially expand the open source developer communities integrating, innovating, and securing first and third-party decentralized Cere Network technologies with the legacy web2 and broader web3 blockchain ecosystems.
