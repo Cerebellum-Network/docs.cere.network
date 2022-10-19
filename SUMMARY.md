@@ -59,7 +59,7 @@
   * [Hardware Recommendations](other/hardware-recommendations.md)
   * [Other Notes](other/other-notes.md)
 
-## tools
+## Tools
 
 * [Cere Explorer](tools/cere-explorer/README.md)
   * [Prepare a browser to work with Cere Explorer](tools/cere-explorer/prepare-a-browser-to-work-with-cere-explorer.md)
@@ -74,6 +74,6 @@
 * [Treasury](learn/treasury.md)
 * [Council](learn/council.md)
 
-## Extended Developer Program
-* [Overview](edp/README.md)
+## [Extended Developer Program](edp/README.md)
+  * [Overview](edp/README.md)
 
