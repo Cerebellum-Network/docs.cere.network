@@ -72,11 +72,10 @@
 
 
 ## Other
-* [Developer Program](edp/README.md)
+* [Developer Program](edp/overview.md)
   * [Bounties](edp/bounties.md)
   * [Contributor Journey](edp/contributor-journey.md)
 * [Other](other/README.md)
   * [Linux Best Practises](other/linux-best-practises.md)
   * [Hardware Recommendations](other/hardware-recommendations.md)
   * [Other Notes](other/other-notes.md)
-
