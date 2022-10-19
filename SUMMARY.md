@@ -75,7 +75,7 @@
 * [Council](learn/council.md)
 
 ## Developer Program
-  * [Welcome](edp/README.md)
+  * [Extended Developer Program](edp/README.md)
   * [Bounties](edp/bounties.md)
   * [Contributor Journey](edp/contributor-journey.md)
 
