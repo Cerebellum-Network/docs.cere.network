@@ -12,4 +12,4 @@ Compared with other storage and cdn protocols it gives full control, flexibility
 
 Follow the [developer’s guide](ddc/developer-guide) to get started with the SDKs.
 
-Check the [Extended Developer Program](edp/overview) for more about the official Cere Network developer community.
+Check the [Extended Developer Program](edp/overview.md) for more about the official Cere Network developer community.
