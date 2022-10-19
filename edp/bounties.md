@@ -1,8 +1,12 @@
 # Bounties
 
-Our bounty program is to invite the community to take part in the development of the Cere Network ecosystem. It covers core projects and tooling from validator nodes to SDKs and integrations. Both technical and non-technical bounties will be issued. 
+Our bounty program is an open invitation to everyone in the broader open source community to take part in the development of the Cere Network ecosystem. 
 
-## Introduction
+The bounty program covers incentivized tasks from simply documentation fixes to building and maintaining core tooling, from validator nodes to SDKs and integrations. 
+
+Bounties come in two form: technical and non-technical. 
+
+## Bounty Types
 
 Bounties will come in various types and sizes. From making transactions on the testnet to running simulations, testing, contributing to project code repositories. 
 
@@ -10,11 +14,11 @@ Anyone can participate in on-going bounties, with the potential to improve their
 
 To get started, all you have to do is join us on [discord](https://discord.gg/bFv6jkpK8N), introduce yourself in #general and let us know you're interested.
 
-## Rewards
+## Bounty Rewards
 
 All bounty rewards will be offered in the form of CERE tokens, unless otherwise noted. 
 
-## Examples
+## Bounty Examples
 
 Some examples of the bounties include:
 - Technical

@@ -7,9 +7,7 @@ Through this program, the Cere Network team engages with developers on-line and 
 We work with the community to help us test our code, build client SDKs, identify bugs and security vulnerabilities, and build new tools and integrations with other blockchain projects and initiatives. 
 
 ## Github ##
-EDP community contributes primarily to the following 2 Cere GitHub organizations: [CereIO](https://github.com/cere-io) and [Cerebellum-Network](https://github.com/Cerebellum-Network)
-
-For example, some of the repositories the community might engage with during participation in EDP activities are:
+EDP community contributes primarily to the following 2 Cere GitHub organizations: [CereIO](https://github.com/cere-io) and [Cerebellum-Network](https://github.com/Cerebellum-Network).  For example, some of the repositories the community might engage with during participation in EDP activities are:
 
 ### DDC v2 ###
 [DDC](https://docs.cere.network/ddc/overview) is a Decentralised Data Cloud offering services to store, retrieve, accelerate and manage data to enable real world use cases.
@@ -32,9 +30,6 @@ Davinci is a realworld example of Freeport project in action.
 ### Documentation ###
 - [DDC v2 Developer Docs](https://github.com/Cerebellum-Network/docs.cere.network)
 
-### More soon! ###
-More demos, documentation, integrations and code coming soon!
-
 ## OGs
 Everyone in the community can participate. Elite contributors earn the ability to get early access to support and resources around validator node pool, community admins and MODs, github project comitters, and sometimes Cere Network colleagues! 
 
@@ -51,7 +46,7 @@ Some examples of incentivized bounties might include the posting of 🧵's and y
 
 The best will have additional opportunities to move up the leaderboard, unlocking new potential along the journey. Perks include accessing project grants and sponsorships, CERE token rewards, event participation packages, and the ultimate reward -> an invitation to becoming an OG.
 
-More details about bounties in the [Bounty Hunt](bounties.md) section.
+More details about bounties in the [Bounties](bounties.md) section.
 
 ## Where can you find us? 
 Join the EDP developer community on 
