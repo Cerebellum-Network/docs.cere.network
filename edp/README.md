@@ -1,4 +1,5 @@
-# Overview
+
+# Overview of EDP
 The Extended Developers Program is a Cere backed program offering early joining, tech-savvy individuals, teams and enterprises close and early access to critical changes in the ecosystem. 
 
 
@@ -54,7 +55,7 @@ One way EDP we will drive community engagement is through Bounty campaigns. Thes
 
 The best will have additional opportunities to move up the leaderboard, unlocking new potential along the journey. Including project grants and sponsorships, CERE token rewards, event participation packages and more. 
 
-More details about bounties in the [Bounty Hunt](/edp/bounties.md) section.
+More details about bounties in the [Bounty Hunt](bounties.md) section.
 
 ## Where can you find us? 
 Join the EDP developer community on 
