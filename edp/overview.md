@@ -49,9 +49,8 @@ The best will have additional opportunities to move up the leaderboard, unlockin
 More details about bounties in the [Bounties](bounties.md) section.
 
 ## Where can you find us? 
-Join the EDP developer community on 
+Join the one and only Official EDP Developer Community on 
 - [discord](https://discord.gg/bFv6jkpK8N)
-- [telegram](https://t.me/ceretroubleshooting)
 
 Follow us on GitHub 
 - [@CereIO](https://github.com/cere-io) 

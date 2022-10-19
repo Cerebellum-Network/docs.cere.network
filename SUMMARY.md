@@ -71,7 +71,7 @@
 
 ## More
 
-* Developer Program
+* Extended Developer Program
   * [Overview](edp/overview.md)
   * [Bounties](edp/bounties.md)
   * [Contributor Journey](edp/contributor-journey.md)
