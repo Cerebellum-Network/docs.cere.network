@@ -74,8 +74,7 @@
 * [Treasury](learn/treasury.md)
 * [Council](learn/council.md)
 
-## Developer Program
-* [Overview](edp/README.md)
-* [Bounties](edp/bounties.md)
-* [Contributor Journey](edp/contributor-journey.md)
+* [Developer Program](edp/README.md)
+  * [Bounties](edp/bounties.md)
+  * [Contributor Journey](edp/contributor-journey.md)
 
