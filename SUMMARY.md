@@ -72,7 +72,8 @@
 
 
 ## Other
-* [Developer Program](edp/overview.md)
+* Developer Program
+  * [Overview](edp/overview.md)
   * [Bounties](edp/bounties.md)
   * [Contributor Journey](edp/contributor-journey.md)
 * [Other](other/README.md)
