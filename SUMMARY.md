@@ -30,8 +30,6 @@
   * [🕸 Topology Schema](ddc/protocols/contract-params-schema.md)
   * [⚖ Smart Contracts](ddc/protocols/smart-contracts.md)
   * [⚖ Smart Contract API](ddc/protocols/smart-contract-api.md)
-* [🤓 Extended Developer Program](edp/README.md)
-
 
 ## Mainnet
 
@@ -75,3 +73,7 @@
 * [Staking/Slashing](learn/slashing.md)
 * [Treasury](learn/treasury.md)
 * [Council](learn/council.md)
+
+## Extended Developer Program
+* [Overview](edp/README.md)
+
