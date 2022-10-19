@@ -77,4 +77,3 @@
 * [Developer Program](edp/README.md)
   * [Bounties](edp/bounties.md)
   * [Contributor Journey](edp/contributor-journey.md)
-
