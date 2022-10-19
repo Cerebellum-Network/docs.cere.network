@@ -59,13 +59,10 @@ They are responsible for helping at all levels of the community. We couldn't wor
 
 In the future, OGs will also be a major source of any DAOs Cere EDP community might get involved with.
 
-## Campaigns
+## Bounties
 As Cere Network and Cere IO continue to make new releases, Cere EDP community will continue to explore new territories. 
 
-New updates and major changes will be communicated through EDP campaigns. Incentivized campaign's might include 🧵's and youtube video bounties or various technical bounties that help us secure Cere Network, improve or add features, and solve real-world problems.
-
-## Bounties
-EDP offers bounties of various types and sizes. From making transactions on the testnet to running simulations, testing, contributing to project code repositories. 
+New updates and major changes will be communicated through EDP Bounty campaigns. Incentivized bounties might include 🧵's and youtube video bounties or various technical bounties that help us secure Cere Network, improve or add features, and solve real-world problems.
 
 The best will have additional opportunities to move up the leaderboard, unlocking new potential along the journey. Including project grants and sponsorships, CERE token rewards, event participation packages and more. 
 
