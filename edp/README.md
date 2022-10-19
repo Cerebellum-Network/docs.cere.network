@@ -16,6 +16,10 @@ Stay tuned! More on building, events, new grants programs and more. Soon.
 ## Github
 EDP community contributes primarily to the following 2 Cere GitHub organizations: [CereIO](https://github.com/cere-io) and [Cerebellum-Network](https://github.com/Cerebellum-Network)
 
+/*
+//////////////////////
+All of these are public, but review required still
+///////////////////////////////////
 ### DDC v2 ###
 [DDC](https://docs.cere.network/ddc/overview) is a Decentralised Data Cloud offering services to store, retrieve, accelerate and manage data to enable real world use cases.
 - [cere-ddc-sdk-go](https://github.com/Cerebellum-Network/cere-ddc-sdk-go)
@@ -39,6 +43,7 @@ Davinci is a realworld example of Freeport project in action.
 - [Android SDK Example](https://github.com/cere-io/sdk-android-example)
 - [iOS SDK](https://github.com/cere-io/sdk-ios)
 - [iOS SDK Example](https://github.com/cere-io/sdk-ios-example)
+*/
 
 ### Documentation ###
 - [DDC v2 Developer Docs](https://github.com/Cerebellum-Network/docs.cere.network)
@@ -63,6 +68,8 @@ New updates and major changes will be communicated through EDP campaigns. Incent
 EDP offers bounties of various types and sizes. From making transactions on the testnet to running simulations, testing, contributing to project code repositories. 
 
 The best will have additional opportunities to move up the leaderboard, unlocking new potential along the journey. Including project grants and sponsorships, CERE token rewards, event participation packages and more. 
+
+More details about bounties in the [Bounty Hunt](/edp/bounties.md) section.
 
 ## Where can you find us? 
 Join the EDP developer community on 
