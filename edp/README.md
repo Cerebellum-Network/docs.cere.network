@@ -16,34 +16,23 @@ Stay tuned! More on building, events, new grants programs and more. Soon.
 ## Github
 EDP community contributes primarily to the following 2 Cere GitHub organizations: [CereIO](https://github.com/cere-io) and [Cerebellum-Network](https://github.com/Cerebellum-Network)
 
-/*
-//////////////////////
-All of these are public, but review required still
-///////////////////////////////////
 ### DDC v2 ###
 [DDC](https://docs.cere.network/ddc/overview) is a Decentralised Data Cloud offering services to store, retrieve, accelerate and manage data to enable real world use cases.
-- [cere-ddc-sdk-go](https://github.com/Cerebellum-Network/cere-ddc-sdk-go)
-- [cere-ddc-sdk-js](https://github.com/Cerebellum-Network/cere-ddc-sdk-js)
-- [cere-ddc-sdk-kotlin](https://github.com/Cerebellum-Network/cere-ddc-sdk-kotlin)
-- [ddc-encryption-impl-kotlin](https://github.com/Cerebellum-Network/ddc-encryption-impl-kotlin)
+- [cere-ddc-sdk-go](https://github.com/Cerebellum-Network/cere-ddc-sdk-go) - Cere DDC SDK for Go
+- [cere-ddc-sdk-js](https://github.com/Cerebellum-Network/cere-ddc-sdk-js) - Cere DDC SDK for Javascript
+- [cere-ddc-sdk-kotlin](https://github.com/Cerebellum-Network/cere-ddc-sdk-kotlin) - Cere DDC SDK for Kotlin (JVM compatible)
+- [ddc-encryption-impl-kotlin](https://github.com/Cerebellum-Network/ddc-encryption-impl-kotlin) - Cere DDC encryption implementation for Kotlin
 
 ### Freeport ###
 Freeport is a secure digital asset vault and solution suite for NFT backed assets.
-- [Freeport](https://github.com/Cerebellum-Network/Cere-Freeport)
-- [Freeport - Minting Tool](https://github.com/Cerebellum-Network/freeport-minting-tool)
-- [Freeport - Smart Contracts](https://github.com/Cerebellum-Network/Freeport-Smart-Contracts)
-- [Freeport - Smart Contract SDK](https://github.com/Cerebellum-Network/Freeport-Smart-Contracts-SDK)
+- [Freeport](https://github.com/Cerebellum-Network/Cere-Freeport) - Freeport Creator Suit and Decentralized Data Vault
+- [Freeport - Minting Tool](https://github.com/Cerebellum-Network/freeport-minting-tool) - Batch NFT minting
+- [Freeport - Smart Contracts](https://github.com/Cerebellum-Network/Freeport-Smart-Contracts) - Smart contracts for NFTs with royalties and marketplaces
+- [Freeport - Smart Contract SDK](https://github.com/Cerebellum-Network/Freeport-Smart-Contracts-SDK) - SDK for Freeport Smart Contracts
 
 ### Davinci ###
 Davinci is a realworld example of Freeport project in action.
 - [Davinci Integration Example](https://github.com/cere-io/integration-external-app-example)
-
-### ???????????????? ###
-- [Android SDK](https://github.com/cere-io/sdk-android)
-- [Android SDK Example](https://github.com/cere-io/sdk-android-example)
-- [iOS SDK](https://github.com/cere-io/sdk-ios)
-- [iOS SDK Example](https://github.com/cere-io/sdk-ios-example)
-*/
 
 ### Documentation ###
 - [DDC v2 Developer Docs](https://github.com/Cerebellum-Network/docs.cere.network)
@@ -51,18 +40,17 @@ Davinci is a realworld example of Freeport project in action.
 ### More soon! ###
 More demos, documentation, integrations and code coming soon!
 
-
 ## OGs
 We call the leaders of our community OG, like `old-gansgsta`. You'll see them around, and know it when you do. They come from the top of the ranks within the community. 
 
-They are responsible for helping at all levels of the community. We couldn't work without them. They get paid for their work.
+They are responsible for helping at all levels of the community. We couldn't work without them, and they get paid for their work.
 
-In the future, OGs will also be a major source of any DAOs Cere EDP community might get involved with.
+In the future, OGs will also be a major source of any DAOs Cere EDP community might initiate around the EDP program.
 
 ## Bounties
 As Cere Network and Cere IO continue to make new releases, Cere EDP community will continue to explore new territories. 
 
-New updates and major changes will be communicated through EDP Bounty campaigns. Incentivized bounties might include 🧵's and youtube video bounties or various technical bounties that help us secure Cere Network, improve or add features, and solve real-world problems.
+One way EDP we will drive community engagement is through Bounty campaigns. These campaigns will offer many opportunities to learn, share and contribute to the Cere Network ecosystem. Some examples of incentivized bounties might include the posting of 🧵's and youtube video bounties or various technical bounties that help us secure Cere Network, improve or add features, and solve real-world problems.
 
 The best will have additional opportunities to move up the leaderboard, unlocking new potential along the journey. Including project grants and sponsorships, CERE token rewards, event participation packages and more. 
 
