@@ -54,11 +54,6 @@
 
 ***
 
-* [Other](other/README.md)
-  * [Linux Best Practises](other/linux-best-practises.md)
-  * [Hardware Recommendations](other/hardware-recommendations.md)
-  * [Other Notes](other/other-notes.md)
-
 ## Tools
 
 * [Cere Explorer](tools/cere-explorer/README.md)
@@ -74,6 +69,15 @@
 * [Treasury](learn/treasury.md)
 * [Council](learn/council.md)
 
-* [Developer Program](edp/README.md)
+
+## Developer Program
+* [Overview](edp/README.md)
   * [Bounties](edp/bounties.md)
   * [Contributor Journey](edp/contributor-journey.md)
+
+## Other
+* [Other](other/README.md)
+  * [Linux Best Practises](other/linux-best-practises.md)
+  * [Hardware Recommendations](other/hardware-recommendations.md)
+  * [Other Notes](other/other-notes.md)
+
