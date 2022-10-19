@@ -69,9 +69,8 @@
 * [Treasury](learn/treasury.md)
 * [Council](learn/council.md)
 
+## More
 
-
-## Other
 * Developer Program
   * [Overview](edp/overview.md)
   * [Bounties](edp/bounties.md)
