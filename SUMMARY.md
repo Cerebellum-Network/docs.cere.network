@@ -70,12 +70,11 @@
 * [Council](learn/council.md)
 
 
-## Developer Program
-* [Overview](edp/README.md)
-  * [Bounties](edp/bounties.md)
-  * [Contributor Journey](edp/contributor-journey.md)
 
 ## Other
+* [Developer Program](edp/README.md)
+  * [Bounties](edp/bounties.md)
+  * [Contributor Journey](edp/contributor-journey.md)
 * [Other](other/README.md)
   * [Linux Best Practises](other/linux-best-practises.md)
   * [Hardware Recommendations](other/hardware-recommendations.md)
