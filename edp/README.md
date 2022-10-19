@@ -1,11 +1,8 @@
 
-# Overview of EDP
+# Overview of EDP #
 The Extended Developers Program is a Cere backed program offering early joining, tech-savvy individuals, teams and enterprises close and early access to critical changes in the ecosystem. 
 
-TESATING
-
-
-## Benefits of EDP
+## Benefits of EDP ##
 Extended Developers Program aims to enable, engage and exponentially expand the open source developer communities integrating, innovating, and securing first and third-party decentralized Cere Network technologies with the legacy web2 and broader web3 blockchain ecosystems.
 
 We learn and work in Cere Network ecosystem, incentived to earn for good work building and integrating with Cere Network protocol and DDCv2.  We are exploring the edge of what' known in the decentralized storage space, gathering real-world use cases.
@@ -16,7 +13,7 @@ The Cere Network team engages with developers at events, and collaborating withi
 
 Stay tuned! More on building, events, new grants programs and more. Soon. 
 
-## Github
+## Github ##
 EDP community contributes primarily to the following 2 Cere GitHub organizations: [CereIO](https://github.com/cere-io) and [Cerebellum-Network](https://github.com/Cerebellum-Network)
 
 ### DDC v2 ###
