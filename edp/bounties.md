@@ -6,7 +6,13 @@ The bounty program covers incentivized tasks from simply documentation fixes to 
 
 ## Types
 
-Bounties come in two form: technical and non-technical. From making transactions on the testnet to running simulations, testing, contributing to project code repositories, bounties come in many different types and sizes. 
+Bounties come in two forms: technical and non-technical. 
+
+From making transactions on the testnet to running simulations, testing, contributing to project code repositories, bounties come in many different types and sizes. 
+
+Some bounties will restrictured in who can participate. Some will be time constrained. Others will be available continuously for anyone to complete once or multiple times sequentially. 
+
+The specifics will be laid out in more detail as new activities are launched. Make sure to join our community discord for the latest news!
 
 ## Rewards
 
