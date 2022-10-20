@@ -52,7 +52,7 @@ EDP drives community engagement primarily through Bounty campaigns. These campai
 
 Some examples of incentivized bounties might include the posting of 🧵's and youtube video bounties or various technical bounties that help us secure Cere Network, improve or add features, and solve real-world problems.
 
-The best will have additional opportunities to move up the leaderboard, unlocking new potential along the way. Perks include accessing project grants and sponsorships, CERE token rewards, event participation packages, and the ultimate reward 👉 an invitation to join the ranks as a Cere Network community OG.
+The best will have additional opportunities to move up the leaderboard, unlocking new potential along the way. Perks include accessing project grants and sponsorships, CERE token rewards, event participation packages, and the ultimate reward 👉 an invitation to join the ranks as a Cere Network community OG 😎.
 
 More details in the [Bounties](bounties.md) section.
 
