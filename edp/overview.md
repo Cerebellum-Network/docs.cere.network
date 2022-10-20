@@ -52,4 +52,4 @@ Some examples of incentivized bounties might include the posting of 🧵's and y
 
 The best will have additional opportunities to move up the leaderboard, unlocking new potential along the journey. Perks include accessing project grants and sponsorships, CERE token rewards, event participation packages, and the ultimate reward -> an invitation to becoming an OG.
 
-More details about bounties in the [Bounties](bounties.md) section.
+More details in the [Bounties](bounties.md) section.
