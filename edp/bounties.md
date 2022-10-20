@@ -25,6 +25,7 @@ All bounty rewards will be offered in the form of CERE tokens, unless otherwise 
 ## Examples
 
 Some examples of the bounties include:
+
 - Technical
   - preparing a deployable repository demonstrating a new use-case for (eg) [cere-ddc-sdk-js](https://github.com/Cerebellum-Network/cere-ddc-sdk-js)
   - running a network simulation for validating that Cere Network slashing works as expected
