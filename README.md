@@ -23,4 +23,5 @@ Compared with other storage and CDN protocols, it gives full control, flexibilit
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 👉 Check out [Gaming docs](other/gaming.md)
 
 *I'd like to build on Cere Network!*
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 👉 Check the [Extended Developer Program](edp/overview.md).
