@@ -6,7 +6,7 @@ Decentralized storage and infrastructure are attracting more attention than ever
 
 As the technology and the industry mature, talented providers, builders and blockchain experts are required to develop and operate robust decentralized infrastructure and data solutions of the future.
 
-Enter: the Cere Network **Extended Developer Program**.
+Enter: the Cere Network **Extended Developer Program** 🎉
 
 ## Extended Developer Program ##
 
