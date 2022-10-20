@@ -6,6 +6,21 @@ Through this program, the Cere Network team engages with developers on-line and 
 
 We work with the community to help us test our code, build client SDKs, identify bugs and security vulnerabilities, and build new tools and integrations with other blockchain projects and initiatives. 
 
+## Where can you find us? 
+Join the one and only Official EDP Developer Community on 
+- [discord](https://discord.gg/bFv6jkpK8N)
+
+Let the team know more about you by registering for EDP here
+- [EDP Registration](https://phxvzka9qop.typeform.com/to/AH5HJJKP).
+
+Follow us on GitHub 
+- [@CereIO](https://github.com/cere-io) 
+- [@Cerebellum-Network](https://github.com/Cerebellum-Network)
+
+Check [our latest jobs!](https://jobs.lever.co/cere-network)
+Let the team know more about you by registering for EDP here
+- [EDP Registration](https://phxvzka9qop.typeform.com/to/AH5HJJKP).
+
 ## Github ##
 EDP community contributes primarily to the following 2 Cere GitHub organizations: [CereIO](https://github.com/cere-io) and [Cerebellum-Network](https://github.com/Cerebellum-Network).  For example, some of the repositories the community might engage with during participation in EDP activities are:
 
@@ -48,12 +63,3 @@ The best will have additional opportunities to move up the leaderboard, unlockin
 
 More details about bounties in the [Bounties](bounties.md) section.
 
-## Where can you find us? 
-Join the one and only Official EDP Developer Community on 
-- [discord](https://discord.gg/bFv6jkpK8N)
-
-Follow us on GitHub 
-- [@CereIO](https://github.com/cere-io) 
-- [@Cerebellum-Network](https://github.com/Cerebellum-Network)
-
-Check [our latest jobs!](https://jobs.lever.co/cere-network)
