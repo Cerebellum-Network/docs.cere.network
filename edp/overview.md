@@ -61,7 +61,7 @@ Tools and scripts are essential for deploying and managing Cere Network [Validat
 - [Freeport - Smart Contract SDK](https://github.com/Cerebellum-Network/Freeport-Smart-Contracts-SDK) - SDK for Freeport Smart Contracts
 
 ### Documentation ###
-- [DDC v2 Developer Docs](https://github.com/Cerebellum-Network/docs.cere.network)
+- [Cere Network Developer Docs](https://github.com/Cerebellum-Network/docs.cere.network)
 
 ## Bounties
 As Cere Network and Cere IO continue to make new releases, Cere EDP community will continue to explore these new territories together, as well.
