@@ -36,6 +36,6 @@ We expect high-quality work at this level. Something which might be incorporated
 
 At this level, the community is gathering around you and looking for your advice and support directly. 
 
-*You should be a a role model and known within the community for your work.*
+*You should be a role model and known within the community for your work. The community looks up to you for guidence and direction.*
 
 - For example, you're leading a workshop around implementing or integrating with Cere Network open source projects, leading a hackathon team or maintaining a community SDK project, identifying critical gaps in usability, reliability or security and proactively working to close them.
