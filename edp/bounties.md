@@ -12,7 +12,9 @@ Bounties come in two forms: technical and non-technical.
 
 From making transactions on the testnet to running simulations, testing, contributing to project code repositories, bounties come in many different types and sizes. 
 
-Some bounties will restrictured in who can participate, but most will be designed so anyone, at anytime can jump right in and get started at the level they're most comfortable with from the start. If you already possess the right knowledge already, we don't want to slow down your pace of innovation. We want you to work on the hardest, most valuable tasks you possible can! 
+Some bounties are restricted in who can participate, but most will be designed so anyone, at anytime can jump right in and get started at the level they're most comfortable with from the start. 
+
+If you already possess the right knowledge already, we don't want to slow down your pace of innovation. We want you to work on the hardest, most valuable tasks you possible can! 
 
 Some bounties will be time constrained, but most will be available continuously for anyone to complete at their own convenience.
 

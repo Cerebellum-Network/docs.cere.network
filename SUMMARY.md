@@ -76,4 +76,4 @@
 * [Gaming](other/gaming.md)
 * [Linux Best Practises](other/linux-best-practises.md)
 * [Hardware Recommendations](other/hardware-recommendations.md)
-* [Notes](other/other-notes.md)
+* [More notes](other/other-notes.md)
