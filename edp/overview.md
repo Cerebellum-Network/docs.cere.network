@@ -10,37 +10,28 @@ We work with the community to help us test our code, build client SDKs, identify
 Join the one and only Official EDP Developer Community on 
 - [discord](https://discord.gg/bFv6jkpK8N)
 
-Let the team know more about you by registering for EDP here
-- [EDP Registration](https://phxvzka9qop.typeform.com/to/AH5HJJKP).
+Register for EDP
+- [EDP Registration](https://phxvzka9qop.typeform.com/to/AH5HJJKP)
 
 Follow us on GitHub 
 - [@CereIO](https://github.com/cere-io) 
 - [@Cerebellum-Network](https://github.com/Cerebellum-Network)
 
 Check [our latest jobs!](https://jobs.lever.co/cere-network)
-Let the team know more about you by registering for EDP here
-- [EDP Registration](https://phxvzka9qop.typeform.com/to/AH5HJJKP).
 
 ## Github ##
-EDP community contributes primarily to the following 2 Cere GitHub organizations: [CereIO](https://github.com/cere-io) and [Cerebellum-Network](https://github.com/Cerebellum-Network).  For example, some of the repositories the community might engage with during participation in EDP activities are:
+EDP community contributes primarily to the following 2 Cere GitHub organizations: [CereIO](https://github.com/cere-io) and [Cerebellum-Network](https://github.com/Cerebellum-Network).  For example, some of the repositories the community are encouraged to work on are:
 
 ### DDC v2 ###
 [DDC](https://docs.cere.network/ddc/overview) is a Decentralised Data Cloud offering services to store, retrieve, accelerate and manage data to enable real world use cases.
 - [cere-ddc-sdk-go](https://github.com/Cerebellum-Network/cere-ddc-sdk-go) - Cere DDC SDK for Go
 - [cere-ddc-sdk-js](https://github.com/Cerebellum-Network/cere-ddc-sdk-js) - Cere DDC SDK for Javascript
 - [cere-ddc-sdk-kotlin](https://github.com/Cerebellum-Network/cere-ddc-sdk-kotlin) - Cere DDC SDK for Kotlin (JVM compatible)
-- [ddc-encryption-impl-kotlin](https://github.com/Cerebellum-Network/ddc-encryption-impl-kotlin) - Cere DDC encryption implementation for Kotlin
 
 ### Freeport ###
 Freeport is a secure digital asset vault and solution suite for NFT backed assets.
-- [Freeport](https://github.com/Cerebellum-Network/Cere-Freeport) - Freeport Creator Suit and Decentralized Data Vault
-- [Freeport - Minting Tool](https://github.com/Cerebellum-Network/freeport-minting-tool) - Batch NFT minting
 - [Freeport - Smart Contracts](https://github.com/Cerebellum-Network/Freeport-Smart-Contracts) - Smart contracts for NFTs with royalties and marketplaces
 - [Freeport - Smart Contract SDK](https://github.com/Cerebellum-Network/Freeport-Smart-Contracts-SDK) - SDK for Freeport Smart Contracts
-
-### Davinci ###
-Davinci is a realworld example of Freeport project in action.
-- [Davinci Integration Example](https://github.com/cere-io/integration-external-app-example)
 
 ### Documentation ###
 - [DDC v2 Developer Docs](https://github.com/Cerebellum-Network/docs.cere.network)
@@ -62,4 +53,3 @@ Some examples of incentivized bounties might include the posting of 🧵's and y
 The best will have additional opportunities to move up the leaderboard, unlocking new potential along the journey. Perks include accessing project grants and sponsorships, CERE token rewards, event participation packages, and the ultimate reward -> an invitation to becoming an OG.
 
 More details about bounties in the [Bounties](bounties.md) section.
-
