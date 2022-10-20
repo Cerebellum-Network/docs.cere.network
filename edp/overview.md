@@ -4,35 +4,32 @@ Cere Network is progressing towards its dream to build a decentralized, permissi
 
 Decentralized storage and infrastructure are attracting more attention than ever, both because of its' promise to transform the industry, but also because transaction fees for this type of blockchain activity are expected to be highly profitable and in strong demand!
 
-As the technology and the industry mature, an essentially unending pool of talented providers, builders and blockchain experts is required to develop ad operatre robust decentralized infrastructure and data solutions of the future.
+As the technology and the industry mature, talented providers, builders and blockchain experts are required to develop and operate robust decentralized infrastructure and data solutions of the future.
 
 Enter: the Cere Network **Extended Developer Program**.
 
 ## Extended Developer Program ##
 
-The Extended Developer Program is a Cere backed program offering early joining, tech-savvy individuals, teams and enterprises close and early access to important changes in the ecosystem. 
+The Extended Developer Program is a Cere backed program offering early joining, tech-savvy individuals, teams and enterprises early access to important changes in the ecosystem. 
 
 Through this program, the Cere Network team engages with developers on-line and IRL at events, collaborating within the community and ecosystem at large to build the future of decentralized data storage solutions as laid out in the Cere Network Vision 2.0 whitepaper (LINK MISSING). 
 
 We work with the community to help us test our code, build client SDKs, identify bugs and security vulnerabilities, and build new tools and integrations with other blockchain projects and initiatives. 
 
-We are looking for ecosystem partners to collaborate on funded and incentivized projects with the Cere Community. [Write us](mailto:chris.ward@cere.network) if it sounds like you!
+We are looking for ecosystem partners to collaborate on funded and incentivized projects with the Cere Community. [Write to us](mailto:chris.ward@cere.network) if it sounds like you!
 
-## Where can you find us? 
-Join the one and only Official EDP Developer Community on 
-- [discord](https://discord.gg/bFv6jkpK8N)
+## Getting started
 
-Register for EDP
-- [EDP Registration](https://phxvzka9qop.typeform.com/to/AH5HJJKP)
+Anyone can participate in on-going bounties, with the potential to improve their ranking on the community leaderboard and earn CERE token rewards. 
 
-Follow us on GitHub 
-- [@CereIO](https://github.com/cere-io) 
-- [@Cerebellum-Network](https://github.com/Cerebellum-Network)
+To get started, complete the following 3 steps.
 
-Check [our latest jobs!](https://jobs.lever.co/cere-network)
+1. Join the one and only Official EDP community on [discord](https://discord.gg/bFv6jkpK8N)
+2. Introduce yourself in #general channel, telling us where you come from and what brought you to the community.
+3. Fill out this [registration form](https://phxvzka9qop.typeform.com/to/AH5HJJKP), so we know a bit more about your background and interests.
 
 ## Github ##
-EDP community contributes primarily to the following 2 Cere GitHub organizations: [CereIO](https://github.com/cere-io) and [Cerebellum-Network](https://github.com/Cerebellum-Network).  For example, some of the repositories the community are encouraged to work on are:
+The EDP community works within the following 2 Cere GitHub organizations: [CereIO](https://github.com/cere-io) and [Cerebellum-Network](https://github.com/Cerebellum-Network).  For example, some of the repositories the community are encouraged to work on are:
 
 ### DDC v2 ###
 [DDC](https://docs.cere.network/ddc/overview) is a Decentralised Data Cloud offering services to store, retrieve, accelerate and manage data to enable real world use cases.
@@ -62,6 +59,20 @@ EDP drives community engagement primarily through Bounty campaigns. These campai
 
 Some examples of incentivized bounties might include the posting of 🧵's and youtube video bounties or various technical bounties that help us secure Cere Network, improve or add features, and solve real-world problems.
 
-The best will have additional opportunities to move up the leaderboard, unlocking new potential along the journey. Perks include accessing project grants and sponsorships, CERE token rewards, event participation packages, and the ultimate reward -> an invitation to becoming an OG.
+The best will have additional opportunities to move up the leaderboard, unlocking new potential along the way. Perks include accessing project grants and sponsorships, CERE token rewards, event participation packages, and the ultimate reward 👉 an invitation to join the ranks as a Cere Network community OG.
 
 More details in the [Bounties](bounties.md) section.
+
+## Where can you find us? 
+Join the one and only Official EDP Developer Community on 
+- [discord](https://discord.gg/bFv6jkpK8N)
+
+Register for EDP
+- [EDP Registration](https://phxvzka9qop.typeform.com/to/AH5HJJKP)
+
+Follow us on GitHub 
+- [@CereIO](https://github.com/cere-io) 
+- [@Cerebellum-Network](https://github.com/Cerebellum-Network)
+
+Check [our latest jobs!](https://jobs.lever.co/cere-network)
+

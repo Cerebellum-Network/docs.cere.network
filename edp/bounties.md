@@ -34,4 +34,5 @@ Anyone can participate in on-going bounties, with the potential to improve their
 To get started, complete the following 3 steps.
 
 1. Join the one and only Official EDP community on [discord](https://discord.gg/bFv6jkpK8N)
-2. Introduce yourself in #general channel, including a short note where you found us and a little more about your background and skillz
+2. Introduce yourself in #general channel.
+3. Fill out this [registration form](https://phxvzka9qop.typeform.com/to/AH5HJJKP), so we know a bit more about you.
