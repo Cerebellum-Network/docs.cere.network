@@ -52,8 +52,6 @@
   * [How to fix environment errors](node/install-and-update/how-to-fix-environment-errors.md)
   * [Node logs](node/install-and-update/node-logs.md)
 
-***
-
 ## Tools
 
 * [Cere Explorer](tools/cere-explorer/README.md)
@@ -69,13 +67,13 @@
 * [Treasury](learn/treasury.md)
 * [Council](learn/council.md)
 
-## More
+## Other
 
 * Extended Developer Program
   * [Overview](edp/overview.md)
   * [Bounties](edp/bounties.md)
   * [Contributor Journey](edp/contributor-journey.md)
-* [Other](other/README.md)
-  * [Linux Best Practises](other/linux-best-practises.md)
-  * [Hardware Recommendations](other/hardware-recommendations.md)
-  * [Other Notes](other/other-notes.md)
+* [Gaming](other/gaming.md)
+* [Linux Best Practises](other/linux-best-practises.md)
+* [Hardware Recommendations](other/hardware-recommendations.md)
+* [More notes](other/other-notes.md)

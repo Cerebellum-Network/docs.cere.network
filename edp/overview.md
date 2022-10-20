@@ -12,7 +12,7 @@ Enter: the Cere Network **Extended Developer Program** 🎉
 
 The Extended Developer Program is a Cere backed program offering early joining, tech-savvy individuals, teams and enterprises early access to important changes in the ecosystem. 
 
-Through this program, the Cere Network team engages with developers on-line and IRL at events, collaborating within the community and ecosystem at large to build the future of decentralized data storage solutions as laid out in the Cere Network Vision 2.0 whitepaper (LINK MISSING). 
+Through this program, the Cere Network team engages with developers on-line and IRL at events, collaborating within the community and ecosystem at large to build the future of decentralized data storage solutions as laid out in the Cere Network [Vision 2.0 whitepaper](https://cere.network) **COMING SOON**
 
 We work with the community to help us test our code, build client SDKs, identify bugs and security vulnerabilities, and build new tools and integrations with other blockchain projects and initiatives. 
 
@@ -33,12 +33,30 @@ The EDP community works within the following 2 Cere GitHub organizations: [Cere-
 
 ### DDC v2 ###
 [DDC](https://docs.cere.network/ddc/overview) is a Decentralised Data Cloud offering services to store, retrieve, accelerate and manage data to enable real world use cases.
-- [cere-ddc-sdk-go](https://github.com/Cerebellum-Network/cere-ddc-sdk-go) - Cere DDC SDK for Go
+- [ddc-cli](https://github.com/Cerebellum-Network/ddc-cli) - Command-line interface to Cere DDC
 - [cere-ddc-sdk-js](https://github.com/Cerebellum-Network/cere-ddc-sdk-js) - Cere DDC SDK for Javascript
 - [cere-ddc-sdk-kotlin](https://github.com/Cerebellum-Network/cere-ddc-sdk-kotlin) - Cere DDC SDK for Kotlin (JVM compatible)
+- [storage-schema](https://docs.cere.network/ddc/protocols/storage-schema) - Data Model for DDC Storage API
+- [ddc-bucket-contract](https://github.com/Cerebellum-Network/ddc-bucket-contract) - DDC cluster & bucket orchestration
+
+### NFT Commerce SDK ###
+Built on top of DDC, the [NFT Commerce SDK](https://docs.cere.network/ddc/integration/integration-sdk) allows developers to offer your customers curated experiences through NFTs, such as exclusive content, event tickets, or memberships.
+- [sdk-android](https://github.com/cere-io/sdk-android)
+- [sdk-ios](https://github.com/cere-io/sdk-ios)
+
+### Validator Nodes ###
+Tools and scripts are essential for deploying and managing Cere Network [Validator Nodes](https://docs.cere.network/node/install-and-update/start-a-node).
+- [node-installation-scripts](https://github.com/Cerebellum-Network/nodes-installation-scripts)
+
+
+[//]: # "FIXME MISSING - these lines will not be included in the docs... they will be ignored"
+[//]: # "- [cere-ddc-sdk-go](https://github.com/Cerebellum-Network/cere-ddc-sdk-go) - Cere DDC SDK for Go"
+[//]: # "- [sdk-js](https://github.com/cere-io/sdk-js)"
+[//]: # "- [ddc-cdn-node](https://github.com/Cerebellum-Network/ddc-cdn-node)"
+
 
 ### Freeport ###
-Freeport is a secure digital asset vault and solution suite for NFT backed assets.
+[Freeport](https://cere.network/freeport/) is a secure digital asset vault and solution suite for NFT backed assets.
 - [Freeport - Smart Contracts](https://github.com/Cerebellum-Network/Freeport-Smart-Contracts) - Smart contracts for NFTs with royalties and marketplaces
 - [Freeport - Smart Contract SDK](https://github.com/Cerebellum-Network/Freeport-Smart-Contracts-SDK) - SDK for Freeport Smart Contracts
 
@@ -67,7 +85,7 @@ In the future, OGs will also be a major source of any DAOs Cere EDP community mi
 Join the one and only Official EDP Developer Community on 
 - [discord](https://discord.gg/bFv6jkpK8N)
 
-Register for EDP
+Let us know you're interested in participating
 - [EDP Registration](https://phxvzka9qop.typeform.com/to/AH5HJJKP)
 
 Follow us on GitHub 
