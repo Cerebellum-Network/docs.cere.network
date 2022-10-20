@@ -1,6 +1,6 @@
 ## Cere Network
 
-Cere Newwork is progressing towards its dream to build a decentralized, permissionless, censorship resistant blockchain network that customers and community use, securely, at scale, in production to launch unique digital products and services using serverless web3 infrastructure and data. 
+Cere Network is progressing towards its dream to build a decentralized, permissionless, censorship resistant blockchain network that customers and community use, securely, at scale, in production to launch unique digital products and services using serverless web3 infrastructure and data. 
 
 Decentralized storage and infrastructure are attracting more attention than ever, both because of its' promise to transform the industry, but also because transaction fees for this type of blockchain activity are expected to be highly profitable and in strong demand!
 
