@@ -4,17 +4,15 @@ Our bounty program is an open invitation to everyone in the broader open source 
 
 The bounty program covers incentivized tasks from simply documentation fixes to building and maintaining core tooling, from validator nodes to SDKs and integrations. 
 
-## Bounty Types
+## Types
 
-Bounties come in two form: technical and non-technical, and will come in different types and sizes. 
+Bounties come in two form: technical and non-technical. From making transactions on the testnet to running simulations, testing, contributing to project code repositories, bounties come in many different types and sizes. 
 
-From making transactions on the testnet to running simulations, testing, contributing to project code repositories. 
-
-## Bounty Rewards
+## Rewards
 
 All bounty rewards will be offered in the form of CERE tokens, unless otherwise noted.
 
-## Bounty Examples
+## Examples
 
 Some examples of the bounties include:
 - Technical
@@ -27,12 +25,3 @@ Some examples of the bounties include:
   - sharing video clip segments, tutorials and code-building demo's on youtube
   - forking, following and sharing news about important changes in the Cere Network ecosystem
 
-## Getting started
-
-Anyone can participate in on-going bounties, with the potential to improve their ranking on the community leaderboard and earn CERE token rewards. 
-
-To get started, complete the following 3 steps.
-
-1. Join the one and only Official EDP community on [discord](https://discord.gg/bFv6jkpK8N)
-2. Introduce yourself in #general channel.
-3. Fill out this [registration form](https://phxvzka9qop.typeform.com/to/AH5HJJKP), so we know a bit more about you.

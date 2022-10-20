@@ -45,13 +45,6 @@ Freeport is a secure digital asset vault and solution suite for NFT backed asset
 ### Documentation ###
 - [DDC v2 Developer Docs](https://github.com/Cerebellum-Network/docs.cere.network)
 
-## OGs
-Everyone in the community can participate. Elite contributors earn the ability to get early access to support and resources around validator node pool, community admins and MODs, github project comitters, and sometimes Cere Network colleagues! 
-
-We call these elite leads in our community `OG`, like `old-gansgsta`.  They are responsible for helping at all levels of the community. We couldn't work without them, and they get paid for their work. You'll see them around, and know it when you do. 
-
-In the future, OGs will also be a major source of any DAOs Cere EDP community might initiate around the EDP program. Stay tuned!
-
 ## Bounties
 As Cere Network and Cere IO continue to make new releases, Cere EDP community will continue to explore these new territories together, as well.
 
@@ -62,6 +55,13 @@ Some examples of incentivized bounties might include the posting of 🧵's and y
 The best will have additional opportunities to move up the leaderboard, unlocking new potential along the way. Perks include accessing project grants and sponsorships, CERE token rewards, event participation packages, and the ultimate reward 👉 an invitation to join the ranks as a Cere Network community OG.
 
 More details in the [Bounties](bounties.md) section.
+
+## OGs
+Everyone in the community can participate. Elite contributors earn the ability to get early access to support and resources around validator node pool, community admins and MODs, github project comitters, and sometimes Cere Network colleagues! 
+
+We call these elite leads in our community `OG`, like `old-gansgsta`.  They are responsible for helping at all levels of the community. We couldn't work without them, and they get paid for their work. You'll see them around, and know it when you do. 
+
+In the future, OGs will also be a major source of any DAOs Cere EDP community might initiate around the EDP program. Stay tuned!
 
 ## Where can you find us? 
 Join the one and only Official EDP Developer Community on 
