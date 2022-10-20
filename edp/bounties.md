@@ -4,15 +4,19 @@ Our bounty program is an open invitation to everyone in the broader open source 
 
 The bounty program covers incentivized tasks from simply documentation fixes to building and maintaining core tooling, from validator nodes to SDKs and integrations. 
 
+Our priority is to ensure everyone in the community has equal opportunity to build their knowledge and skills from bottom up.
+
 ## Types
 
 Bounties come in two forms: technical and non-technical. 
 
 From making transactions on the testnet to running simulations, testing, contributing to project code repositories, bounties come in many different types and sizes. 
 
-Some bounties will restrictured in who can participate. Some will be time constrained. Others will be available continuously for anyone to complete once or multiple times sequentially. 
+Some bounties will restrictured in who can participate, but most will be designed so anyone, at anytime can jump right in and get started at the level they're most comfortable with from the start. If you already possess the right knowledge already, we don't want to slow down your pace of innovation. We want you to work on the hardest, most valuable tasks you possible can! 
 
-The specifics will be laid out in more detail as new activities are launched. Make sure to join our community discord for the latest news!
+Some bounties will be time constrained, but most will be available continuously for anyone to complete at their own convenience.
+
+The specifics of each bounty will be laid out in more detail as new activities are launched.  Make sure to join our community discord for the latest news!
 
 ## Rewards
 

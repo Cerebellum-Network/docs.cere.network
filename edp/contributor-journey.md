@@ -2,9 +2,7 @@
 
 As the Cere Network developer community matures, and individual and team contributors level up their skills, bounty difficulty and number of responsiblities will increase, along with the rewards!
 
-The path all EDP participants will follow can be laid out as a simple Contributor's Journey. 
-
-It is possible to complete any task on offer, if you already possess the right knowledge. We don't want to slow down the pace of innovation, as the harder tasks will usually correspond with importance, as well. But our priority is to ensure everyone in the community has equal opportunity to build their knowledge and skills from bottom up.
+The path developers will follow can be laid out as a simple Contributor's Journey. 
 
 ## Contributor Journey
 
