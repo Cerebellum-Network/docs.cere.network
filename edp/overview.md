@@ -6,13 +6,13 @@ Decentralized storage and infrastructure are attracting more attention than ever
 
 As the technology and the industry mature, talented providers, builders and blockchain experts are required to develop and operate robust decentralized infrastructure and data solutions of the future.
 
-Enter: the Cere Network **Extended Developer Program** 🎉
+Enter... the Cere Network 🎉 **Extended Developer Program** 🎉
 
 ## Extended Developer Program ##
 
 The Extended Developer Program is a Cere backed program offering early joining, tech-savvy individuals, teams and enterprises early access to important changes in the ecosystem. 
 
-Through this program, the Cere Network team engages with developers on-line and IRL at events, collaborating within the community and ecosystem at large to build the future of decentralized data storage solutions as laid out in the Cere Network [Vision 2.0 whitepaper]()
+Through this program, the Cere Network team engages with developers on-line and IRL at events, collaborating within the community and ecosystem at large to build the future of decentralized data storage solutions as laid out in the Cere Network [Vision 2.0 whitepaper](https://cere.network/cere-vision-2-0/)
 
 We work with the community to help us test our code, build client SDKs, identify bugs and security vulnerabilities, and build new tools and integrations with other blockchain projects and initiatives. 
 
@@ -48,13 +48,6 @@ Built on top of DDC, the [NFT Commerce SDK](https://docs.cere.network/ddc/integr
 Tools and scripts are essential for deploying and managing Cere Network [Validator Nodes](https://docs.cere.network/node/install-and-update/start-a-node).
 - [node-installation-scripts](https://github.com/Cerebellum-Network/nodes-installation-scripts)
 
-
-[//]: # "FIXME MISSING - these lines will not be included in the docs... they will be ignored"
-[//]: # "- [cere-ddc-sdk-go](https://github.com/Cerebellum-Network/cere-ddc-sdk-go) - Cere DDC SDK for Go"
-[//]: # "- [sdk-js](https://github.com/cere-io/sdk-js)"
-[//]: # "- [ddc-cdn-node](https://github.com/Cerebellum-Network/ddc-cdn-node)"
-
-
 ### Freeport ###
 [Freeport](https://cere.network/freeport/) is a secure digital asset vault and solution suite for NFT backed assets.
 - [Freeport - Smart Contracts](https://github.com/Cerebellum-Network/Freeport-Smart-Contracts) - Smart contracts for NFTs with royalties and marketplaces
@@ -77,7 +70,7 @@ More details in the [Bounties](bounties.md) section.
 ## OGs
 Everyone in the community can participate. Elite contributors earn the ability to get early access to support and resources around validator node pool, community admins and MODs, github project comitters, and sometimes Cere Network colleagues! 
 
-We call these elite leads in our community `OG`, like `old-gansgsta`.  They are responsible for helping at all levels of the community. We couldn't work without them, and they get paid for their work. You'll see them around, and know it when you do. 
+We call these elite leads in our community `OG`, like `old-gansgsta`.  They are responsible for helping at all levels of the community. We couldn't work without them, and sometimes even, they get paid for their work. You'll see them around, and know it when you do. 
 
 In the future, OGs will also be a major source of any DAOs Cere EDP community might initiate around the EDP program. Stay tuned!
 
@@ -92,5 +85,4 @@ Follow us on GitHub
 - [@CereIO](https://github.com/cere-io) 
 - [@Cerebellum-Network](https://github.com/Cerebellum-Network)
 
-Check [our latest jobs!](https://jobs.lever.co/cere-network)
-
+Cere Network is [hiring!](https://jobs.lever.co/cere-network)
