@@ -33,9 +33,27 @@ The EDP community works within the following 2 Cere GitHub organizations: [Cere-
 
 ### DDC v2 ###
 [DDC](https://docs.cere.network/ddc/overview) is a Decentralised Data Cloud offering services to store, retrieve, accelerate and manage data to enable real world use cases.
-- [cere-ddc-sdk-go](https://github.com/Cerebellum-Network/cere-ddc-sdk-go) - Cere DDC SDK for Go
+- [ddc-cli](https://github.com/Cerebellum-Network/ddc-cli) - Command-line interface to Cere DDC
 - [cere-ddc-sdk-js](https://github.com/Cerebellum-Network/cere-ddc-sdk-js) - Cere DDC SDK for Javascript
 - [cere-ddc-sdk-kotlin](https://github.com/Cerebellum-Network/cere-ddc-sdk-kotlin) - Cere DDC SDK for Kotlin (JVM compatible)
+- [storage-schema](https://docs.cere.network/ddc/protocols/storage-schema) - Data Model for DDC Storage API
+- [ddc-bucket-contract](https://github.com/Cerebellum-Network/ddc-bucket-contract) - DDC cluster & bucket orchestration
+
+### NFT Commerce SDK ###
+Built on top of DDC, the [NFT Commerce SDK](https://docs.cere.network/ddc/integration/integration-sdk) allows developers to offer your customers curated experiences through NFTs, such as exclusive content, event tickets, or memberships.
+- [sdk-android](https://github.com/cere-io/sdk-android)
+- [sdk-ios](https://github.com/cere-io/sdk-ios)
+
+### Validator Nodes ###
+Tools and scripts are essential for deploying and managing Cere Network [Validator Nodes](https://docs.cere.network/node/install-and-update/start-a-node).
+- [node-installation-scripts](https://github.com/Cerebellum-Network/nodes-installation-scripts)
+
+
+[//]: # "FIXME MISSING - these lines will not be included in the docs... they will be ignored"
+[//]: # "- [cere-ddc-sdk-go](https://github.com/Cerebellum-Network/cere-ddc-sdk-go) - Cere DDC SDK for Go"
+[//]: # "- [sdk-js](https://github.com/cere-io/sdk-js)"
+[//]: # "- [ddc-cdn-node](https://github.com/Cerebellum-Network/ddc-cdn-node)"
+
 
 ### Freeport ###
 [Freeport](https://cere.network/freeport/) is a secure digital asset vault and solution suite for NFT backed assets.
