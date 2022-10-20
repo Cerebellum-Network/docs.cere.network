@@ -31,7 +31,6 @@
   * [⚖ Smart Contracts](ddc/protocols/smart-contracts.md)
   * [⚖ Smart Contract API](ddc/protocols/smart-contract-api.md)
 
-
 ## Mainnet
 
 * [Blockchain Details](mainnet/network-details.md)
@@ -70,6 +69,10 @@
 
 ## Other
 
+* Extended Developer Program
+  * [Overview](edp/overview.md)
+  * [Bounties](edp/bounties.md)
+  * [Contributor Journey](edp/contributor-journey.md)
 * [Gaming](other/gaming.md)
 * [Linux Best Practises](other/linux-best-practises.md)
 * [Hardware Recommendations](other/hardware-recommendations.md)
