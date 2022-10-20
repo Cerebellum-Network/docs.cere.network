@@ -29,7 +29,7 @@ To get started, complete the following 3 steps.
 3. Fill out this [registration form](https://phxvzka9qop.typeform.com/to/AH5HJJKP), so we know a bit more about your background and interests.
 
 ## Github ##
-The EDP community works within the following 2 Cere GitHub organizations: [CereIO](https://github.com/cere-io) and [Cerebellum-Network](https://github.com/Cerebellum-Network).  For example, some of the repositories the community are encouraged to work on are:
+The EDP community works within the following 2 Cere GitHub organizations: [Cere-IO](https://github.com/cere-io) and [Cerebellum-Network](https://github.com/Cerebellum-Network).  For example, some of the repositories the community are encouraged to work on are:
 
 ### DDC v2 ###
 [DDC](https://docs.cere.network/ddc/overview) is a Decentralised Data Cloud offering services to store, retrieve, accelerate and manage data to enable real world use cases.
