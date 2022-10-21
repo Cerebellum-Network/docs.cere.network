@@ -2,7 +2,7 @@
 
 Cere Network is progressing towards its dream to build a decentralized, permissionless, censorship resistant blockchain network that customers and community use, securely, at scale, in production to launch unique digital products and services using serverless web3 infrastructure and data. 
 
-Decentralized storage and infrastructure are attracting more attention than ever, both because of its' promise to transform the industry, but also because transaction fees for this type of blockchain activity are expected to be highly profitable and in strong demand!
+Decentralized data clouds and infrastructure are attracting more attention than ever, both because of its' promise to transform the industry, but also because transaction fees for this type of blockchain activity are expected to be highly profitable and in strong demand!
 
 As the technology and the industry mature, talented providers, builders and blockchain experts are required to develop and operate robust decentralized infrastructure and data solutions of the future.
 
@@ -12,7 +12,7 @@ Enter... the Cere Network 🎉 **Extended Developer Program** 🎉
 
 The Extended Developer Program is a Cere backed program offering early joining, tech-savvy individuals, teams and enterprises early access to important changes in the ecosystem. 
 
-Through this program, the Cere Network team engages with developers on-line and IRL at events, collaborating within the community and ecosystem at large to build the future of decentralized data storage solutions as laid out in the Cere Network [Vision 2.0 whitepaper](https://cere.network/cere-vision-2-0/)
+Through this program, the Cere Network team engages with developers on-line and IRL at events, collaborating within the community and ecosystem at large to build the future of decentralized data cloud solutions as laid out in the Cere Network [Vision 2.0 whitepaper](https://cere.network/cere-vision-2-0/)
 
 We work with the community to help us test our code, build client SDKs, identify bugs and security vulnerabilities, and build new tools and integrations with other blockchain projects and initiatives. 
 
