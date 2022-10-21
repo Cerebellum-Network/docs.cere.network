@@ -70,7 +70,7 @@ More details in the [Bounties](bounties.md) section.
 ## OGs
 Everyone in the community can participate. Elite contributors earn the ability to get early access to support and resources around validator node pool, community admins and MODs, github project comitters, and sometimes Cere Network colleagues! 
 
-We call these elite leads in our community `OG`, like `old-gansgsta`.  They are responsible for helping at all levels of the community. We couldn't work without them, and sometimes even, they get paid for their work. You'll see them around, and know it when you do. 
+We call these elite leads in our community `OG`, like `original-gansgsta`.  They are responsible for helping at all levels of the community. We couldn't work without them, and sometimes even, they get paid for their work. You'll see them around, and know it when you do. 
 
 In the future, OGs will also be a major source of any DAOs Cere EDP community might initiate around the EDP program. Stay tuned!
 
