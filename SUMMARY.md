@@ -53,14 +53,7 @@
   * [How to fix environment errors](node/install-and-update/how-to-fix-environment-errors.md)
   * [Node logs](node/install-and-update/node-logs.md)
 
-***
-
-* [Other](other/README.md)
-  * [Linux Best Practises](other/linux-best-practises.md)
-  * [Hardware Recommendations](other/hardware-recommendations.md)
-  * [Other Notes](other/other-notes.md)
-
-## tools
+## Tools
 
 * [Cere Explorer](tools/cere-explorer/README.md)
   * [Prepare a browser to work with Cere Explorer](tools/cere-explorer/prepare-a-browser-to-work-with-cere-explorer.md)
@@ -74,3 +67,10 @@
 * [Staking/Slashing](learn/slashing.md)
 * [Treasury](learn/treasury.md)
 * [Council](learn/council.md)
+
+## Other
+
+* [Gaming](other/gaming.md)
+* [Linux Best Practises](other/linux-best-practises.md)
+* [Hardware Recommendations](other/hardware-recommendations.md)
+* [Notes](other/other-notes.md)
