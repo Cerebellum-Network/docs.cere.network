@@ -28,7 +28,7 @@ We expect high-quality work at this level. Something which might be incorporated
 
 *You should be proficient builder within the Cere Ecosystem and seen as a essential part of the team.* 
 
-- For example, preparing a new example use-case not already covered in the [Developer Guide](https://docs.cere.network/ddc/developer-guide/examples/) or a complete bug/feature request including pull-request.
+- For example, preparing a new example use-case not already covered in the [Developer Guide](/ddc/developer-guide/examples/) or a complete bug/feature request including pull-request.
 
 ### Level 4 - “Leading”
 

@@ -8,7 +8,7 @@ Our priority is to ensure everyone in the community has equal opportunity to bui
 
 ## Types
 
-Bounties come in two forms: technical and non-technical. 
+Bounties come in two forms: technical and social.
 
 From making transactions on the testnet to running simulations, testing, contributing to project code repositories, bounties come in many different types and sizes. 
 
@@ -32,7 +32,8 @@ Some examples of the bounties include:
   - preparing a deployable repository demonstrating a new use-case for (eg) [cere-ddc-sdk-js](https://github.com/Cerebellum-Network/cere-ddc-sdk-js)
   - running a network simulation for validating that Cere Network slashing works as expected
   - creating a new community maintained client SDK for a new language (eg, rust)
-  - adding new content to our [user-guide](https://docs.cere.network/ddc/developer-guide/examples)
+  - adding new content to our [user-guide](/ddc/developer-guide/examples)
+
 - Social
   - posting multi-tweet reviews 🧵
   - sharing video clip segments, tutorials and code-building demo's on youtube
