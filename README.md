@@ -2,6 +2,7 @@
 description: Welcome to Cere DDC Wiki!
 ---
 
+
 # Introduction to Cere DDC
 
 DDC is a decentralized data protocol built from the ground up for Web3, capable of powering a future of interoperable, privacy-preserving, and serverless data.
