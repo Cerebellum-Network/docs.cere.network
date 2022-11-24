@@ -50,10 +50,10 @@ Tools and scripts are essential for deploying and managing Cere Network [Validat
 
 ### Freeport ###
 [Freeport](https://cere.network/freeport/) is a secure digital asset vault and solution suite for NFT backed assets.
-- [Smart Contracts](https://github.com/Cerebellum-Network/Freeport-Smart-Contracts) - Smart contracts for NFTs with royalties and marketplaces
-- [Smart Contract SDK](https://github.com/Cerebellum-Network/Freeport-Smart-Contracts-SDK) - SDK for Freeport Smart Contracts
-- [Client SDK](https://github.com/cere-io/freeport-client-sdk) - SDK for communicating with Freeport API
-- [Minting Tool](https://github.com/Cerebellum-Network/freeport-minting-tool) - Tool for batch NFT minting
+- [freeport-smart-contracts](https://github.com/Cerebellum-Network/Freeport-Smart-Contracts) - Smart contracts for NFTs with royalties and marketplaces
+- [freeport-smart-contract-sdk](https://github.com/Cerebellum-Network/Freeport-Smart-Contracts-SDK) - SDK for Freeport Smart Contracts
+- [client-sdk](https://github.com/cere-io/freeport-client-sdk) - SDK for communicating with Freeport API
+- [minting-tool](https://github.com/Cerebellum-Network/freeport-minting-tool) - Tool for batch NFT minting
 
 ### NFT Commerce SDK ###
 Built on top of DDC, the [NFT Commerce SDK](https://docs.cere.network/ddc/integration/integration-sdk) allows developers to offer your customers curated experiences through NFTs, such as exclusive content, event tickets, or memberships.
@@ -62,7 +62,7 @@ Built on top of DDC, the [NFT Commerce SDK](https://docs.cere.network/ddc/integr
 - [sdk-js](https://github.com/cere-io/sdk-js) with [JS SDK example](https://github.com/cere-io/sdk-js-sample-app)
 
 ### Documentation ###
-- [Cere Network Developer Docs](https://github.com/Cerebellum-Network/docs.cere.network)
+- [ddc-developer-docs](https://github.com/Cerebellum-Network/docs.cere.network)
 
 ## Bounties
 As Cere Network and Cere IO continue to make new releases, Cere EDP community will continue to explore these new territories together, as well.
