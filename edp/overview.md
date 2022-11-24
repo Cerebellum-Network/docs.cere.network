@@ -42,11 +42,6 @@ The EDP community works within the following 2 Cere GitHub organizations: [Cere-
 - [web-console](https://github.com/Cerebellum-Network/ddc-web-console) - DDC Web Console for external developers
 - [dropbox-example](https://github.com/Cerebellum-Network/debox) - Simple example demonstrating Dropbox-like functionality on DDC
 
-### NFT Commerce SDK ###
-Built on top of DDC, the [NFT Commerce SDK](https://docs.cere.network/ddc/integration/integration-sdk) allows developers to offer your customers curated experiences through NFTs, such as exclusive content, event tickets, or memberships.
-- [sdk-android](https://github.com/cere-io/sdk-android)
-- [sdk-ios](https://github.com/cere-io/sdk-ios)
-
 ### Validator Nodes ###
 Tools and scripts are essential for deploying and managing Cere Network [Validator Nodes](https://docs.cere.network/node/install-and-update/start-a-node).
 - [ddc-pallet](https://github.com/Cerebellum-Network/ddc-pallet) - Substrate module for DDC data transfers
@@ -55,8 +50,16 @@ Tools and scripts are essential for deploying and managing Cere Network [Validat
 
 ### Freeport ###
 [Freeport](https://cere.network/freeport/) is a secure digital asset vault and solution suite for NFT backed assets.
-- [Freeport - Smart Contracts](https://github.com/Cerebellum-Network/Freeport-Smart-Contracts) - Smart contracts for NFTs with royalties and marketplaces
-- [Freeport - Smart Contract SDK](https://github.com/Cerebellum-Network/Freeport-Smart-Contracts-SDK) - SDK for Freeport Smart Contracts
+- [Smart Contracts](https://github.com/Cerebellum-Network/Freeport-Smart-Contracts) - Smart contracts for NFTs with royalties and marketplaces
+- [Smart Contract SDK](https://github.com/Cerebellum-Network/Freeport-Smart-Contracts-SDK) - SDK for Freeport Smart Contracts
+- [Client SDK](https://github.com/cere-io/freeport-client-sdk)
+- [Minting Tool](https://github.com/Cerebellum-Network/freeport-minting-tool)
+
+### NFT Commerce SDK ###
+Built on top of DDC, the [NFT Commerce SDK](https://docs.cere.network/ddc/integration/integration-sdk) allows developers to offer your customers curated experiences through NFTs, such as exclusive content, event tickets, or memberships.
+- [sdk-android](https://github.com/cere-io/sdk-android) with [Android SDK example](https://github.com/cere-io/sdk-android-example)
+- [sdk-ios](https://github.com/cere-io/sdk-ios) with [iOS SDK example](https://github.com/cere-io/sdk-ios-example)
+- [sdk-js](https://github.com/cere-io/sdk-js) with [JS SDK example](https://github.com/cere-io/sdk-js-sample-app)
 
 ### Documentation ###
 - [Cere Network Developer Docs](https://github.com/Cerebellum-Network/docs.cere.network)
