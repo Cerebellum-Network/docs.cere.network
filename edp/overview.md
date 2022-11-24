@@ -45,15 +45,15 @@ The EDP community works within the following 2 Cere GitHub organizations: [Cere-
 ### Validator Nodes ###
 Tools and scripts are essential for deploying and managing Cere Network [Validator Nodes](https://docs.cere.network/node/install-and-update/start-a-node).
 - [ddc-pallet](https://github.com/Cerebellum-Network/ddc-pallet) - Substrate module for DDC data transfers
-- [node-installation-scripts](https://github.com/Cerebellum-Network/nodes-installation-scripts) - installation helper scripts
+- [node-installation-scripts](https://github.com/Cerebellum-Network/nodes-installation-scripts) - Installation helper scripts
 - [blockchain-test-scripts](https://github.com/Cerebellum-Network/test-scripts) - Automated regressions tests for Cere Network PoS
 
 ### Freeport ###
 [Freeport](https://cere.network/freeport/) is a secure digital asset vault and solution suite for NFT backed assets.
 - [Smart Contracts](https://github.com/Cerebellum-Network/Freeport-Smart-Contracts) - Smart contracts for NFTs with royalties and marketplaces
 - [Smart Contract SDK](https://github.com/Cerebellum-Network/Freeport-Smart-Contracts-SDK) - SDK for Freeport Smart Contracts
-- [Client SDK](https://github.com/cere-io/freeport-client-sdk)
-- [Minting Tool](https://github.com/Cerebellum-Network/freeport-minting-tool)
+- [Client SDK](https://github.com/cere-io/freeport-client-sdk) - SDK for communicating with Freeport API
+- [Minting Tool](https://github.com/Cerebellum-Network/freeport-minting-tool) - Tool for batch NFT minting
 
 ### NFT Commerce SDK ###
 Built on top of DDC, the [NFT Commerce SDK](https://docs.cere.network/ddc/integration/integration-sdk) allows developers to offer your customers curated experiences through NFTs, such as exclusive content, event tickets, or memberships.
