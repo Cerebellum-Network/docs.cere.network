@@ -40,7 +40,7 @@ The EDP community works within the following 2 Cere GitHub organizations: [Cere-
 - [ddc-bucket-contract](https://github.com/Cerebellum-Network/ddc-bucket-contract) - DDC cluster & bucket orchestration
 - [web-loader](https://github.com/Cerebellum-Network/web-loader) - HTML App Uploader
 - [web-console](https://github.com/Cerebellum-Network/ddc-web-console) - DDC Web Console for external developers
-- [Dropbox-example](https://github.com/Cerebellum-Network/debox)
+- [dropbox-example](https://github.com/Cerebellum-Network/debox) - Simple example demonstrating Dropbox-like functionality on DDC
 
 ### NFT Commerce SDK ###
 Built on top of DDC, the [NFT Commerce SDK](https://docs.cere.network/ddc/integration/integration-sdk) allows developers to offer your customers curated experiences through NFTs, such as exclusive content, event tickets, or memberships.
@@ -49,9 +49,9 @@ Built on top of DDC, the [NFT Commerce SDK](https://docs.cere.network/ddc/integr
 
 ### Validator Nodes ###
 Tools and scripts are essential for deploying and managing Cere Network [Validator Nodes](https://docs.cere.network/node/install-and-update/start-a-node).
-- [DDC-pallet](https://github.com/Cerebellum-Network/ddc-pallet)
-- [node-installation-scripts](https://github.com/Cerebellum-Network/nodes-installation-scripts)
-- [blockchain-test-scripts](https://github.com/Cerebellum-Network/test-scripts)
+- [ddc-pallet](https://github.com/Cerebellum-Network/ddc-pallet) - Substrate module for DDC data transfers
+- [node-installation-scripts](https://github.com/Cerebellum-Network/nodes-installation-scripts) - installation helper scripts
+- [blockchain-test-scripts](https://github.com/Cerebellum-Network/test-scripts) - Automated regressions tests for Cere Network PoS
 
 ### Freeport ###
 [Freeport](https://cere.network/freeport/) is a secure digital asset vault and solution suite for NFT backed assets.
