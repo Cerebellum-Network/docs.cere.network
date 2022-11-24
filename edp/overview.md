@@ -31,13 +31,16 @@ To get started, complete the following 3 steps.
 ## Github ##
 The EDP community works within the following 2 Cere GitHub organizations: [Cere-IO](https://github.com/cere-io) and [Cerebellum-Network](https://github.com/Cerebellum-Network).  For example, some of the repositories the community are encouraged to work on are:
 
-### DDC v2 ###
+### DDC ###
 [DDC](https://docs.cere.network/ddc/overview) is a Decentralised Data Cloud offering services to store, retrieve, accelerate and manage data to enable real world use cases.
 - [ddc-cli](https://github.com/Cerebellum-Network/ddc-cli) - Command-line interface to Cere DDC
 - [cere-ddc-sdk-js](https://github.com/Cerebellum-Network/cere-ddc-sdk-js) - Cere DDC SDK for Javascript
 - [cere-ddc-sdk-kotlin](https://github.com/Cerebellum-Network/cere-ddc-sdk-kotlin) - Cere DDC SDK for Kotlin (JVM compatible)
 - [storage-schema](https://docs.cere.network/ddc/protocols/storage-schema) - Data Model for DDC Storage API
 - [ddc-bucket-contract](https://github.com/Cerebellum-Network/ddc-bucket-contract) - DDC cluster & bucket orchestration
+- [web-loader](https://github.com/Cerebellum-Network/web-loader) - HTML App Uploader
+- [web-console](https://github.com/Cerebellum-Network/ddc-web-console) - DDC Web Console for external developers
+- [Dropbox-example](https://github.com/Cerebellum-Network/debox)
 
 ### NFT Commerce SDK ###
 Built on top of DDC, the [NFT Commerce SDK](https://docs.cere.network/ddc/integration/integration-sdk) allows developers to offer your customers curated experiences through NFTs, such as exclusive content, event tickets, or memberships.
@@ -46,7 +49,9 @@ Built on top of DDC, the [NFT Commerce SDK](https://docs.cere.network/ddc/integr
 
 ### Validator Nodes ###
 Tools and scripts are essential for deploying and managing Cere Network [Validator Nodes](https://docs.cere.network/node/install-and-update/start-a-node).
+- [DDC-pallet](https://github.com/Cerebellum-Network/ddc-pallet)
 - [node-installation-scripts](https://github.com/Cerebellum-Network/nodes-installation-scripts)
+- [blockchain-test-scripts](https://github.com/Cerebellum-Network/test-scripts)
 
 ### Freeport ###
 [Freeport](https://cere.network/freeport/) is a secure digital asset vault and solution suite for NFT backed assets.
