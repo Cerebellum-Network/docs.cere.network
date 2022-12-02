@@ -2,11 +2,11 @@
 
 From this section you will know how to become a Validator.
 
-1. Create a `Stash` account by following the [instructions](https://cere-network.gitbook.io/cere-network/tools/cere-explorer/how-to-create-an-account-by-using-cere-explorer).
-2. Create a `Controller` account by following the [instructions](https://cere-network.gitbook.io/cere-network/tools/cere-explorer/how-to-create-an-account-by-using-cere-explorer).
+1. Create a `Stash` account by following the [instructions](/tools/cere-explorer/how-to-create-an-account-by-using-cere-explorer.md).
+2. Create a `Controller` account by following the [instructions](/tools/cere-explorer/how-to-create-an-account-by-using-cere-explorer.md).
 3. **Testnets Only!** - **** Fund Stash and Controller accounts with native tokens by using [Cere FriendBot](https://laboratory.cere.network/#/friend-bot) (you can take accounts public keys in the [Account tab in the Cere Explorer ](https://explorer.cere.network/#/accounts)by clicking on the round icon left to the account name).
 4. Wait until your local Node will be synced. Syncing should happen automatically after X minutes.
-5. Add a Validator via [Cere Explorer](https://explorer.cere.network/) (check [here](https://cere-network.gitbook.io/cere-network/tools/cere-explorer/how-to-connect-to-your-node-with-cere-explorer) how to connect to your node).
+5. Add a Validator via [Cere Explorer](https://explorer.cere.network/) (check [here](/tools/cere-explorer/how-to-connect-to-your-node-with-cere-explorer.md) how to connect to your node).
    1. Generate `Session Key`.
       1. Go to `Developer` → `RPC calls.`
       2. Select `author` → `rotateKeys()` function.
