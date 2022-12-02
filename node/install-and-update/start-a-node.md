@@ -5,7 +5,7 @@
 1. [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 2. [Install Docker](https://docs.docker.com/get-docker/)
 3. [Install Docker Compose 1.25.0+](https://docs.docker.com/compose/install/)
-4. [Install & Configure Network Time Protocol (NTP) Client - Linux only](https://cere-network.gitbook.io/cere-network/node/install-and-update/install-and-configure-network-time-protocol-ntp-client)
+4. [Install & Configure Network Time Protocol (NTP) Client - Linux only](/node/install-and-update/install-and-configure-network-time-protocol-ntp-client.md)
 
 ## **Start a Node**
 
@@ -61,8 +61,8 @@ To run a Node on your host, please, follow the steps below.
      Mar 03 14:42:23.973  INFO Local node identity is: 12D3KooWLafVQ2XGQS8A3rdj9t8rX5UFcVGxtx8a9vgQsYJi7Rdz (legacy representation: 12D3KooWLafVQ2XGQS8A3rdj9t8rX5UFcVGxtx8a9vgQsYJi7Rdz)
     ```
 
-    If you can not see the output in more than 2 minutes you should check node logs. Use the [instructions](https://cere-network.gitbook.io/cere-network/node/install-and-update/node-logs) to know more about logs and their set up.
-8. Launch [Cere Explorer ](https://explorer.cere.network/)and [connect to your node](https://cere-network.gitbook.io/cere-network/tools/cere-explorer/how-to-connect-to-your-node-with-cere-explorer). You can check the Node's `syncing` status. To do this go to the `Network` -> `Explorer` -> `Node info`. It should be equal to `yes` or `no` (synced already).
+    If you can not see the output in more than 2 minutes you should check node logs. Use the [instructions](/node/install-and-update/node-logs.md) to know more about logs and their set up.
+8. Launch [Cere Explorer ](https://explorer.cere.network/)and [connect to your node](/tools/cere-explorer/how-to-connect-to-your-node-with-cere-explorer.md). You can check the Node's `syncing` status. To do this go to the `Network` -> `Explorer` -> `Node info`. It should be equal to `yes` or `no` (synced already).
 
 Congratulations! You've successfully started a Node on your host. \
 \

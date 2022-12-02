@@ -2,11 +2,11 @@
 
 From this section you will know how to become a Validator.
 
-1. Create a `Stash` account by following the [instructions](https://cere-network.gitbook.io/cere-network/tools/cere-explorer/how-to-create-an-account-by-using-cere-explorer).
-2. Create a `Controller` account by following the [instructions](https://cere-network.gitbook.io/cere-network/tools/cere-explorer/how-to-create-an-account-by-using-cere-explorer).
-3. **Testnets Only!** - **** Fund Stash and Controller accounts with native tokens by using [Cere FriendBot](https://laboratory.cere.network/#/friend-bot) (you can take accounts public keys in the [Account tab in the Cere Explorer ](https://explorer.cere.network/#/accounts)by clicking on the round icon left to the account name).
+1. Create a `Stash` account by following the [instructions](/tools/cere-explorer/how-to-create-an-account-by-using-cere-explorer.md).
+2. Create a `Controller` account by following the [instructions](/tools/cere-explorer/how-to-create-an-account-by-using-cere-explorer.md).
+3. **Testnets Only!** - **** Fund Stash and Controller accounts with native tokens by using [Cere FriendBot](https://stats.cere.network/#/friend-bot) (you can take accounts public keys in the [Account tab in the Cere Explorer ](https://explorer.cere.network/#/accounts)by clicking on the round icon left to the account name).
 4. Wait until your local Node will be synced. Syncing should happen automatically after X minutes.
-5. Add a Validator via [Cere Explorer](https://explorer.cere.network/) (check [here](https://cere-network.gitbook.io/cere-network/tools/cere-explorer/how-to-connect-to-your-node-with-cere-explorer) how to connect to your node).
+5. Add a Validator via [Cere Explorer](https://explorer.cere.network/) (check [here](/tools/cere-explorer/how-to-connect-to-your-node-with-cere-explorer.md) how to connect to your node).
    1. Generate `Session Key`.
       1. Go to `Developer` → `RPC calls.`
       2. Select `author` → `rotateKeys()` function.
@@ -26,7 +26,7 @@ From this section you will know how to become a Validator.
       7. Press `Bond & Validate`
       8. Press `Sign and Submit`
 6. **IGNORE if you completed #5, BETA!** - Add a Validator by using an automated script.
-   1.  Replace the [./scripts/validator/.env](https://github.com/Cerebellum-Network/nodes-installation-scripts/blob/master/scripts/validator/.env) with appropriate values.
+   1.  Replace the [.env.* config](https://github.com/Cerebellum-Network/nodes-installation-scripts/tree/master/configs) with appropriate values.
 
        | Parameter                     | Description                                                        |
        | ----------------------------- | ------------------------------------------------------------------ |
@@ -38,9 +38,9 @@ From this section you will know how to become a Validator.
    2.  Run the script.
 
        ```
-            docker-compose --env-file ./scripts/validator/.env up add_validator
+            docker-compose --env-file $CONFIG_FILE up add_validator
        ```
    3. Once it is finished, you should be able to see `Validator added successfully!` message.
-   4. Clean up the values in [./scripts/validator/.env](https://github.com/Cerebellum-Network/nodes-installation-scripts/blob/master/scripts/validator/.env).
+   4. Clean up the values in your .env config file
 
 Congratulations! Now your Validator is in a waiting state.
