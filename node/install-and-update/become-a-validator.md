@@ -26,7 +26,7 @@ From this section you will know how to become a Validator.
       7. Press `Bond & Validate`
       8. Press `Sign and Submit`
 6. **IGNORE if you completed #5, BETA!** - Add a Validator by using an automated script.
-   1.  Replace the [./scripts/validator/.env](https://github.com/Cerebellum-Network/nodes-installation-scripts/blob/master/scripts/validator/.env) with appropriate values.
+   1.  Replace the [.env.* config](https://github.com/Cerebellum-Network/nodes-installation-scripts/tree/master/configs) with appropriate values.
 
        | Parameter                     | Description                                                        |
        | ----------------------------- | ------------------------------------------------------------------ |
@@ -38,9 +38,9 @@ From this section you will know how to become a Validator.
    2.  Run the script.
 
        ```
-            docker-compose --env-file ./scripts/validator/.env up add_validator
+            docker-compose --env-file $CONFIG_FILE up add_validator
        ```
    3. Once it is finished, you should be able to see `Validator added successfully!` message.
-   4. Clean up the values in [./scripts/validator/.env](https://github.com/Cerebellum-Network/nodes-installation-scripts/blob/master/scripts/validator/.env).
+   4. Clean up the values in your .env config file
 
 Congratulations! Now your Validator is in a waiting state.
