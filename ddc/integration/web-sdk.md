@@ -19,7 +19,7 @@ If your web application uses NPM, you can add our SDK as a dependency.
 npm install --save @cere/sdk-js@5.3.2
 ```
 
-Then, you can use import it in your code:
+Then, you can import it into your code:
 ```typescript
 import { cereWebSDK } from "@cere/sdk-js/dist/web";
 ```
@@ -30,7 +30,7 @@ Once the Cere Web SDK is installed on your web application, initialize the libra
 
 You can find your APP_ID on the RXB Dashboard
 
-User ID is what should be set for each of your users and be unchangeable.
+User ID is what should be set for each of your users and should be unchangeable.
 
 
 ```javascript
@@ -43,9 +43,9 @@ try {
    console.log('Could not initialize cereSDK.');
 }
 ```
-App ID and User ID should be provided, otherwise, an error will be thrown.
+App ID and User ID should be provided, otherwise an error will result.
 
-You can also specify the container element to where you want the in-app messages will be attached. By default, in-app messages are attached to the `<body>`.
+You can also specify the container element that you want the in-app messages to be attached to. By default, in-app messages are attached to the `<body>`.
 
 ```javascript
 let containerForInAppMessages = document.getElementById('container');
@@ -56,11 +56,11 @@ console.log('Could not initialize cereSDK.');
 }
 ```
 
-Besides, one more important parameter that can be set during the SDK initialization is `API_KEY`.
+One more important parameter that can be set during the SDK initialization is `API_KEY`.
 
 ## Auth methods supported
 
-Initialisation of SDK can be handled in a variety of methods.
+Initialisation of the SDK can be handled in a variety of methods.
 
 For all invocations `APP_ID`, `USER_ID`, `REACT_APP_API_KEY` - parameters described previously.
 
@@ -113,7 +113,7 @@ If you pass a container div upon initialization of the SDK, the SDK will render 
 
 #### Reward Click
 
-In order to track rewards clicked by the user, your template must use an action-click class and set the data-event-type parameter to `REWARD_CLICKED`. Any clicks inside of this div will be registered in Cere's DDC automatically as reward clicks. You can pass data about the reward inside of data-event-value parameter.
+In order to track rewards clicked by the user, your template must use an action-click class and set the data-event-type parameter to `REWARD_CLICKED`. Any clicks inside of this div will be registered in Cere's DDC automatically as reward clicks. You can pass data about the reward inside the data-event-value parameter.
 
 ```html
  <div class="action-click"
@@ -136,7 +136,7 @@ Similarly, users can dismiss an event, which you can inject automatically using 
 
 #### Impression Event
 
-Every time an engagement is displayed to the user, an impression event is registered in Cere DDC.
+Every time an engagement is displayed to the user, an impression event is registered in the Cere DDC.
 
 ### Custom Handlers
 
@@ -174,7 +174,7 @@ sdk.sendEvent(eventName, eventPayload);
 
 For ReactJS library without NPM there is a possibility to add web.js script 
 
-1. There is a way for adding external javascript file into react js application. If you want to deal with this case please take a look at link Option 1: CDN
+1. There is a way for adding an external javascript file into a react js application. If you want to deal with this case please take a look at link Option 1: CDN
 2. There are different ways to add external javascript files in react. Some of them are listed below.
 
 ### React-script-tag

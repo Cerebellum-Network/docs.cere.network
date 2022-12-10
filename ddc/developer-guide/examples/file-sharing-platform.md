@@ -8,14 +8,14 @@ Use the [🔗 Setup](../setup.md) guide to create and top-up an account.
 
 ### Scenario
 
-There are 2 users Bob and Alice. The scenario flow is next:
+There are 2 users: Bob and Alice. The scenario flow:
 
 * Bob creates a bucket
 * Bob stores private (encrypted) data
 * Bob stores public (unencrypted) data
 * Bob shares data to Alice
 * Alice reads Bob's public data
-* Alice read Bob's private data
+* Alice reads Bob's private data
 
 {% hint style="warning" %}
 Add a link to React demo application GitHub repository
