@@ -33,10 +33,10 @@ SS58 Address: 5HZDCq4tLYrnjTMpGyMdPsrPxDwAFG8gDR49oW6jL7yTs5Ec
 ```
 
 {% hint style="warning" %}
-Please write down your secret phrase and keep it in a safe place. The secret phrase can be used to restore your keys (wallet). Keep it carefully to not lose your data.
+Please write down your secret phrase and keep it in a safe place. The secret phrase can be used to restore your keys (wallet). Put it in a safe place so you do not lose your data.
 {% endhint %}
 
-Or you can extract keys from existing secret phrase (mnemonic code):
+Or you can extract keys from the existing secret phrase (mnemonic code):
 
 ```shell
 ./ddc-cli extract-keys --secret-phrase 'hair solve immune apology aerobic broom milk split paper crime maple harvest' --scheme sr25519

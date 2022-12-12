@@ -1,14 +1,14 @@
 ---
-description: Learn how to get started with DDC using the SDK Client Library.
+description: Learn how to get started with the DDC using the SDK Client Library.
 ---
 
 # ⏱ Quickstart
 
-In order to complete this guide using the DDC client library, you must have an account in Cere Blockchain that have enough CERE tokens (amount depends on your needs) and secret phrase (mnemonic) of that account (required to configure a client).
+In order to complete this guide using the DDC Client Library, you must have an account in Cere Blockchain that has enough CERE tokens (amount depends on your needs) and the secret phrase (mnemonic) of that account (required to configure a client).
 
 Use the [🔗 Setup](setup.md) guide to create and top-up an account.
 
-### Installing the client library
+### Installing the Client Library
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -84,11 +84,11 @@ import {DdcUri, IFILE, IPIECE} from "@cere-ddc-sdk/core";
 
 const setupClient = async () => {
     // Cluster address is either string (url of the CDN node to use) or number (id of the CDN cluster to use)
-    // CDN node addresses and cluster ids can be found here: https://docs.cere.network/testnet/ddc-network-testnet
+    // CDN node addresses and cluster IDs can be found here: https://docs.cere.network/testnet/ddc-network-testnet
     const options = {clusterAddress: 2n};
 
     // The secret phrase is going to be used to sign requests and encrypt/decrypt (optional) data
-    // Replace mnemonicGenerate by your secret phrase generated during account setup (see https://docs.cere.network/ddc/developer-guide/setup)
+    // Replace mnemonicGenerate with your secret phrase generated during account setup (see https://docs.cere.network/ddc/developer-guide/setup)
     const secretPhrase = mnemonicGenerate();
 
     // Initialise DDC client and connect to blockchain
@@ -109,10 +109,10 @@ At the moment Kotlin SDK is outdated :cry:
 
 ### Create bucket
 
-DDC client setup explained in [Setup client](quickstart.md#setup-client) section.
+The DDC client setup is explained in the [Setup client](quickstart.md#setup-client) section.
 
 {% hint style="info" %}
-On bucket creation, you pay tokens for the bucket reservation. Please, be careful and don't create unnecessary buckets that can be unused or forgotten.
+On Bucket creation, you pay tokens for the Bucket reservation. Please be careful and don't create unnecessary Buckets that will be unused or forgotten.
 {% endhint %}
 
 {% tabs %}
@@ -152,20 +152,20 @@ At the moment Kotlin SDK is outdated :cry:
 
 ### Store data
 
-Data can be encrypted by client (see [Encryption](quickstart.md#encryption)).
+Data can be encrypted by the client (see [Encryption](quickstart.md#encryption)).
 
-DDC client setup explained in [Setup client](quickstart.md#setup-client) section.
+The DDC client setup is explained in [Setup client](quickstart.md#setup-client) section.
 
 {% hint style="info" %}
-Only bucket creator can store data to the bucket. Otherwise, storage returns 403 status code.
+Only the Bucket creator can store data in the Bucket. Otherwise, storage returns 403 status code.
 {% endhint %}
 
 #### Piece
 
-Piece is the smallest indivisible unit stored in DDC. A piece consists of the data and [tags](../protocols/storage-schema.md) that can be used to search pieces or to store not searchable metadata.
+Piece is the smallest indivisible unit stored in the DDC. A Piece consists of the data and [tags](../protocols/storage-schema.md) that can be used to search Pieces or to store non-searchable metadata.
 
 {% hint style="info" %}
-Max size of the piece is 100 MB. To upload bigger unit of data, see [File](quickstart.md#file) section.
+Max size of the Piece is 100 MB. To upload a bigger unit of data, see [File](quickstart.md#file) section.
 {% endhint %}
 
 {% tabs %}
@@ -215,13 +215,13 @@ At the moment Kotlin SDK is outdated :cry:
 
 #### File
 
-File is a bigger unit of data that is presented as a set of pieces. File pieces are distributed across set of nodes (depends on the cluster size and number of pieces). See [File Storage](../protocols/file-storage.md) section.
+File is a bigger unit of data that is presented as a set of Pieces. File Pieces are distributed across a set of nodes (depends on the cluster size and number of Pieces). See [File Storage](../protocols/file-storage.md) section.
 
 {% hint style="info" %}
 There is no hard limit on the max size of the file.
 {% endhint %}
 
-On the code level storing of the File is almost the same as storing of the Piece, the difference is in supported data types (depends on the language you use) and internal logic (splitting of the file into pieces).
+On the code level storing of the File is almost the same as storing of the Piece. The difference is in supported data types (depends on the language you use) and internal logic (splitting of the File into Pieces).
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -270,9 +270,9 @@ At the moment Kotlin SDK is outdated :cry:
 
 ### Read data
 
-Encrypted data can be decrypted by client (see [Encryption](quickstart.md#encryption)).
+Encrypted data can be decrypted by the client (see [Encryption](quickstart.md#encryption)).
 
-DDC client setup explained in [Setup client](quickstart.md#setup-client) section.
+The DDC client setup is explained in [Setup client](quickstart.md#setup-client) section.
 
 #### Piece
 
@@ -353,9 +353,9 @@ At the moment Kotlin SDK is outdated :cry:
 
 Search is based on [tags](../protocols/storage-schema.md) that are combined using logical 'or' operator (e.g. tagA = N or tagB = M).\
 \
-Search operation is distributed and result is collected from the nodes of the storage cluster where bucket is stored (because bucket is distributed across all cluster nodes).
+Search operation is distributed and the result is collected from the nodes of the storage cluster where the Bucket is stored (because Bucket is distributed across all cluster nodes).
 
-DDC client setup explained in [Setup client](quickstart.md#setup-client) section.
+The DDC client setup is explained in [Setup client](quickstart.md#setup-client) section.
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -398,11 +398,11 @@ At the moment Kotlin SDK is outdated :cry:
 
 Data sharing is implemented via DEK re-encryption (see [Encryption](quickstart.md#encryption)).
 
-In order to share data, partner have to share his encryption public key to data owner (generated via his secret phrase).
+In order to share data, the partner must share their encryption public key with the data owner (generated via his secret phrase).
 
-Then partner can read encrypted data having his secret phrase and shared DEK path via DDC Client.
+Then the partner can read encrypted data having their secret phrase and shared DEK path via the DDC Client.
 
-DDC client setup explained in [Setup client](quickstart.md#setup-client) section.
+The DDC client setup is explained in [Setup client](quickstart.md#setup-client) section.
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -439,9 +439,9 @@ At the moment Kotlin SDK is outdated :cry:
 
 The DDC Client Library provides encryption/decryption out of the box (using [NaCl](https://nacl.cr.yp.to/)).\
 \
-Secret phrase passed in DDC Client on setup is used to generate (via blake2b-256) master `DEK`.
+Secret phrase passed in the DDC Client on setup is used to generate (via blake2b-256) master `DEK`.
 
-`DEK path` per piece can be passed inside `storeOptions` to `store` function. Then DEK path is split by '/' into parts and each part (from left to right) is used to generate DEK based on previous value (master DEK is an initial value).
+`DEK path` per Piece can be passed inside `storeOptions` to `store` function. Then DEK path is split by '/' into parts and each part (from left to right) is used to generate DEK based on previous value (master DEK is an initial value).
 
 _Example_
 
@@ -455,7 +455,7 @@ Piece DEK = blake2b-256(`personal` + blake2b-256(`documents` + blake2b-256(`supe
 
 _Explanation_
 
-The recursively (in reverse order) generated DEK allows to implement hierarchical encryption where data encrypted by `/documents/personal` can be decrypted knowing one of the values:
+The recursively (in reverse order) generated DEK allows one to implement hierarchical encryption where data encrypted by `/documents/personal` can be decrypted knowing one of the values:
 
 * blake2b-256(`super secret phrase`)
 * blake2b-256(`documents` + blake2b-256(`super secret phrase`))

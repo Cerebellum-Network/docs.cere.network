@@ -2,7 +2,7 @@
 
 ## Schema of the parameters in the DDC bucket contract
 
-This is the data model used to configure clusters, nodes, and buckets in the [ddc-bucket smart contract](https://github.com/Cerebellum-Network/ddc-bucket-contract).
+This is the data model used to configure Clusters, Nodes, and Buckets in the [ddc-bucket smart contract](https://github.com/Cerebellum-Network/ddc-bucket-contract).
 
 ### Bucket Parameters
 
@@ -14,17 +14,17 @@ Bucket parameters specify:
 
 Cluster parameters specify:
 
-* What type of nodes can be included in a cluster.
-* How data and requests should be routed to nodes.
-* Any additional details given by the cluster manager.
+* What type of nodes can be included in a Cluster.
+* How data and requests should be routed to Nodes.
+* Any additional details given by the Cluster manager.
 
 ### Node Parameters
 
 Node parameters specify:
 
-* What engine a node is running.
-* How to connect to a physical node that provides the service offered in the contract.
-* Any additional details given by a provider about his node.
+* What engine a Node is running.
+* How to connect to a physical Node that provides the service offered in the contract.
+* Any additional details given by a Provider about their node.
 
 ([Source](https://github.com/Cerebellum-Network/ddc-schemas))
 
@@ -34,9 +34,9 @@ Node parameters specify:
 
 #### v0.1.3
 
-* Basic bucket parameters with replication factor.
-* Basic cluster parameters with engine name, version, and the uniform topology.
-* Basic node parameters with the node URL and engine version.
+* Basic Bucket parameters with replication factor.
+* Basic Cluster parameters with engine name, version, and the uniform topology.
+* Basic Node parameters with the Node URL and engine version.
 
 ## Protocol Documentation
 
@@ -71,7 +71,7 @@ The parameters of a bucket.
 
 #### ClusterParams
 
-The parameters of a cluster.
+The parameters of a Cluster.
 
 | Field                | Type                                                      | Label | Description                                                                               |
 | -------------------- | --------------------------------------------------------- | ----- | ----------------------------------------------------------------------------------------- |
@@ -83,11 +83,11 @@ The parameters of a cluster.
 
 #### TopologyType
 
-A topology specifies how requests should be routed to nodes of a cluster.
+A topology specifies how requests should be routed to Nodes of a Cluster.
 
-A cluster is segmented into a number of vnodes. Each vnode is assigned to a physical node and there should be multiple vnodes per physical node. The assignment of vnodes is managed in the `ddc-bucket` smart contract.
+A Cluster is segmented into a number of vnodes. Each vnode is assigned to a physical Node and there should be multiple vnodes per physical Node. The assignment of vnodes is managed in the `ddc-bucket` smart contract.
 
-Each request is assigned to a list of vnodes based on a routing key. In a STORAGE cluster, routing keys must be derived from the identifier of data pieces. In a CDN or otherwise stateless cluster, routing keys may be random, or may implement some affinity to users or to queries for better performance (caching, etc).
+Each request is assigned to a list of vnodes based on a routing key. In a STORAGE Cluster, routing keys must be derived from the identifier of data pieces. In a CDN or otherwise stateless Cluster, routing keys may be random, or may implement some affinity to users or to queries for better performance (caching, etc).
 
 | Name          | Number | Description                                                                                                                                                            |
 | ------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -115,8 +115,8 @@ The list of engine types.
 | Name    | Number | Description                                            |
 | ------- | ------ | ------------------------------------------------------ |
 | UNKNOWN | 0      | The engine type is missing, this is probably an error. |
-| STORAGE | 1      | The engine of storage nodes to store data pieces.      |
-| CDN     | 2      | The engine of CDN nodes to upload and search pieces.   |
+| STORAGE | 1      | The engine of storage Nodes to store data pieces.      |
+| CDN     | 2      | The engine of CDN Nodes to upload and search pieces.   |
 
 ### Scalar Value Types
 
