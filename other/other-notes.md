@@ -8,6 +8,6 @@
 * Must have infrastructure that protects the validator's signing keys so that an attacker cannot take control and commit slashable behavior.
 * Must be high availability.
 
-Session keys used by a validator should always be isolated to just a single node. Replicating session keys across multiple nodes could lead to equivocation slashes, or soon to parachain validity slashes which can make you lose 100% of your staked funds.
+Session keys used by a validator should always be isolated to just a single node. Replicating session keys across multiple nodes could lead to equivocation slashes, or soon to parachain validity slashes, which can make you lose 100% of your staked funds.
 
-The good news is that 100% uptime of your validator is not really needed, as it has some buffer within eras in order to go offline for a little while and upgrade.\
+The good news is that 100% uptime of your validator is not really needed, as there is some buffer time within eras to account for going offline for a little while to upgrade.

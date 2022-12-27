@@ -1,7 +1,7 @@
 # 🌐 Storage Service
 
-DDC offers clusters with storage services which persists data safely and allows searching and retrieving data.
-A core component of the storage service is the DDC storage node which is responsible for partitions of the data. Safety and scalability is achieved by spreading the data over a number of nodes.
+The DDC offers clusters with storage services which persists data safely and allows searching and retrieving data.
+A core component of the storage service is the DDC storage node, which is responsible for partitions of the data. Safety and scalability is achieved by spreading the data over a number of nodes.
 
 {% hint style="info" %}
 **For more details, see the documentation of DDC Storage nodes:**
@@ -11,7 +11,7 @@ A core component of the storage service is the DDC storage node which is respons
 
 ## Recovery
 
-Every  DDC storage has Merkle DAG which presents tree of stored files. When some node inconsistent, storage node can recover data by using his own Merkle DAG and replica nodes for searching required files and copying.
+Every  DDC storage has Merkle DAG which presents a tree of stored files. When a node is inconsistent, the storage node can recover data by using its own Merkle DAG and replica nodes for searching required files and copying.
 
 ## Implementation
 
@@ -19,8 +19,8 @@ Every  DDC storage has Merkle DAG which presents tree of stored files. When some
 
 ## Metrics
 
-Storage node provides metrics for monitoring:
+The storage node provides metrics for monitoring:
 
-* general HTTP metrics
-* stored data in bytes
-* stored piece number
+* General HTTP metrics
+* Stored data in bytes
+* Stored piece number

@@ -27,7 +27,7 @@ The meaning of the different parts of such URIs is explained below.
 ### `file/` queries
 
 A `file/` URI represents a file, as known from usual file systems. The simplest form points to a
-file by a path inside of a bucket:
+file by a path inside of a Bucket:
 
     /ddc/buc/BUCKET_ID/file/PATH
 
@@ -42,7 +42,7 @@ pieces holding the file content. See [📂 File Storage](file-storage.md) for mo
 ### `piece/` queries
 
 A piece is a container of data and metadata. It is the smallest indivisible unit stored in DDC
-object storage. A piece can contain links to other pieces.
+Object Storage. A piece can contain links to other pieces.
 
 A `piece/` URI represents a data piece or a set of pieces in DDC Object Storage. Piece URIs take
 the following form:
@@ -52,7 +52,7 @@ the following form:
 
 ### Identifying files and pieces
 
-The PATH part of a URI identifies a piece of content within a bucket.
+The PATH part of a URI identifies a piece of content within a Bucket.
 
 Mutable content can be addressed by a filename or a slash-based path:
 
@@ -81,27 +81,27 @@ Additionally, the CID may be followed by a file extension. Such a URL still refe
 
 ### `buc/` - Identifying buckets by ID
 
-A bucket can be identified by its ID:
+A Bucket can be identified by its ID:
 
     buc/BUCKET_ID/
 
-BUCKET_ID is a numerical, unique, and immutable identifier to a bucket.
-A `buc/…/` query can be resolved in the DDC bucket system to identify the current set
-of storage nodes responsible for this bucket.
+BUCKET_ID is a numerical, unique, and immutable identifier to a Bucket.
+A `buc/…/` query can be resolved in the DDC Bucket system to identify the current set
+of storage nodes responsible for this Bucket.
 
 
 ### `org/` - Identifying buckets by name
 
-A bucket can also be identified by a name:
+A Bucket can also be identified by a name:
 
     org/ORGANIZATION_NAME/buc/BUCKET_NAME/
 
-BUCKET_NAME is a mutable alias to a bucket. Bucket names exist within an *organization*, and can be freely chosen by owners of the organization. The organization itself has a name (ORGANIZATION_NAME), which is unique within the DDC network, and which must be claimed and controlled by user accounts on the Cere blockchain. A `org/…/buc/…/` query can be resolved to find the ID of a bucket.
+BUCKET_NAME is a mutable alias to a Bucket. Bucket names exist within an *organization*, and can be freely chosen by owners of the organization. The organization itself has a name (ORGANIZATION_NAME), which is unique within the DDC network, and which must be claimed and controlled by user accounts on the Cere blockchain. A `org/…/buc/…/` query can be resolved to find the ID of a Bucket.
 
 
 ## Web URLs - The gateway from the web to DDC
 
-DDC defines Web URLs that can be used anywhere where HTTPS is expected, i.e. in web browsers. A Web URL
+The DDC defines Web URLs that can be used anywhere where HTTPS is expected, i.e. in web browsers. A Web URL
 is constructed with the URL to a CDN node, followed by the DDC URI to resolve, like so:
 
     https://CDN_NODE/DDC_URI
@@ -114,7 +114,7 @@ For example:
 
 The URI of an object can always be parsed from a Web URL by detecting the first occurence of the string `/ddc/`.
 
-A Web URL identifies an object, and suggests a CDN node from which to retrieve it. Given such a request, a CDN node will fetch the corresponding data piece(s) from the DDC network. The client may also use any other CDN node of his choice, or it may use the DDC protocol by itself and fetch the data from the Cere blockchain and from storage nodes directly.
+A Web URL identifies an object, and suggests a CDN node from which to retrieve it. Given such a request, a CDN node will fetch the corresponding data piece(s) from the DDC network. The client may also use any other CDN node of its choice, or it may use the DDC protocol by itself and fetch the data from the Cere blockchain and from storage nodes directly.
 
 For usage, see the [☁ CDN API](cdn-api.md).
 

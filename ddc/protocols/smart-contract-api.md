@@ -1,6 +1,6 @@
 # ⚖ Smart Contract API
 
-DDC v2 Smart Contracts -- Orchestrate the network around clusters and buckets
+DDC v2 Smart Contracts -- Orchestrate the network around Clusters and Buckets
 
 ## Functions
 
@@ -13,13 +13,13 @@ fn bucket_create(
 ) -> BucketId
 ```
 
-Create a new bucket and return its `bucket_id`.
+Create a new Bucket and return its `bucket_id`.
 
 The caller will be its first owner and payer of resources.
 
 `bucket_params` is configuration used by clients and nodes. See the [data structure of BucketParams](https://docs.cere.network/ddc/protocols/contract-params-schema)
 
-The bucket can be connected to a single cluster (currently). Allocate cluster resources with the function `bucket_alloc_into_cluster`
+The Bucket can be connected to a single Cluster (currently). Allocate Cluster resources with the function `bucket_alloc_into_cluster`
 
 ### bucket\_alloc\_into\_cluster (mutable)
 
@@ -30,7 +30,7 @@ fn bucket_alloc_into_cluster(
 )
 ```
 
-Allocate some resources of a cluster to a bucket.
+Allocate some resources of a Cluster to a Bucket.
 
 The amount of resources is given per vnode (total resources will be `resource` times the number of vnodes).
 
@@ -42,7 +42,7 @@ fn bucket_settle_payment(
 )
 ```
 
-Settle the due costs of a bucket from its payer account to the cluster account.
+Settle the due costs of a Bucket from its payer account to the Cluster account.
 
 ### bucket\_change\_params (mutable, payable)
 
@@ -53,7 +53,7 @@ fn bucket_change_params(
 )
 ```
 
-Change the `bucket_params`, which is configuration used by clients and nodes.
+Change the `bucket_params`, which is the configuration used by clients and nodes.
 
 See the [data structure of BucketParams](https://docs.cere.network/ddc/protocols/contract-params-schema)
 
@@ -65,7 +65,7 @@ fn bucket_get(
 ) -> Result
 ```
 
-Get the current status of a bucket.
+Get the current status of a Bucket.
 
 ### bucket\_list (view)
 
@@ -77,7 +77,7 @@ fn bucket_list(
 )
 ```
 
-Iterate through all buckets.
+Iterate through all Buckets.
 
 The algorithm for paging is: start with `offset = 1` and `limit = 20`. The function returns a `(results, max_id)`. Call again with `offset += limit`, until `offset >= max_id`. The optimal `limit` depends on the size of params.
 
@@ -94,11 +94,11 @@ fn cluster_create(
 ) -> ClusterId
 ```
 
-Create a new cluster and return its `cluster_id`.
+Create a new Cluster and return its `cluster_id`.
 
 The caller will be its first manager.
 
-The cluster is split in a number of vnodes. The vnodes are assigned to the given physical nodes in a round-robin. Only nodes of providers that trust the cluster manager can be used (see `node_trust_manager`). The assignment can be changed with the function `cluster_replace_node`.
+The Cluster is split in a number of vnodes. The vnodes are assigned to the given physical nodes in a round-robin. Only nodes of providers that trust the Cluster manager can be used (see `node_trust_manager`). The assignment can be changed with the function `cluster_replace_node`.
 
 `cluster_params` is configuration used by clients and nodes. In particular, this describes the semantics of vnodes. See the [data structure of ClusterParams](https://docs.cere.network/ddc/protocols/contract-params-schema)
 
@@ -111,7 +111,7 @@ fn cluster_reserve_resource(
 )
 ```
 
-As manager, reserve more resources for the cluster from the free capacity of nodes.
+As manager, reserve more resources for the Cluster from the free capacity of nodes.
 
 The amount of resources is given per vnode (total resources will be `resource` times the number of vnodes).
 
@@ -127,7 +127,7 @@ fn cluster_replace_node(
 
 As manager, re-assign a vnode to another physical node.
 
-Only nodes of providers that trust the cluster manager can be used (see `node_trust_manager`).
+Only nodes of Providers that trust the Cluster manager can be used (see `node_trust_manager`).
 
 ### cluster\_distribute\_revenues (mutable)
 
@@ -137,7 +137,7 @@ fn cluster_distribute_revenues(
 )
 ```
 
-Trigger the distribution of revenues from the cluster to the providers.
+Trigger the distribution of revenues from the Cluster to the Providers.
 
 ### cluster\_change\_params (mutable, payable)
 
@@ -160,7 +160,7 @@ fn cluster_get(
 ) -> Result
 ```
 
-Get the current status of a cluster.
+Get the current status of a Cluster.
 
 ### cluster\_list (view)
 
@@ -172,7 +172,7 @@ fn cluster_list(
 )
 ```
 
-Iterate through all clusters.
+Iterate through all Clusters.
 
 The algorithm for paging is: start with `offset = 1` and `limit = 20`. The function returns a `(results, max_id)`. Call again with `offset += limit`, until `offset >= max_id`. The optimal `limit` depends on the size of params.
 
@@ -186,7 +186,7 @@ fn node_trust_manager(
 )
 ```
 
-As node provider, authorize a cluster manager to use his nodes.
+As node Provider, authorize a Cluster manager to use their nodes.
 
 ### node\_distrust\_manager (mutable)
 
@@ -196,7 +196,7 @@ fn node_distrust_manager(
 )
 ```
 
-As node provider, revoke the authorization of a cluster manager to use his nodes.
+As node Provider, revoke the authorization of a Cluster manager to use their nodes.
 
 ### node\_create (mutable, payable)
 
@@ -260,7 +260,7 @@ fn account_deposit(
 )
 ```
 
-As user, deposit tokens on the account of the caller from the transaction value. This deposit can be used to pay for the services to buckets of the account.
+As user, deposit tokens on the account of the caller from the transaction value. This deposit can be used to pay for the services to Buckets of the account.
 
 ### account\_get (view)
 
@@ -344,7 +344,7 @@ fn admin_set_fee_config(
 )
 ```
 
-Set the network and cluster fee configuration.
+Set the network and Cluster fee configuration.
 
 ## Events
 
@@ -357,7 +357,7 @@ event BucketCreated(
 )
 ```
 
-A bucket was created. The given account is its first owner and payer of resources.
+A Bucket was created. The given account is its first owner and payer of resources.
 
 ### BucketAllocated
 
@@ -369,7 +369,7 @@ event BucketAllocated(
 )
 ```
 
-Some amount of resources of a cluster were allocated to a bucket.
+Some amount of resources of a Cluster were allocated to a Bucket.
 
 ### BucketSettlePayment
 
@@ -380,7 +380,7 @@ event BucketSettlePayment(
 )
 ```
 
-The due costs of a bucket was settled from the bucket payer to the cluster.
+The due costs of a Bucket was settled from the Bucket payer to the Cluster.
 
 ### ClusterCreated
 
@@ -392,7 +392,7 @@ event ClusterCreated(
 )
 ```
 
-A new cluster was created.
+A new Cluster was created.
 
 ### ClusterNodeReplaced
 
@@ -415,7 +415,7 @@ event ClusterReserveResource(
 )
 ```
 
-Some resources were reserved for the cluster from the nodes.
+Some resources were reserved for the Cluster from the nodes.
 
 ### ClusterDistributeRevenues
 
@@ -426,7 +426,7 @@ event ClusterDistributeRevenues(
 )
 ```
 
-The share of revenues of a cluster for a provider was distributed.
+The share of revenues of a Cluster for a Provider was distributed.
 
 ### NodeCreated
 

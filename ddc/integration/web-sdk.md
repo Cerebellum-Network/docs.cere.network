@@ -64,7 +64,7 @@ Initialisation of the SDK can be handled in a variety of methods.
 
 For all invocations `APP_ID`, `USER_ID`, `REACT_APP_API_KEY` - parameters described previously.
 
-Auth methods supported list is placed below:
+Auth methods supported include:
 
 * OAUTH_APPLE
 * OAUTH_FACEBOOK

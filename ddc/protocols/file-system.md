@@ -3,7 +3,7 @@
 {% hint style="info" %} This is the specification of `File System v0.1` based on `Storage Schema v0.1.4`
 {% endhint %}
 
-Files can be organized in DDC, like in familiar file systems, in a hierarchy of folders and files.
+Files can be organized in the DDC just as they are in familiar file systems in a hierarchy of folders and files.
 The file path is included in the piece of the file descriptor (see [📂 File Storage](file-storage.md)).
 
 The file can then be accessed by [🔗 `/file/` URLs](ddc-url.md#file-queries). If multiple versions of the file exist, the most recent file will be returned.
@@ -61,4 +61,4 @@ A map can be used to package a web application. This technique is used in partic
 }
 ```
 
-A map may be uploaded itself as a DDC file, and its content holds the map. A map file is immutable, but it is possible to upload multiple versions of a map, distinguished by their timestamp.
+A map may be uploaded itself as a DDC file, and its content holds the map. A map file is immutable, but it is possible to upload multiple versions of a map, which will be distinguished by their timestamps.

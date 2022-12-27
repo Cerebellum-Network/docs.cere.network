@@ -8,7 +8,7 @@ In this section you will learn how to prepare a browser to work with Cere Explor
 
 ## Brave
 
-1. Disable Trackers & ads blocking (Settings -> Get started -> Shields) to be able to connect to the local Node by websocket ws.
+1. Disable tracker and ad blocking (Settings -> Get started -> Shields) to be able to connect to the local Node by websocket ws.
 
 ## Firefox
 
@@ -16,4 +16,4 @@ In this section you will learn how to prepare a browser to work with Cere Explor
 
 ## Safari
 
-1. Safari does not support connect to the local Node by websocket ws. At the same time, it can be used to connect to any Node by wss.
+1. Safari does not support connection to the local Node via websocket ws. However, it can be used to connect to any Node via wss.
