@@ -5,8 +5,8 @@ Add value instantly to your game by enabling customizable player experiences usi
 - Create in-game assets through Cere Freeport creator suite
 - Use the Cere Tools for immersive player experiences
 - No-install browser games can be launched from anywhere
-- But mobile browser-optimized games that bypass app stores and royalty payments
-- Unlock the power data through Cere’s DDC
+- Mobile browser-optimized games that bypass app stores and external royalty payments
+- Unlock the power of decentralized data through Cere’s DDC
 - Wallets that can directly communicate with game packs to handle the end-to-end flows of signup/authentication/payment/custody of assets
 - Track achievements, progress, and digital content acquired in users' wallets. 
 

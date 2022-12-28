@@ -21,7 +21,7 @@ Integrating the NFT-commerce SDK in your webshop enables you to offer your custo
 
 ### How are the engagment templates generated and maintained?
 
-The engagement templates integrated through the SDK are curated by the Cere team through Cere RXB (Real time experience builder) at the moment. A new engagement template based on your customer's needs can be made available within a couple of hours. In the future RXB will be available as a self-service tool.
+The engagement templates integrated through the SDK are curated by the Cere team through Cere RXB (Real time experience builder) at the moment. A new engagement template based on your customers' needs can be made available within a couple of hours. In the future RXB will be available as a self-service tool.
 
 ### Where do the NFTs come from?
 

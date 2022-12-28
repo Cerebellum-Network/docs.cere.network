@@ -3,11 +3,12 @@
 {% hint style="info" %} This is the specification of `File Storage v0.1` based on `Storage Schema v0.1.4`
 {% endhint %}
 
-Files are stored in DDC as a set of data pieces. A file is represented by a piece which is a file descriptor. The file can be referenced by referencing this descriptor piece, e.g., by its CID or its tags.
+Files are stored in the DDC as a set of data pieces. A file is represented by a piece that is a file descriptor. The file can be referenced by referencing this descriptor piece, e.g., by its CID or its tags.
 
 The content of the file is stored in chunks in the descriptor piece and/or in separate data pieces.
 The first chunk may be stored inline in the descriptor piece, or not.
-Additional chunks, if any, may be stored in data pieces that must be uploaded before the descriptor piece. The data pieces are referenced by their CID in the `links` field of the descriptor piece. The data pieces are to be found in the same context as the descriptor piece, i.e., in the same bucket and cluster, although usually not on the same node.
+
+Additional chunks, if any, may be stored in data pieces that must be uploaded before the descriptor piece. The data pieces are referenced by their CID in the `links` field of the descriptor piece. The data pieces are to be found in the same context as the descriptor piece, i.e., in the same Bucket and Cluster, although usually not on the same node.
 
 The details of content chunking is the responsibility of the uploader.
 The inline chunk should be empty or small to allow fast access to the descriptor.

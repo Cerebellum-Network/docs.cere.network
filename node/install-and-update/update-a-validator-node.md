@@ -1,6 +1,6 @@
 # Update a Validator Node
 
-This manual is supposed to be used for upgrading your Validator Node or machine and keeping your Validator online. The process will take several hours, so make sure you understand the instructions first and plan accordingly.
+This section details upgrading your Validator Node or machine and keeping your Validator online. The process will take several hours, so make sure you understand the instructions first and plan accordingly.
 
 ## Key components
 
@@ -42,13 +42,13 @@ Machine B - a machine where Validator B is hosting
 
 11\. Press `Set session key`.
 
-12\. **!Important** Wait until the message `Pre-sealed block for proposal at` **appears** in Validator B and **disappears** in Validator A logs. You can do it by running the following command in the Validator Nodes root directory:\
+12\. **!Important** Wait until the message `Pre-sealed block for proposal at` **appears** in Validator B and **disappears** in Validator A logs. You can do this by running the following command in the Validator Nodes root directory:\
 \*\*\*\*`docker-compose logs -f --tail=1000 | grep "Pre-sealed block for proposal at"`
 
-13\. Now you can safely stop Validator A using command: `docker-compose stop add_validator_node_custom` in order to update either the Validator A itself or Machine A.
+13\. Now you can safely stop Validator A using command: `docker-compose stop add_validator_node_custom` in order to update either Validator A itself or Machine A.
 
 14\. Repeat steps 1-12 for Validator A on Machine A.
 
 15\. Now you can stop Validator B.
 
-16\. You’re done, the Validator A has been updated successfully.
+16\. You’re done and Validator A has been updated successfully.

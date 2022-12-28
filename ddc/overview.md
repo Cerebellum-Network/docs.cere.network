@@ -2,9 +2,9 @@
 
 ## What is the DDC Network?
 
-The Decentralized Data Cloud (DDC) protocol is built from the ground up for Web3, capable of powering a future of interoperable, privacy-preserving and serverless data.
+The Decentralized Data Cloud (DDC) protocol is built from the ground up for Web3 and is capable of powering a future of interoperable, privacy-preserving, and serverless data.
 
-## Benefits of DDC
+## Benefits of the DDC
 
 The DDC enables you to build Web3 dApps, integrating real-world use cases on a Decentralized Data Cloud where the user owns the data. It provides multiple services on the protocol level and a toolset to quickly get started building dApps and serverless applications. The DDC offers flexible data management, secure, reliable and GDPR compliant data storage, fast data delivery, built-in file sharing, and serverless app hosting. 
 
@@ -25,7 +25,7 @@ Users do not need to trust Providers to provide correctly and to keep their data
 
 ## Services
 
-There are multiple services in the DDC.
+There are multiple services in the DDC:
 
 - Blockchain for payments and management.
 

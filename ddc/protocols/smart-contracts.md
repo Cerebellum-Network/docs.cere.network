@@ -1,6 +1,6 @@
 # ⚖ Smart Contracts
 
-The DDC v2 Smart Contracts orchestrate the network around clusters and buckets.
+The DDC v2 Smart Contracts orchestrate the network around Clusters and Buckets.
 
 ## Design
 

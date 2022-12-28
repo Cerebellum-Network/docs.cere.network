@@ -6,9 +6,9 @@ Cere Network's Council serves as an elected body of network participants that ar
 
 ### Submitting Candidacy
 
-In order to join the Cere Network Council, the submission request requires a small amount of Cere Tokens to be bonded. The bond will be forfeited if the candidacy submission does not win or becomes a runner-up. If you are elected to the Council, the bond will remain kept.
+In order to join the Cere Network Council, the submission request requires a small amount of Cere Tokens to be bonded. The bond will be forfeited if the candidacy submission does not win or becomes a runner-up. If you are elected to the Council, the bond will be kept.
 
-If you intend to run for a spot on the Council, it is a good idea to announce your intentions in one of Cere's public forums(Telegram, Twitter, etc.) prior to your submission, so that your supporters will know when to vote for you.
+If you intend to run for a spot on the Council it's a good idea to announce your intentions in one or more of Cere's public forums (Telegram, Twitter, etc.) prior to your submission so that your supporters will know when to vote for you.
 
 ### Submission
 
@@ -24,7 +24,7 @@ Once your submission is in, we recommend kicking off the voting process by givin
 
 ![](<../.gitbook/assets/submit council.PNG>)
 
-If you were selected to join the council during the voting period, you will have won the council election and your account will now display under the "Members" section.
+If you were selected to join the council during the voting period you will have won the council election and your account will now display under the "Members" section.
 
 ![](../.gitbook/assets/currentcouncil.PNG)
 

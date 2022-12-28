@@ -2,7 +2,7 @@
 
 ## Storage Schema
 
-This is the data model for the API of DDC Storage.
+This is the data model for the API of the DDC Storage.
 
 ([Source](https://github.com/Cerebellum-Network/ddc-schemas))
 
@@ -77,7 +77,7 @@ A link is a pointer from one piece to another.
 
 #### Piece
 
-A piece is a container of data and metadata. It is the smallest indivisible unit stored in DDC object storage.
+A piece is a container of data and metadata. It is the smallest indivisible unit stored in the DDC object storage.
 
 | Field    | Type                               | Label    | Description                                                                                                          |
 | -------- | ---------------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------- |

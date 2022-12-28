@@ -16,7 +16,7 @@ docker-compose logs -f --tail=100 add_validation_node_custom
 
 ## Change log level
 
-By default, LOG\_LEVEL `debug` is enabled. To change it, please, update correspond variable in the [Network .env file](node-logs.md#check-application-logs). The following LOG\_LEVELS are supporting:
+By default, LOG\_LEVEL `debug` is enabled. To change it, please update the corresponding variable in the [Network .env file](node-logs.md#check-application-logs). The following LOG\_LEVELS are supported:
 
 1. error
 2. warn
@@ -26,7 +26,7 @@ By default, LOG\_LEVEL `debug` is enabled. To change it, please, update correspo
 
 ## Collect logs
 
-In order to collect logs you can use the following command:
+In order to collect logs use the following command:
 
 *   Collect application logs: \\
 

@@ -16,6 +16,6 @@
 
 ### Your Node is on a localhost
 
-1. Execute steps 2-4 from your Node is on a remote host [section](/tools/cere-explorer/how-to-connect-to-your-node-with-cere-explorer.md).
+1. Execute steps 2-4 from the "Your Node is on a remote host" [section](/tools/cere-explorer/how-to-connect-to-your-node-with-cere-explorer.md).
 2. You are done.
 

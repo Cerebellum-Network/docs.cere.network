@@ -16,9 +16,9 @@ Slashing will happen if a validator misbehaves (e.g. goes offline, attacks the n
 
 Once a validator gets slashed, it goes into the state as an "unapplied slash". While unapplied, a governance proposal can be made to reverse it during this period. After the grace period, the slashes are applied.
 
-The following levels of offense are defined (for specific slash amounts, see the equations in the section below):
+The following levels of offense are defined (for specific slash amounts see the equations in the section below):
 
-* Level 1: isolated unresponsiveness, i.e. being offline for an entire epoch. No slashing, only chilling.
+* Level 1: Isolated unresponsiveness. i.e. being offline for an entire epoch. No slashing, only chilling.
 * Level 2: concurrent unresponsiveness or double-signing. Slashes a very small amount of the stake and chills.
 * Level 3: misconducts unlikely to be accidental, but which do not harm the network's security to any large extent. Examples include concurrent equivocation or isolated cases of unjustified voting in GRANDPA. Slashes a moderately small amount of the stake and chills.
 * Level 4: misconduct that poses serious security or monetary risk to the system, or mass collusion. Slashes all or most of the stake behind the validator and chills.
