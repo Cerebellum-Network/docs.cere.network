@@ -43,7 +43,7 @@ Machine B - a machine where Validator B is hosting
 11\. Press `Set session key`.
 
 12\. **!Important** Wait until the message `Pre-sealed block for proposal at` **appears** in Validator B and **disappears** in Validator A logs. You can do this by running the following command in the Validator Nodes root directory:\
-\*\*\*\*`docker-compose logs -f --tail=1000 | grep "Pre-sealed block for proposal at"`
+\*\*\*\*`docker-compose logs -f --tail=1000 | grep "Pre-sealed block for proposal at"`. Change should happen once the current era ends and the next era begins.
 
 13\. Now you can safely stop Validator A using command: `docker-compose stop add_validator_node_custom` in order to update either Validator A itself or Machine A.
 
