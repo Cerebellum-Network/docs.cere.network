@@ -25,4 +25,4 @@ Compared with other storage and CDN protocols, it offers more control, flexibili
 
 *I'd like to build on the Cere Network!*
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 👉 Check the [Extended Developer Program](edp/overview.md).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 👉 Check the [Cere Contributor's Program](https://cere.notion.site/Contribute-9bcbdfc546104611ba844113e8ddbf53).
