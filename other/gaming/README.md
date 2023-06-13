@@ -8,7 +8,7 @@ Add value instantly to your game by enabling customizable player experiences usi
 - Mobile browser-optimized games that bypass app stores and external royalty payments
 - Unlock the power of decentralized data through Cere’s DDC
 - Wallets that can directly communicate with game packs to handle the end-to-end flows of signup/authentication/payment/custody of assets
-- Track achievements, progress, and digital content acquired in users' wallets. 
+- Track achievements, progress, and digital content acquired in users' wallets.
 
 **Want to learn how Cere Toolset can supercharge your game?**
 
