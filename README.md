@@ -21,7 +21,7 @@ Compared with other storage and CDN protocols, it offers more control, flexibili
 
 *I'm a game developer and I want to instantly add value to my game.*
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 👉 Check out [Gaming Docs](other/gaming.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 👉 Check out [Gaming Docs](other/gaming/gaming.md)
 
 *I'd like to build on the Cere Network!*
 
