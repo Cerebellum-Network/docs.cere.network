@@ -5,11 +5,12 @@
 ## DDC
 
 * [📖 Overview](ddc/overview.md)
-* [⚙ Developer Guide](ddc/developer-guide/README.md)
+* [⚙️ Developer Guide](ddc/developer-guide/README.md)
   * [🔑 Setup](ddc/developer-guide/setup.md)
-  * [⏱ Quickstart](ddc/developer-guide/quickstart.md)
+  * [⏱️ Quickstart](ddc/developer-guide/quickstart.md)
   * [💼 Examples](ddc/developer-guide/examples/README.md)
-    * [🗄 File sharing platform](ddc/developer-guide/examples/file-sharing-platform.md)
+    * [👨‍💻 NodeJS](ddc/developer-guide/examples/nodejs.md)
+    * [💻 CLI](ddc/developer-guide/examples/cli.md)
 * [💾 Provider](ddc/provider.md)
 * [🏭 Integration](ddc/integration/README.md)
   * [💻 NFT Commerce SDK](ddc/integration/integration-sdk.md)
@@ -18,18 +19,18 @@
     * [📙 IOS](ddc/integration/ios-sdk.md)
     * [📘 React Native](ddc/integration/react-native-sdk.md)
 * [📦 SDK](ddc/sdk.md)
-* [☁ CDN Service](ddc/cdn-nodes/README.md)
+* [☁️ CDN Service](ddc/cdn-nodes/README.md)
 * [🌐 Storage Service](ddc/storage-nodes/README.md)
 * [📃 Protocols](ddc/protocols/README.md)
   * [🔗 DDC URLs](ddc/protocols/ddc-url.md)
-  * [☁ CDN API](ddc/protocols/cdn-api.md)
-  * [☁ Storage Schema](ddc/protocols/storage-schema.md)
+  * [☁️ CDN API](ddc/protocols/cdn-api.md)
+  * [☁️ Storage Schema](ddc/protocols/storage-schema.md)
   * [📂 File Storage](ddc/protocols/file-storage.md)
   * [📂 File System](ddc/protocols/file-system.md)
-  * [🕸 Network Topology](ddc/protocols/topology.md)
-  * [🕸 Topology Schema](ddc/protocols/contract-params-schema.md)
-  * [⚖ Smart Contracts](ddc/protocols/smart-contracts.md)
-  * [⚖ Smart Contract API](ddc/protocols/smart-contract-api.md)
+  * [🕸️ Network Topology](ddc/protocols/topology.md)
+  * [🕸️ Topology Schema](ddc/protocols/contract-params-schema.md)
+  * [⚖️ Smart Contracts](ddc/protocols/smart-contracts.md)
+  * [⚖️ Smart Contract API](ddc/protocols/smart-contract-api.md)
 
 ## Mainnet
 
@@ -69,7 +70,7 @@
 
 ## Other
 
-* Extended Developer Program
+* [Extended Developer Program](other/extended-developer-program/README.md)
   * [Overview](edp/overview.md)
   * [Bounties](edp/bounties.md)
   * [Contributor Journey](edp/contributor-journey.md)

@@ -26,11 +26,11 @@ Machine B - a machine where Validator B is hosting
 
 6\. Double click on it to save the rotation key to the clipboard.
 
-![](<../../.gitbook/assets/0 (1).png>)
+![](../../.gitbook/assets/0.png)
 
 7\. Select Tab `Network` -> `Staking` -> `Account actions`.
 
-![](<../../.gitbook/assets/1 (1).png>)
+![](../../.gitbook/assets/1.png)
 
 8\. Select `Validators`.
 
@@ -38,7 +38,7 @@ Machine B - a machine where Validator B is hosting
 
 10\. Insert previously generated rotation key.
 
-![](<../../.gitbook/assets/2 (1).png>)
+![](../../.gitbook/assets/2.png)
 
 11\. Press `Set session key`.
 

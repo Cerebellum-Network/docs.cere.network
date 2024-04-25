@@ -1,8 +1,15 @@
 ---
 description: >-
-  Learn how an applications can be built on top of the DDC using possible scenarios (applications) and code examples.
+  Learn how an applications can be built on top of the DDC using possible
+  scenarios (applications) and code examples.
 ---
 
 # 💼 Examples
 
-[File sharing platform](file-sharing-platform.md) is an application that allows users to upload, download, and share a files.
+{% content-ref url="nodejs.md" %}
+[nodejs.md](nodejs.md)
+{% endcontent-ref %}
+
+{% content-ref url="cli.md" %}
+[cli.md](cli.md)
+{% endcontent-ref %}

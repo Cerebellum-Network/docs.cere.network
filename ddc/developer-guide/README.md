@@ -4,10 +4,11 @@ description: >-
   applications on top of DDC using DDC Client Libraries.
 ---
 
-# ⚙ Developer Guide
+# ⚙️ Developer Guide
 
-[Setup](quickstart.md) section is a complete guide on how to create an account, extract private/public keys required for client libraries, and deposit tokens in the account.
-
-[Quickstart](quickstart.md) section contains code blocks per each operation existing in the DDC Client and explains how it works.
-
-[Examples](examples/) section is supposed to contain possible usage scenarios (applications) and code examples. &#x20;
+* [setup.md](setup.md "mention") \
+  Learn how to create an account and deposit tokens.
+* [quickstart.md](quickstart.md "mention") \
+  Learn how to get started with the DDC using the SDK Client library.
+* [examples](examples/ "mention") \
+  Learn how an applications can be built on top of the DDC using possible scenarios (applications) and code examples.

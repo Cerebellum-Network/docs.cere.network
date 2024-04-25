@@ -1,12 +1,12 @@
-# NFT-commerce SDK
+# 💻 NFT Commerce SDK
 
 Integrating the NFT-commerce SDK in your webshop enables you to offer your customers curated experiences through NFTs, such as exclusive content, event tickets, or memberships. Through the SDK, potential customers can decrypt and consume content that is stored on the Cere DDC right on your website through engagement templates that are created with Cere RXB (Real time experience builder) and populated by NFTs that were minted with Cere Freeport. This NFT experience on your website can be further extended and seamlessly integrated with the Cere whitelabel NFT marketplace to enable tradeability and create a collector base.
 
 ### What are the prerequisites to integrate the SDK?
 
-- Payment for the NFT is conducted via your normal webshop checkout
-- An API Key for secure communication with the Cere API is needed
-- Having UserIDs mapped to your customers
+* Payment for the NFT is conducted via your normal webshop checkout
+* An API Key for secure communication with the Cere API is needed
+* Having UserIDs mapped to your customers
 
 ### What does the typical event flow look like?
 
@@ -32,6 +32,9 @@ NFTs integrated through the SDK are minted with Cere Freeport. During the mintin
 As with any other SDK your frontend application has to be extended with just a few lines of code. Following the documentation below you are integrating a demo RXB engagement template on your website and will allocate test NFT tokens to potential buyers.
 
 ## [📓 Web](web-sdk.md)
+
 ## [📗 Android](android-sdk.md)
+
 ## [📙 IOS](ios-sdk.md)
+
 ## [📘 React Native](react-native-sdk.md)

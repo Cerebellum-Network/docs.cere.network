@@ -1,7 +1,6 @@
-# Web
+# 📓 Web
 
 ## Installation
-
 
 ### Option 1: CDN
 
@@ -20,6 +19,7 @@ npm install --save @cere/sdk-js@5.3.2
 ```
 
 Then, you can import it into your code:
+
 ```typescript
 import { cereWebSDK } from "@cere/sdk-js/dist/web";
 ```
@@ -28,10 +28,9 @@ import { cereWebSDK } from "@cere/sdk-js/dist/web";
 
 Once the Cere Web SDK is installed on your web application, initialize the library with `APP_ID` and `YOUR_USER_ID`.
 
-You can find your APP_ID on the RXB Dashboard
+You can find your APP\_ID on the RXB Dashboard
 
 User ID is what should be set for each of your users and should be unchangeable.
-
 
 ```javascript
 let appId = 242;
@@ -43,6 +42,7 @@ try {
    console.log('Could not initialize cereSDK.');
 }
 ```
+
 App ID and User ID should be provided, otherwise an error will result.
 
 You can also specify the container element that you want the in-app messages to be attached to. By default, in-app messages are attached to the `<body>`.
@@ -66,11 +66,11 @@ For all invocations `APP_ID`, `USER_ID`, `REACT_APP_API_KEY` - parameters descri
 
 Auth methods supported include:
 
-* OAUTH_APPLE
-* OAUTH_FACEBOOK
-* OAUTH_GOOGLE
+* OAUTH\_APPLE
+* OAUTH\_FACEBOOK
+* OAUTH\_GOOGLE
 * FIREBASE
-* TRUSTED_3RD_PARTY
+* TRUSTED\_3RD\_PARTY
 * EMAIL
 
 ```javascript
@@ -92,7 +92,6 @@ let sdk = cereWebSDK(APP_ID, USER_ID, {
  }});
 ```
 
-
 ```javascript
 let sdk = cereWebSDK(APP_ID, USER_ID, {
  token: REACT_APP_API_KEY,
@@ -103,8 +102,8 @@ let sdk = cereWebSDK(APP_ID, USER_ID, {
  }});
 ```
 
-
 ## Events
+
 ### Default Handlers
 
 #### Render template
@@ -123,7 +122,6 @@ In order to track rewards clicked by the user, your template must use an action-
  </div>            
 ```
 
-
 #### Dismiss Event
 
 Similarly, users can dismiss an event, which you can inject automatically using the data-event-type of `DISMISS`. This is best practice for determining if a user actively dismissed an engagement offering. It will remove the entire engagement from the container div by default.
@@ -133,13 +131,11 @@ Similarly, users can dismiss an event, which you can inject automatically using 
 
 ```
 
-
 #### Impression Event
 
 Every time an engagement is displayed to the user, an impression event is registered in the Cere DDC.
 
 ### Custom Handlers
-
 
 You can also register custom handlers for when an engagement is received by the websocket, or when a user dismisses an engagement. These functions are onEngagement and `onDismissEngagement`, `onGetUserKeypair`
 
@@ -159,10 +155,9 @@ sdk.onGetUserKeypair((keyPair) => {
 });
 ```
 
-
 ### Custom Events
 
-In addition to the default events like IMPRESSION and REWARD_CLICKED, you can record events in the Cere platform to learn more about your app’s usage and then use that data to understand users’ patterns to segment them and set up unique campaigns to deliver personalized product offerings.
+In addition to the default events like IMPRESSION and REWARD\_CLICKED, you can record events in the Cere platform to learn more about your app’s usage and then use that data to understand users’ patterns to segment them and set up unique campaigns to deliver personalized product offerings.
 
 ```javascript
 let eventName = 'YOUR_EVENT_NAME';
@@ -172,14 +167,14 @@ sdk.sendEvent(eventName, eventPayload);
 
 ## CDN + ReactJS app
 
-For ReactJS library without NPM there is a possibility to add web.js script 
+For ReactJS library without NPM there is a possibility to add web.js script
 
 1. There is a way for adding an external javascript file into a react js application. If you want to deal with this case please take a look at link Option 1: CDN
 2. There are different ways to add external javascript files in react. Some of them are listed below.
 
 ### React-script-tag
 
-React-script-tag is an npm package that provides a React <script> tag that supports universal rendering. All standard <script> attributes like async, src, type, and defer are supported, including onLoad and onError callbacks.
+React-script-tag is an npm package that provides a React tag that supports universal rendering. All standard attributes like async, src, type, and defer are supported, including onLoad and onError callbacks.
 
 ```javascript
 import ScriptTag from 'react-script-tag';
@@ -208,7 +203,6 @@ const Demo = props => (
 );
 ```
 
-
 ### DOM Method
 
 Though the above solutions are simple to achieve, it requires us to add additional packages that might bulk up our application. If you have some experience coding, then you can do:
@@ -221,7 +215,6 @@ componentDidMount () {
     document.body.appendChild(script);
 }
 ```
-
 
 ### React Hooks
 
@@ -259,4 +252,3 @@ useEffect(() => {
 ## In-app messages
 
 In-app messages are a good way to tell your users about your new app features or deliver a special personalized offer.
-
